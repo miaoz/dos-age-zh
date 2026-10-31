@@ -1,4 +1,5 @@
 import { retainCanvas } from "./render-health.js";
+import { drawCJK } from "./zh-font.js";
 import { wrapChinese } from "./zh-layout.js";
 // The title screen (v0.13, the user's pick of four, "C", 2026-10-26): what a journey starts on,
 // before the world. The art (tools/title-art.png, 270 px a side) fills the screen behind it all, its
@@ -419,13 +420,13 @@ function paint(g, tone, L, level, W, H) {
   g.fillStyle = bg;
   g.fillRect(-rx, -rx, 2 * rx, 2 * rx);
   g.restore();
-  if (sheet.complete) g.drawImage(logoIn(T.orb), Math.round(wd.x + wd.dosW + Wd.gap * lp), wd.y, 24 * lp, 36 * lp);
-  if (fontReady) {
-    g.fillStyle = T.orb;
-    const base = wd.y + 18 * lp - Wd.lift * lp + Wd.cap * Wd.size * lp / 2;
-    spaced(g, "DOS", wd.x, base, Wd.size * lp, Wd.track * lp);
-    spaced(g, "AGE", wd.x + wd.dosW + 2 * Wd.gap * lp + 24 * lp, base, Wd.size * lp, Wd.track * lp);
-  }
+  const titleScale = Math.max(1, Math.floor(lp * 2.2));
+  const titleW = 44 * titleScale, titleX = Math.round(W / 2 - titleW / 2);
+  [..."幽林纪"].forEach((ch, i) => drawCJK(g, ch, titleX + i * 16 * titleScale,
+    wd.y + titleScale, titleScale, T.orb));
+  const subScale = Math.max(1, Math.floor(lp * 0.7)), sub = [["DOS-AGE", I.label]];
+  drawSans(g, sub, Math.round((W - sansWidth(sub, DOSAGE) * subScale) / 2),
+    wd.y + 29 * lp, subScale, DOSAGE);
   // the top: the version, the language's pill, and when the next Daily Challenge comes
   drawSans(g, [[VERSION, I.version]], L.version.x, L.version.y, k, DOSAGE);
   const Pi = TITLE.pill, pl = L.pill, lg = L.langPill;

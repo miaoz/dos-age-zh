@@ -20,4 +20,4 @@ const server = http.createServer(async (req,res) => {
   res.end(req.method === 'HEAD' ? undefined : data);
  } catch {res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'});res.end('文件不存在');}
 });
-server.listen(port,'127.0.0.1',()=>console.log(`DOS-AGE 中文版：http://127.0.0.1:${port}`));
+server.listen(port,'127.0.0.1',()=>console.log(`幽林纪：http://127.0.0.1:${port}`));

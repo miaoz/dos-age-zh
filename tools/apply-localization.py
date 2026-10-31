@@ -127,4 +127,16 @@ export function showKofi(on, phone) {
 s=load('title.js')
 s='import { wrapChinese } from "./zh-layout.js";\n'+s
 s=s.replace('function wrap(text, w, k) {','function wrap(text, w, k) {\n  if (/[\\u2e80-\\u9fff]/u.test(text)) return wrapChinese(text, t => sansWidth([[t]]) * k, w);')
+# Draw the Chinese edition's title in the existing responsive wordmark bounds.
+s='import { drawCJK } from "./zh-font.js";\n'+s
+start=s.index('  if (sheet.complete) g.drawImage(logoIn(T.orb)')
+end=s.index('  // the top: the version',start)
+s=s[:start]+'''  const titleScale = Math.max(1, Math.floor(lp * 2.2));
+  const titleW = 44 * titleScale, titleX = Math.round(W / 2 - titleW / 2);
+  [..."幽林纪"].forEach((ch, i) => drawCJK(g, ch, titleX + i * 16 * titleScale,
+    wd.y + titleScale, titleScale, T.orb));
+  const subScale = Math.max(1, Math.floor(lp * 0.7)), sub = [["DOS-AGE", I.label]];
+  drawSans(g, sub, Math.round((W - sansWidth(sub, DOSAGE) * subScale) / 2),
+    wd.y + 29 * lp, subScale, DOSAGE);
+'''+s[end:]
 save('title.js',s)
