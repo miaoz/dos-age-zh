@@ -1170,7 +1170,9 @@
     "You climb down to floor {n} of the cave.": "你向下爬到了洞穴第 {n} 层。",
     "You climb back up to floor {n} of the cave.": "你向上爬回了洞穴第 {n} 层。",
     "{foe:The} freezes solid!": "{foe:The}冻成了冰块！",
-    "{owner}'s {spell}": "{owner}的{spell}"
+    "{owner}'s {spell}": "{owner}的{spell}",
+    "Standalone edition: scores are not submitted online.": "独立版：成绩不参与联网排名。",
+    "This journey has ended. Restart to play again, or return to the title screen.": "本次冒险已结束。你可以重新开始，或返回标题画面。"
   },
   "nouns": {
     "Fighter": {

@@ -49,6 +49,72 @@ s=s.replace('function humanToken() {','function humanToken() {\n  return Promise
 s=s.replace('function askTicket(tries = TICKET.tries) {','function askTicket(tries = TICKET.tries) {\n  return; // Local edition: no telemetry or leaderboard submissions.\n')
 s=s.replace('function fault(msg) {','function fault(msg) {\n  return; // Errors remain in the local console.\n')
 s=s.replace('ariaLabel: "Chat"','ariaLabel: "聊天（本地版离线）"').replace('ariaLabel: "Your name for the scoreboard"','ariaLabel: "排行榜昵称"')
+# The standalone edition ends locally; no submission gates or remote rank requests.
+def replace_once(old, new):
+    global s
+    assert s.count(old) == 1, f'Offline flow patch no longer matches: {old[:90]}'
+    s=s.replace(old,new)
+replace_once('step: watching ? "sent" : "name"', 'step: "finished"')
+replace_once('document.body.append(nameInput);', '// Offline edition: keep the unused score-name field out of the page and tab order.')
+replace_once('else rankScore(dead.score, timeUp ? "time" : dayNumber(), by, foe);',
+             'else board = { state: "offline", rank: null, classRank: null, top: [] };')
+replace_once('  setTimeout(() => typeName(), Math.max(0, at - clock()));   // once the box is up\n', '')
+# Keep the original score calculation and end-of-run art; replace the online form.
+a=s.index('function drawGameOver(')
+b=s.index('// (a part with each of its lines in the middle)', a)
+view=s[a:b]
+view=view.replace('  const naming = dead.step === "name", theme = timeUp ? I.hint : I.hintDied;\n','')
+c=view.index('  // (once it\'s sent:')
+view=view[:c]+'''  const scores = sheetParts.box([
+    sheet.padded(sheet.lines([[[dailyMode() ? tl("DAILY") : tl("COMPETITIVE"), S.title]]], "f", true)),
+    sheet.row([[tl("SCORE"), S.label]], [[sc.score.toLocaleString("en-US"), S.text]], { bg: S.line, rightSize: "big" }),
+    sheet.padded(sheet.text("Standalone edition: scores are not submitted online.", I.board))
+  ], { pad: 2, gap: 2 });
+  const buttons = [sheetButton("R", "Restart Game", kind, { key: "start" }),
+    sheetButton("T", "Return to Title", "plain", { key: "title" })];
+  const spec = { title: "GAME OVER", w: cardPanelW(90), help: dead.help, lift,
+    helpText: ["This journey has ended. Restart to play again, or return to the title screen.",
+      "Standalone edition: scores are not submitted online."],
+    parts: [sheetParts.box([art, centre(caption)], { pad: 8, gap: 8 }), scores, sheetParts.cta(buttons)] };
+  if (measuring) return drawSheet(spec, true);
+  const hits = drawSheet(spec);
+  dead.buttons = Object.fromEntries(["help", "close", "start", "title"].filter(k => hits[k]).map(k => [k, hits[k]]));
+}
+// Shared by pointer/touch and keyboard: neither path waits for a server.
+function gameOverAction(action) {
+  if (action === "start") startOver(watching ? null : gameMode, true);
+  else if (action === "title") startOver();
+}
+'''
+s=s[:a]+view+s[b:]
+a=s.index('  if (dead && !ranking) {          // only naming the score')
+b=s.index('  if (lookout)',a)
+s=s[:a]+'''  if (dead && !ranking) {          // Local results and navigation, available immediately.
+    if (dead.hidden) { if (!e.repeat) dead.hidden = false; return; }
+    if (e.repeat) return;
+    if (e.code === "Slash" || e.code === "KeyH") dead.help = !dead.help;
+    else if (e.code === "Escape" && dead.help) dead.help = false;
+    else if (e.code === "KeyR") gameOverAction("start");
+    else if (e.code === "KeyT" || e.code === "Escape") gameOverAction("title");
+    return;
+  }
+'''+s[b:]
+a=s.index('  if (dead && !ranking) {          // dead: only')
+b=s.index('  if (lookout)',a)
+s=s[:a]+'''  if (dead && !ranking) {
+    if (dead.hidden) { dead.hidden = false; return; }
+    const b = deadButtonAt(px, py), help = dead.help;
+    if (b) { e.preventDefault(); click(); }
+    dead.help = b === "help" && !help;
+    if (b === "help" || help) return;
+    if (b === "close") Object.assign(dead, { hidden: true, buttons: {} });
+    else gameOverAction(b);
+    return;
+  }
+'''+s[b:]
+# The replay controls precede the normal game-over controls.
+replace_once('else if (b === "play" || b === "start" || b === "close") startOver();',
+             'else if (b === "play" || b === "start" || b === "title" || b === "close") startOver();')
 save('game.js',s)
 save('kofi.js','''// Preserve author attribution without loading a third-party payment widget.
 export function showKofi(on, phone) {

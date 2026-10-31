@@ -61,3 +61,5 @@ await checkPublicFiles(new URL('../dist/',import.meta.url));
 console.log('PASS: offline API responses, static fallback, public asset file boundaries.');
 
 await import('./check-dynamic.mjs');
+
+await import('./check-game-over.mjs');

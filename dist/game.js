@@ -8807,14 +8807,13 @@ const talkButtonAt = (px, py) => Object.entries(talk?.buttons || {}).find(([, r]
 // (watching a journey again, nothing's sent: its rank's the one it had when it was picked)
 function die(at, { timeUp = false, by = null, foe = null } = {}) {
   if (!timeUp) { mourn(at); keepOwnGhost(); }
-  dead = { at, buttons: {}, timeUp, score: journeyScore(timeUp, true), ghost: ghostOf(), step: watching ? "sent" : "name",
+  dead = { at, buttons: {}, timeUp, score: journeyScore(timeUp, true), ghost: ghostOf(), step: "finished",
     fell: !timeUp && map === MAPS.outside ? { x: player.x, y: player.y, by } : null,   // (where, for the Daily's graves, see FALLEN)
     foe: foe?.called ?? null };   // (what killed them, as it's named, for the score card's epitaph)
   setTimeout(timeUp ? endOfDays : toll, Math.max(0, at - clock()));
   if (watching) board = { state: "done", rank: watching.rank, top: [] };
-  else rankScore(dead.score, timeUp ? "time" : dayNumber(), by, foe);
+  else board = { state: "offline", rank: null, classRank: null, top: [] };
   tellRun(timeUp ? "time" : "fell");
-  setTimeout(() => typeName(), Math.max(0, at - clock()));   // once the box is up
   BUILD();                         // (for its record, see REPLAY)
   if (local && journal) BUILD().then(() => {   // (on a local server, kept for "?watch=last", once what ended it's in the record)
     try { localStorage.setItem("mektxt.lastJourney", JSON.stringify({ name: null, score: dead.score.score, replay: journeyRecord() })); } catch {}
@@ -8975,7 +8974,7 @@ Object.assign(nameInput, { type: "text", maxLength: SCORE_NAME.max, autocomplete
 nameInput.setAttribute("aria-label", "排行榜昵称");
 Object.assign(nameInput.style, { position: "fixed", left: "0", top: "0", width: "1px", height: "1px",
   opacity: "0", border: "0", padding: "0", fontSize: "16px" });
-document.body.append(nameInput);
+// Offline edition: keep the unused score-name field out of the page and tab order.
 try { nameInput.value = (localStorage.getItem("mektxt.scoreName") ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, SCORE_NAME.max); } catch {}
 nameInput.addEventListener("input", () => { nameInput.value = nameInput.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, SCORE_NAME.max); });
 nameInput.addEventListener("keydown", e => {
@@ -9249,7 +9248,6 @@ function drawGameOver(now, measuring = false) {
   if (!dead || now < dead.at || dead.hidden) return;
   if (!measuring) fitUi(() => drawGameOver(now, true));
   const G = GAME_OVER, I = G.ink, S = SHEET.ink, { timeUp, score: sc } = dead, kind = timeUp ? "go" : "stop";
-  const naming = dead.step === "name", theme = timeUp ? I.hint : I.hintDied;
   const tile = (t, x, y) => { const { u } = uiMetrics(); ctx.drawImage(t instanceof HTMLCanvasElement ? t : tiles, ...(t instanceof HTMLCanvasElement ? [0, 0] : [t * CW, 0]), CW, CH, x, y, CW * u, CH * u); };
   const look = SCENE.classes[charClass].right;
   const heart = () => recolour(HUD.statIcons.hp, [["#d95763", I.heart], ["#45283c", I.heartBg]]), skull = () => recolour(SCENE.deathRed, [["#d95763", I.skull]]);
@@ -9270,47 +9268,25 @@ function drawGameOver(now, measuring = false) {
     } };
   // (all of it MEK Sans, the user's, 2026-10-27)
   const caption = timeUp ? sheet.text("\"YOUR JOURNEY ENDS HERE, ADVENTURER!\"", I.caption, "f", SANS) : sheet.text(tl("YOU SUCCUMBED TO DEATH ON DAY {n}", { n: dayNumber() }), I.died, "f", SANS);
-  // (once it's sent: the character between two hearts or skulls, over their name and class)
-  const who = dead.name || tl("YOU"), sign = { minW: () => uiMetrics().px(3 * CW + 16), h: () => uiMetrics().px(CH),
-    draw: (x, y, w) => {
-      const { px } = uiMetrics(), mid = x + Math.round(w / 2), t = timeUp ? heart() : skull();
-      tile(t, mid - px(CW / 2 + 8 + CW), y); tile(look, mid - px(CW / 2), y); tile(t, mid + px(CW / 2 + 8), y);
-    } };
-  const top = naming || !dead.name ? [art, centre(caption)]
-    : [sign, sheet.lines([[[who, S.text]]], "big", true), sheet.lines([[[upper(nameOf(CLASSES[charClass].name)), I.caption]]], "f", true)];
-  // the score, rank and class rank
-  const value = (t, ink) => [[t, ink]];
-  const rows = [[english("SCORE"), value(sc.score.toLocaleString("en-US"), S.text)], [english("RANK"), value(rankShown(), S.title)],
-    [english("CLASS RANK"), value(board?.state === "done" ? (board.classRank ? placeShown(board.classRank) : "-") : rankShown(), S.title)]]
-    .map(([l, v]) => sheet.row([[tl(l), S.label]], v, { bg: S.line, rightSize: "big" }));
-  const boardLink = { ...sheet.lines([tapKeys([["[", "#847e87"], ["G", S.title], [`] ${tl("Leaderboard")}`, "#847e87"]])], "f", true), key: "board" };
-  const scores = sheetParts.box([sheet.padded(sheet.lines([[[dailyMode() ? tl("DAILY") : tl("COMPETITIVE"), S.title]]], "f", true)), ...rows,
-    sheet.padded({ ...boardLink, draw: (x, y, w, hits) => { boardLink.draw(x, y, w); hits.board = [x, y - uiMetrics().px(4), w, boardLink.h() + uiMetrics().px(8)]; } })], { pad: 2, gap: 2 });
-  // the name's box (while it's typed) and Submit Score, or Share to X and Restart Game
-  const nameBox = { minW: () => Math.max(...[tl("Submit Name"), tl("Try Again")].map(s => sheetW([[`${upper(s)}... [${SCORE_NAME.max}]`]]))) + uiMetrics().px(16), h: () => uiMetrics().px(18),
-    draw: (x, y, w, hits) => {
-      const { px } = uiMetrics(), h = px(18), focused = document.activeElement === nameInput, v = nameInput.value;
-      ctx.fillStyle = S.bg; ctx.fillRect(x, y, w, h);
-      sheetFrame(x, y, w, h, theme);
-      const blinkOff = focused && Math.floor(now / 500) % 2 === 1;
-      const runs = v ? [[v, S.text], ...(v.length < SCORE_NAME.max ? [["_", blinkOff ? S.bg : S.text], ["_".repeat(SCORE_NAME.max - v.length - 1), theme]] : [])]
-        : [[`${dead.badName ? tl("Try Again") : tl("Submit Name")}... [${SCORE_NAME.max}]`, dead.badName ? I.bad : theme]];
-      const size = v ? "big" : "f";
-      drawSans(ctx, runs, x + Math.round((w - sheetW(runs, size)) / 2), y + Math.round((h - sheetLineH(size)) / 2), sheetFont(size));
-      hits.name = [x, y, w, h];
-    } };
-  const toFull = ON_SITE && !watching;
-  const cta = naming ? sheetParts.box([nameBox], { pad: 2 }) : null;
-  const buttons = naming ? [sheetButton("Y", "Submit Score", kind, { key: "submit" })]
-    : [sheetButton("S", "Share to X", "plain", { key: "share" }), sheetButton("R", "Restart Game", kind, { key: "start" }),
-      ...(toFull ? [{ runs: sheetKey("D", "Play More on DOS-AGE.COM", "#5d73ff"), key: "full" }] : [])];
+  const scores = sheetParts.box([
+    sheet.padded(sheet.lines([[[dailyMode() ? tl("DAILY") : tl("COMPETITIVE"), S.title]]], "f", true)),
+    sheet.row([[tl("SCORE"), S.label]], [[sc.score.toLocaleString("en-US"), S.text]], { bg: S.line, rightSize: "big" }),
+    sheet.padded(sheet.text("Standalone edition: scores are not submitted online.", I.board))
+  ], { pad: 2, gap: 2 });
+  const buttons = [sheetButton("R", "Restart Game", kind, { key: "start" }),
+    sheetButton("T", "Return to Title", "plain", { key: "title" })];
   const spec = { title: "GAME OVER", w: cardPanelW(90), help: dead.help, lift,
-    helpText: dailyMode() ? G.helpDaily : timeUp ? G.help : G.helpDied,
-    parts: [sheetParts.box(top, { pad: 8, gap: 8 }), scores, ...(cta ? [cta] : []), sheetParts.cta(buttons)] };
+    helpText: ["This journey has ended. Restart to play again, or return to the title screen.",
+      "Standalone edition: scores are not submitted online."],
+    parts: [sheetParts.box([art, centre(caption)], { pad: 8, gap: 8 }), scores, sheetParts.cta(buttons)] };
   if (measuring) return drawSheet(spec, true);
   const hits = drawSheet(spec);
-  dead.buttons = { help: hits.help, close: hits.close, board: hits.board };
-  for (const k of ["name", "submit", "share", "start", "full"]) if (hits[k]) dead.buttons[k] = hits[k];
+  dead.buttons = Object.fromEntries(["help", "close", "start", "title"].filter(k => hits[k]).map(k => [k, hits[k]]));
+}
+// Shared by pointer/touch and keyboard: neither path waits for a server.
+function gameOverAction(action) {
+  if (action === "start") startOver(watching ? null : gameMode, true);
+  else if (action === "title") startOver();
 }
 // (a part with each of its lines in the middle)
 const centre = part => ({ ...part, draw: (x, y, w, hits) => {
@@ -11356,17 +11332,13 @@ addEventListener("keydown", raw => {
   if (watching && !ranking) { watchKey(e); return; }   // (watching a journey again: only its own keys)
   if (ranking) { rankingKey(e); return; }   // the leaderboard, till it's closed
   if (opening?.step === "title") { titleKey(e); return; }
-  if (dead && !ranking) {          // only naming the score (see SCORE_NAME), the leaderboard, starting over from here, or leaving
-    if (dead.hidden) { if (!e.repeat) dead.hidden = false; return; }   // (X hid the box: any key brings it back)
-    if (!e.repeat && (e.code === "Slash" || e.code === "KeyH")) dead.help = !dead.help;
+  if (dead && !ranking) {          // Local results and navigation, available immediately.
+    if (dead.hidden) { if (!e.repeat) dead.hidden = false; return; }
+    if (e.repeat) return;
+    if (e.code === "Slash" || e.code === "KeyH") dead.help = !dead.help;
     else if (e.code === "Escape" && dead.help) dead.help = false;
-    else if (dead.step === "name" && ["Enter", "NumpadEnter"].includes(e.code)) typeName();
-    else if (!e.repeat && e.code === "KeyY" && dead.step === "name") submitName();
-    else if (!e.repeat && e.code === "KeyR") startOver();   // (while the name's not being typed)
-    else if (!e.repeat && e.code === "KeyD" && dead.buttons.full) openFullGame();
-    else if (!e.repeat && e.code === "KeyG") openLeaderboard();
-    else if (!e.repeat && e.code === "KeyS" && dead.step === "sent") shareScore();
-    else leave(e);
+    else if (e.code === "KeyR") gameOverAction("start");
+    else if (e.code === "KeyT" || e.code === "Escape") gameOverAction("title");
     return;
   }
   if (lookout) {                   // up a tower: only coming back down
@@ -11712,7 +11684,7 @@ canvas.addEventListener("pointerdown", e => {
     if (own === "start") watchAgain();
     else if (b === "pause") pauseWatching();
     else if (b === "speed") nextSpeed();
-    else if (b === "play" || b === "start" || b === "close") startOver();
+    else if (b === "play" || b === "start" || b === "title" || b === "close") startOver();
     else if (b === "board") openLeaderboard();
     return;
   }
@@ -11728,19 +11700,14 @@ canvas.addEventListener("pointerdown", e => {
     else if (titleLinkAt(px, py)) linkPress = { id: e.pointerId, url: titleLinkAt(px, py) };
     return;
   }
-  if (dead && !ranking) {          // dead: only the game-over box's name and buttons (see GAME_OVER)
-    if (dead.hidden) { dead.hidden = false; return; }   // (X hid the box: a press brings it back)
+  if (dead && !ranking) {
+    if (dead.hidden) { dead.hidden = false; return; }
     const b = deadButtonAt(px, py), help = dead.help;
-    if (b) { e.preventDefault(); click(); }     // (so the press doesn't take the focus straight back off the name)
+    if (b) { e.preventDefault(); click(); }
     dead.help = b === "help" && !help;
-    if (b === "help" || help) return;   // (a press anywhere hides the help)
+    if (b === "help" || help) return;
     if (b === "close") Object.assign(dead, { hidden: true, buttons: {} });
-    else if (b === "submit") submitName();
-    else if (b === "start") startOver();
-    else if (b === "full") openFullGame();
-    else if (b === "name") typeName(true);
-    else if (b === "board") openLeaderboard();
-    else if (b === "share") sharePress = e.pointerId;   // (shared as it's let go: see below)
+    else gameOverAction(b);
     return;
   }
   if (lookout) { act("t"); return; }   // up a tower: a tap anywhere comes back down
