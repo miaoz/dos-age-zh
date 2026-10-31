@@ -1,3 +1,4 @@
+import { retainCanvas } from "./render-health.js";
 // Fusion Pixel 12px, unmodified font. Copyright/license: assets/fonts/fusion-pixel/.
 // Rasterize each glyph once at its native size; upscale like the original bitmap fonts.
 export const CJK_ADVANCE = 12;
@@ -18,7 +19,7 @@ export function drawCJK(ctx, ch, x, y, f, colour) {
     g.fillText(ch, 0, 12);
     // Bound the cache for long sessions with many different colored messages.
     if (glyphCache.size >= 4096) glyphCache.delete(glyphCache.keys().next().value);
-    glyphCache.set(key, tile);
+    glyphCache.set(key, retainCanvas(tile, "cjk-glyph"));
   }
   ctx.save();
   ctx.imageSmoothingEnabled = false;

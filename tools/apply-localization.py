@@ -1,7 +1,8 @@
 from pathlib import Path
+from render_recovery import patch_render_recovery
 R=Path(__file__).resolve().parents[1]
 def load(name): return (R/'tools/original'/name).read_text()
-def save(name,s): (R/'dist'/name).write_text(s)
+def save(name,s): (R/'dist'/name).write_text(patch_render_recovery(name, s))
 s=load('lang.js')
 a=s.index('export const LANGUAGES = '); b=s.index(';',a)
 s=s[:a]+'export const LANGUAGES = { "zh-CN": "简体中文", en: "English" }'+s[b:]
@@ -47,7 +48,7 @@ s=s.replace('setAttribute("aria-label", "Chat")', 'setAttribute("aria-label", "�
 s=s.replace('function connectChat() {','function connectChat() {\n  return; // Local edition: no official chat backend.\n')
 s=s.replace('function humanToken() {','function humanToken() {\n  return Promise.resolve(null); // Local edition has no leaderboard ticket service.\n')
 s=s.replace('function askTicket(tries = TICKET.tries) {','function askTicket(tries = TICKET.tries) {\n  return; // Local edition: no telemetry or leaderboard submissions.\n')
-s=s.replace('function fault(msg) {','function fault(msg) {\n  return; // Errors remain in the local console.\n')
+s=s.replace('function fault(msg) {','function fault(msg) {\n  recordRenderEvent("game-fault", { message: String(msg).slice(0, 800) });\n  return; // Local diagnostics only; never submit errors to the original service.\n')
 s=s.replace('ariaLabel: "Chat"','ariaLabel: "聊天（本地版离线）"').replace('ariaLabel: "Your name for the scoreboard"','ariaLabel: "排行榜昵称"')
 # The standalone edition ends locally; no submission gates or remote rank requests.
 def replace_once(old, new):

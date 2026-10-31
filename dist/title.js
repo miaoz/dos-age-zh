@@ -1,3 +1,4 @@
+import { retainCanvas } from "./render-health.js";
 import { wrapChinese } from "./zh-layout.js";
 // The title screen (v0.13, the user's pick of four, "C", 2026-10-26): what a journey starts on,
 // before the world. The art (tools/title-art.png, 270 px a side) fills the screen behind it all, its
@@ -132,7 +133,7 @@ function artIn(tone, level) {
   const g = c.getContext("2d"), img = g.createImageData(px, px);
   idx.forEach((v, i) => { img.data.set(cols[v], 4 * i); img.data[4 * i + 3] = 255; });
   g.putImageData(img, 0, 0);
-  arts.set(k, c);
+  arts.set(k, retainCanvas(c, "title-arts"));
   return c;
 }
 
@@ -150,7 +151,7 @@ function logoIn(ink, part = null) {
   const img = g.getImageData(0, 0, w, h), d = img.data, col = rgb(ink);
   for (let i = 0; i < d.length; i += 4) if (d[i + 3] && d[i] === 155 && d[i + 1] === 173) d.set(col, i);
   g.putImageData(img, 0, 0);
-  logos.set(k, c);
+  logos.set(k, retainCanvas(c, "title-logos"));
   return c;
 }
 
@@ -497,7 +498,7 @@ function mask(g, k, dot) {
     const t = tile.getContext("2d");
     t.fillStyle = "#000";
     BAYER.forEach((b, i) => { if ((b + 0.5) / 16 < k / TITLE.steps) t.fillRect((i % 4) * dot, Math.floor(i / 4) * dot, dot, dot); });
-    masks.set(key, tile);
+    masks.set(key, retainCanvas(tile, "title-masks"));
   }
   return g.createPattern(masks.get(key), "repeat");
 }
@@ -583,7 +584,7 @@ function classArtIn(group) {
   const g = c.getContext("2d"), img = g.createImageData(px, px);
   classPixels.forEach((v, i) => { img.data.set(cols[v], 4 * i); img.data[4 * i + 3] = 255; });
   g.putImageData(img, 0, 0);
-  const art = { canvas: c, data: img.data };
+  const art = { canvas: retainCanvas(c, "class-art"), data: img.data };
   classArts.set(group, art);
   return art;
 }
@@ -599,7 +600,7 @@ export function classPicture(group) {
   const g = c.getContext("2d"), img = g.createImageData(px, px);
   classPixels.forEach((v, i) => { img.data.set(cols[v], 4 * i); img.data[4 * i + 3] = 255; });
   g.putImageData(img, 0, 0);
-  classPictures.set(group, c);
+  classPictures.set(group, retainCanvas(c, "title-classPictures"));
   return c;
 }
 const shift = { group: null, from: null, t0: 0, last: -Infinity, mix: null };   // (the look, the one it's changing from, since when)

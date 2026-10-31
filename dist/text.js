@@ -1,3 +1,4 @@
+import { retainCanvas } from "./render-health.js";
 import { isCJK, CJK_ADVANCE, drawCJK, cjkReady } from "./zh-font.js";
 // Text in MEKMODE Text, drawn from the white glyph strip tools/extract.py bakes and tinted
 // to whatever colour is asked for (each colour's copy is made once).
@@ -21,7 +22,7 @@ function tint(colour) {
     g.globalCompositeOperation = "source-in";
     g.fillStyle = colour;
     g.fillRect(0, 0, c.width, c.height);
-    tinted.set(colour, c);
+    tinted.set(colour, retainCanvas(c, "font-strip"));
   }
   return tinted.get(colour);
 }
@@ -61,7 +62,7 @@ function sansTint(font, colour) {
     g.globalCompositeOperation = "source-in";
     g.fillStyle = colour;
     g.fillRect(0, 0, c.width, c.height);
-    tinted.set(colour, c);
+    tinted.set(colour, retainCanvas(c, "font-strip"));
   }
   return tinted.get(colour);
 }

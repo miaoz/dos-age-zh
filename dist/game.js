@@ -1,3 +1,4 @@
+import { retainCanvas, watchScreen, setRenderState, renderHeartbeat, recordRenderEvent } from "./render-health.js";
 import { wrapChinese, chineseTokens } from "./zh-layout.js";
 import { SCENE } from "./scene.js";
 import { stepPose, STEP_ANIM_MS, SLIDE } from "./motion.js";
@@ -984,6 +985,7 @@ let dead = null;                   // { at, buttons, timeUp, score, step, badNam
 
 const canvas = document.getElementById("screen");
 const ctx = canvas.getContext("2d");
+watchScreen(canvas);
 let tiles = new Image();           // (a canvas once it's loaded, with FLOOR_DOT's tiles added on the end)
 tiles.src = "assets/tiles.png";
 let fog = [tiles]; // tile atlases per fog step, built once the tiles load
@@ -3322,7 +3324,7 @@ const gapMasks = [0, 1, 2, 3].map(px => [0, 1, 2, 3].map(py => {
       if (d < 1 && BAYER[(y + py) % 4][(x + px) % 4] >= (keep + (1 - keep) * d * d) * 16) img.data[(y * 2 * r + x) * 4 + 3] = 255;
     }
   g.putImageData(img, 0, 0);
-  return c;
+  return retainCanvas(c, "gap-mask");
 }));
 const gapCell = document.createElement("canvas");
 gapCell.width = CW; gapCell.height = CH;
@@ -3499,7 +3501,7 @@ function channelAtlas([r, g, b]) {
     const img = x.getImageData(0, 0, c.width, c.height), d = img.data;
     for (let i = 0; i < d.length; i += 4) { d[i] *= r; d[i + 1] *= g; d[i + 2] *= b; }
     x.putImageData(img, 0, 0);
-    channelAtlases.set(k, c);
+    channelAtlases.set(k, retainCanvas(c, "channel-atlas"));
   }
   return channelAtlases.get(k);
 }
@@ -3705,7 +3707,7 @@ function stoneAtlas() {
       for (let k = 0; k < 3; k++) d[i + k] = STONE.dark[k] + (STONE.light[k] - STONE.dark[k]) * l;
     }
     x.putImageData(img, 0, 0);
-    stoneAtlasMade = c;
+    stoneAtlasMade = retainCanvas(c, "stone-atlas");
   }
   return stoneAtlasMade;
 }
@@ -3753,7 +3755,7 @@ function invertAtlas(atlas) {
   const img = x.getImageData(0, 0, c.width, c.height), d = img.data;
   for (let i = 0; i < d.length; i += 4) { d[i] = 255 - d[i]; d[i + 1] = 255 - d[i + 1]; d[i + 2] = 255 - d[i + 2]; }
   x.putImageData(img, 0, 0);
-  return c;
+  return retainCanvas(c, "inverted-atlas");
 }
 function shock(now, s, atlas) {
   const f = Math.floor((now - (s.shockT0 ?? -Infinity)) / SHOCK.ms);
@@ -4162,6 +4164,7 @@ function withNoteTiles(img) {
     rows.forEach((row, y) => [...row].forEach((ch, x) => {
       if (glow && ch !== "t" && NOTE_INK[ch]) { const gg = glow.getContext("2d"); gg.fillStyle = RELIC_INK.fg; gg.fillRect(x, y, 1, 1); }
     }));
+    if (glow) retainCanvas(glow, "relic-glow");
     rows.forEach((row, y) => [...row].forEach((ch, x) => {
       if (!NOTE_INK[ch]) return;
       g.fillStyle = relic ? RELIC_INK[ch === "t" ? "bg" : "fg"] : NOTE_INK[ch];
@@ -4878,9 +4881,10 @@ function hudShortcutAt(x, y) {
 // Each frame's drawn by drawFrame(); one that throws is told to the dashboard (see fault()) and
 // the next comes all the same, so an error in a turn or a draw never stops the game for good
 function frame(page) {
-  try { drawFrame(page); }
+  try { drawFrame(page); renderHeartbeat(); }
   catch (err) {
     console.error(err);
+    recordRenderEvent("frame-error", { message: String(err?.message ?? err).slice(0, 800), stack: String(err?.stack ?? "").slice(0, 1600) });
     fault(`${err?.message ?? err} @ ${String(err?.stack ?? "").match(/\/([^/\s)]+:\d+):\d+/)?.[1] ?? "frame"}`);
   }
   finally { requestAnimationFrame(frame); }
@@ -6965,7 +6969,7 @@ function drawWarmth(now, pos, strength = 1) {
         const d = Math.hypot(x, y) / R;
         if (d < 1 && (1 - d) * W.dense * 16 > BAYER[(((y + py) % 4) + 4) % 4][(((x + px) % 4) + 4) % 4]) g.fillRect(x + R, y + R, 1, 1);
       }
-    warmths.set(k, disc);
+    warmths.set(k, retainCanvas(disc, "warmth"));
   }
   ctx.save();
   ctx.imageSmoothingEnabled = false;
@@ -8923,7 +8927,8 @@ document.addEventListener("visibilitychange", () => { if (document.hidden) tellR
 // screen, as a freeze that came back would). Nothing of the player's goes with it.
 const FAULTS = { most: 3, stallMs: 5000 }, faulted = new Set();
 function fault(msg) {
-  return; // Errors remain in the local console.
+  recordRenderEvent("game-fault", { message: String(msg).slice(0, 800) });
+  return; // Local diagnostics only; never submit errors to the original service.
 
   msg = String(msg ?? "").replace(/https?:\/\/[^/\s]+\//g, "").slice(0, 160);
   if (offBoard || watching || !msg || faulted.has(msg) || faulted.size >= FAULTS.most) return;
@@ -9233,7 +9238,7 @@ function recolour(t, swaps) {
       if (to) [img.data[i], img.data[i + 1], img.data[i + 2]] = to;
     }
     g.putImageData(img, 0, 0);
-    recoloured.set(k, c);
+    recoloured.set(k, retainCanvas(c, "recoloured-tile"));
   }
   return recoloured.get(k);
 }
@@ -11030,7 +11035,7 @@ function tintedLook(id, ink) {
     for (let i = 0; i < img.data.length; i += 4)
       if (!(img.data[i] === 255 && img.data[i + 1] === 255 && img.data[i + 2] === 255)) [img.data[i], img.data[i + 1], img.data[i + 2]] = [r, gr, bl];
     g.putImageData(img, 0, 0);
-    tintedLooks.set(k, c);
+    tintedLooks.set(k, retainCanvas(c, "class-icon"));
   }
   return tintedLooks.get(k);
 }
@@ -11868,7 +11873,7 @@ function dpadLook(lit) {
       if (ch === "#") dot(Math.round(cx - (row.length - 1) / 2) + i, Math.round(cy - (rows.length - 1) / 2) + j, way === lit ? DPAD.lit : DPAD.arrow);
     }));
   }
-  dpadLooks.set(lit, c);
+  dpadLooks.set(lit, retainCanvas(c, "dpad"));
   return c;
 }
 const dpadShown = () => settings.dpad && tapping && active && !opening && !dead && !watching && !chat && !logOpen && !notice && !talk && !panel &&
@@ -12270,11 +12275,16 @@ if (opening && TITLE_MODES().includes(wantMode)) focusTitle(TITLE_MODES().indexO
 if (opening?.step === "class") openMode(opening.mode);   // (...and to go on into it)
 if (onSite && !watching && !tryingOptions) beginOnSite();
 
+setRenderState(() => ({ turns, hp: stats.hp, map: map.id, x: player.x, y: player.y,
+  cls: charClass, dead: !!dead, opening: opening?.step ?? null,
+  screen: { width: canvas.width, height: canvas.height, lost: ctx.isContextLost?.() ?? null,
+    alpha: ctx.globalAlpha, composite: ctx.globalCompositeOperation } }));
+
 // (a picture that wouldn't load even asked for twice: the game can't start, and says so (Figma
 // 631:80641) with a way to reload, rather than staying blank)
 Promise.all([pictureLoaded(tiles), pictureLoaded(prompt), fontReady, sansReady]).then(() => {
   document.getElementById("loading")?.remove();   // (index.html's trees, the game's own frames from here)
-  tiles = withAllyTiles(withNoteTiles(withFloorDots(tiles)));
+  tiles = retainCanvas(withAllyTiles(withNoteTiles(withFloorDots(tiles))), "tiles", true);
   for (const id of RELIC_IDS) SCENE.itemIcons[id] = noteTiles[id];   // (see RELIC)
   SCENE.itemIcons["white-tuft"] = noteTiles.tuft;   // (see KEEPSAKE)
   SCENE.itemIcons["lumberjack-locket"] = noteTiles.locket;

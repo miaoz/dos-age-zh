@@ -63,3 +63,5 @@ console.log('PASS: offline API responses, static fallback, public asset file bou
 await import('./check-dynamic.mjs');
 
 await import('./check-game-over.mjs');
+
+await import('./check-render-health.mjs');

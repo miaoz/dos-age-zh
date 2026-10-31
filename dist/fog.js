@@ -1,3 +1,4 @@
+import { retainCanvas } from "./render-health.js";
 // Fog of war: world cells fade in steps with distance from the character.
 // Each step is a recoloured copy of the tile atlas. Past the dimmed step, tiles become a
 // dithered silhouette (the 50% level is the Figma "checker", 11:1539) that thins out
@@ -84,7 +85,7 @@ export function fogAtlases(tiles, cw, ch) {
         }
       }
     g.putImageData(img, 0, 0);
-    return c;
+    return retainCanvas(c, "fog-atlas", true);
   });
 }
 
@@ -120,7 +121,7 @@ export function redAtlases(atlases, amount) {
       for (let k = 0; k < 3; k++) px[i + k] = Math.round(px[i + k] + (Math.min(255, RED[k] * l) - px[i + k]) * amount);
     }
     g.putImageData(img, 0, 0);
-    return c;
+    return retainCanvas(c, "fog-atlas", true);
   });
 }
 
@@ -137,5 +138,5 @@ export function flashAtlas(atlas, colour) {
     px.set(colour, i);
   }
   g.putImageData(img, 0, 0);
-  return c;
+  return retainCanvas(c, "fog-atlas", true);
 }

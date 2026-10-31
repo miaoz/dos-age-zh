@@ -1,3 +1,4 @@
+import { recordRenderEvent } from "./render-health.js";
 // Subtle CRT post-process: the game still draws to its 2D canvas (which keeps all input),
 // and a WebGL canvas laid over it shows that picture with scanlines, a faint glow, a touch of
 // colour fringing toward the edges and a soft vignette, and a slight curve like a tube's glass
@@ -88,7 +89,7 @@ export function createCrt(source) {
   // over the game's canvas exactly, which fills the box they're both in
   Object.assign(out.style, { position: "absolute", left: "0", top: "0", width: "100%", height: "100%", pointerEvents: "none" });
   const gl = out.getContext("webgl", { alpha: false, antialias: false });
-  if (!gl) return none;
+  if (!gl) { recordRenderEvent("webgl-unavailable"); return none; }
 
   // The program and what it draws with; made again if the context's lost and given back (a
   // phone or tablet drops it when the browser's put away, and the picture would freeze black)
@@ -124,7 +125,7 @@ export function createCrt(source) {
     gl.viewport(0, 0, out.width, out.height);
     return true;
   };
-  if (!setup()) return none;
+  if (!setup()) { recordRenderEvent("webgl-setup-failed"); return none; }
 
   source.after(out);
   source.style.opacity = "0"; // still drawn to and still takes input, just not seen
@@ -135,8 +136,8 @@ export function createCrt(source) {
     out.style.display = on && !lost ? "" : "none";
     source.style.opacity = on && !lost ? "0" : "";
   };
-  out.addEventListener("webglcontextlost", e => { e.preventDefault(); lost = true; show(); });
-  out.addEventListener("webglcontextrestored", () => { lost = !setup(); show(); });
+  out.addEventListener("webglcontextlost", e => { e.preventDefault(); lost = true; recordRenderEvent("webgl-context-lost", { status: e.statusMessage, trusted: e.isTrusted }); show(); });
+  out.addEventListener("webglcontextrestored", () => { lost = !setup(); recordRenderEvent("webgl-context-restored", { ok: !lost }); show(); });
   // call once per frame, after the game has drawn (`k`: the strength, see above)
   const render = (now, k = 1) => {
     if (!on || lost || !source.width || !source.height) return; // nothing to draw (a window of no size)
