@@ -80,11 +80,11 @@
     "evasive": "善于闪避",
     "passive": "被动",
     "aggressive": "好斗",
-    "Weak": "弱小",
+    "Weak": "虚弱的",
     "Normal": "普通",
-    "Superior": "精良",
-    "Cursed": "诅咒",
-    "Enchanted": "附魔",
+    "Superior": "精英",
+    "Cursed": "受诅咒的",
+    "Enchanted": "魔化",
     "Lumberjack": "樵夫",
     "lumberjack": "樵夫",
     "Miner": "矿工",
@@ -524,7 +524,7 @@
     "Esc X": "Esc X",
     "hunts you": "正在追猎你",
     "Your observation level is affected by your MAG. The more MAG you have, the more you'll learn about a monster.": "观察等级受魔力影响。魔力越高，能看出的怪物信息就越多。",
-    "Superior, cursed and enchanted monsters each know a randomly chosen spell.": "精英、诅咒和附魔怪物各自掌握一个随机法术。",
+    "Superior, cursed and enchanted monsters each know a randomly chosen spell.": "精英怪物、受诅咒的怪物和魔化怪物各自掌握一个随机法术。",
     "You're playing in competitive mode, which is limited by days.": "你正在游玩有天数限制的竞技模式。",
     "You've reached the last of your days, so your score is final.": "最后一天已经结束，得分已结算。",
     "Your score goes on the leaderboard if it's in the top 30.": "得分进入前 30 名才会显示在排行榜上。",
@@ -1027,7 +1027,7 @@
     "Monsters cast Thunderbolt.": "怪物会施放雷击。",
     "Monsters cast Blink.": "怪物会施放闪现。",
     "Every monster is cursed.": "所有怪物都受到诅咒。",
-    "Every monster is enchanted.": "所有怪物都获得附魔。",
+    "Every monster is enchanted.": "所有怪物都已魔化。",
     "Days and nights are 25% longer.": "昼夜时长增加 25%。",
     "Days and nights are 25% shorter.": "昼夜时长缩短 25%。",
     "Potions can't be drunk.": "无法饮用药水。",
@@ -1404,7 +1404,7 @@
       "": "凶兆"
     },
     "Enchanted": {
-      "": "附魔"
+      "": "魔化"
     },
     "Saga": {
       "": "史诗"
@@ -1782,7 +1782,7 @@
       "": "锈蚀的铁斧"
     },
     "Superior Iron Axe": {
-      "": "优质的铁斧"
+      "": "精良的铁斧"
     },
     "Cursed Iron Axe": {
       "": "诅咒的铁斧"
@@ -1794,7 +1794,7 @@
       "": "锈蚀的铁镐"
     },
     "Superior Iron Pickaxe": {
-      "": "优质的铁镐"
+      "": "精良的铁镐"
     },
     "Cursed Iron Pickaxe": {
       "": "诅咒的铁镐"
@@ -1806,7 +1806,7 @@
       "": "锈蚀的铁匕首"
     },
     "Superior Iron Dagger": {
-      "": "优质的铁匕首"
+      "": "精良的铁匕首"
     },
     "Cursed Iron Dagger": {
       "": "诅咒的铁匕首"
@@ -1818,7 +1818,7 @@
       "": "锈蚀的铁剑"
     },
     "Superior Iron Sword": {
-      "": "优质的铁剑"
+      "": "精良的铁剑"
     },
     "Cursed Iron Sword": {
       "": "诅咒的铁剑"
@@ -1830,7 +1830,7 @@
       "": "锈蚀的铁长杖"
     },
     "Superior Iron Staff": {
-      "": "优质的铁长杖"
+      "": "精良的铁长杖"
     },
     "Cursed Iron Staff": {
       "": "诅咒的铁长杖"
@@ -1842,7 +1842,7 @@
       "": "锈蚀的铁魔杖"
     },
     "Superior Iron Wand": {
-      "": "优质的铁魔杖"
+      "": "精良的铁魔杖"
     },
     "Cursed Iron Wand": {
       "": "诅咒的铁魔杖"
@@ -1854,7 +1854,7 @@
       "": "锈蚀的铁圣杯"
     },
     "Superior Iron Chalice": {
-      "": "优质的铁圣杯"
+      "": "精良的铁圣杯"
     },
     "Cursed Iron Chalice": {
       "": "诅咒的铁圣杯"
@@ -1866,7 +1866,7 @@
       "": "锈蚀的钢斧"
     },
     "Superior Steel Axe": {
-      "": "优质的钢斧"
+      "": "精良的钢斧"
     },
     "Cursed Steel Axe": {
       "": "诅咒的钢斧"
@@ -1878,7 +1878,7 @@
       "": "锈蚀的钢镐"
     },
     "Superior Steel Pickaxe": {
-      "": "优质的钢镐"
+      "": "精良的钢镐"
     },
     "Cursed Steel Pickaxe": {
       "": "诅咒的钢镐"
@@ -1890,7 +1890,7 @@
       "": "锈蚀的钢匕首"
     },
     "Superior Steel Dagger": {
-      "": "优质的钢匕首"
+      "": "精良的钢匕首"
     },
     "Cursed Steel Dagger": {
       "": "诅咒的钢匕首"
@@ -1902,7 +1902,7 @@
       "": "锈蚀的钢剑"
     },
     "Superior Steel Sword": {
-      "": "优质的钢剑"
+      "": "精良的钢剑"
     },
     "Cursed Steel Sword": {
       "": "诅咒的钢剑"
@@ -1914,7 +1914,7 @@
       "": "锈蚀的钢长杖"
     },
     "Superior Steel Staff": {
-      "": "优质的钢长杖"
+      "": "精良的钢长杖"
     },
     "Cursed Steel Staff": {
       "": "诅咒的钢长杖"
@@ -1926,7 +1926,7 @@
       "": "锈蚀的钢魔杖"
     },
     "Superior Steel Wand": {
-      "": "优质的钢魔杖"
+      "": "精良的钢魔杖"
     },
     "Cursed Steel Wand": {
       "": "诅咒的钢魔杖"
@@ -1938,7 +1938,7 @@
       "": "锈蚀的钢圣杯"
     },
     "Superior Steel Chalice": {
-      "": "优质的钢圣杯"
+      "": "精良的钢圣杯"
     },
     "Cursed Steel Chalice": {
       "": "诅咒的钢圣杯"
@@ -1950,7 +1950,7 @@
       "": "弯曲的金斧"
     },
     "Superior Gold Axe": {
-      "": "优质的金斧"
+      "": "精良的金斧"
     },
     "Cursed Gold Axe": {
       "": "诅咒的金斧"
@@ -1962,7 +1962,7 @@
       "": "弯曲的金镐"
     },
     "Superior Gold Pickaxe": {
-      "": "优质的金镐"
+      "": "精良的金镐"
     },
     "Cursed Gold Pickaxe": {
       "": "诅咒的金镐"
@@ -1974,7 +1974,7 @@
       "": "弯曲的金匕首"
     },
     "Superior Gold Dagger": {
-      "": "优质的金匕首"
+      "": "精良的金匕首"
     },
     "Cursed Gold Dagger": {
       "": "诅咒的金匕首"
@@ -1986,7 +1986,7 @@
       "": "弯曲的金剑"
     },
     "Superior Gold Sword": {
-      "": "优质的金剑"
+      "": "精良的金剑"
     },
     "Cursed Gold Sword": {
       "": "诅咒的金剑"
@@ -1998,7 +1998,7 @@
       "": "弯曲的金长杖"
     },
     "Superior Gold Staff": {
-      "": "优质的金长杖"
+      "": "精良的金长杖"
     },
     "Cursed Gold Staff": {
       "": "诅咒的金长杖"
@@ -2010,7 +2010,7 @@
       "": "弯曲的金魔杖"
     },
     "Superior Gold Wand": {
-      "": "优质的金魔杖"
+      "": "精良的金魔杖"
     },
     "Cursed Gold Wand": {
       "": "诅咒的金魔杖"
@@ -2022,7 +2022,7 @@
       "": "弯曲的金圣杯"
     },
     "Superior Gold Chalice": {
-      "": "优质的金圣杯"
+      "": "精良的金圣杯"
     },
     "Cursed Gold Chalice": {
       "": "诅咒的金圣杯"
@@ -2034,7 +2034,7 @@
       "": "弯曲的血斧"
     },
     "Superior Blood Axe": {
-      "": "优质的血斧"
+      "": "精良的血斧"
     },
     "Cursed Blood Axe": {
       "": "诅咒的血斧"
@@ -2046,7 +2046,7 @@
       "": "弯曲的血镐"
     },
     "Superior Blood Pickaxe": {
-      "": "优质的血镐"
+      "": "精良的血镐"
     },
     "Cursed Blood Pickaxe": {
       "": "诅咒的血镐"
@@ -2058,7 +2058,7 @@
       "": "弯曲的血匕首"
     },
     "Superior Blood Dagger": {
-      "": "优质的血匕首"
+      "": "精良的血匕首"
     },
     "Cursed Blood Dagger": {
       "": "诅咒的血匕首"
@@ -2070,7 +2070,7 @@
       "": "弯曲的血剑"
     },
     "Superior Blood Sword": {
-      "": "优质的血剑"
+      "": "精良的血剑"
     },
     "Cursed Blood Sword": {
       "": "诅咒的血剑"
@@ -2082,7 +2082,7 @@
       "": "弯曲的血长杖"
     },
     "Superior Blood Staff": {
-      "": "优质的血长杖"
+      "": "精良的血长杖"
     },
     "Cursed Blood Staff": {
       "": "诅咒的血长杖"
@@ -2094,7 +2094,7 @@
       "": "弯曲的血魔杖"
     },
     "Superior Blood Wand": {
-      "": "优质的血魔杖"
+      "": "精良的血魔杖"
     },
     "Cursed Blood Wand": {
       "": "诅咒的血魔杖"
@@ -2106,7 +2106,7 @@
       "": "弯曲的血圣杯"
     },
     "Superior Blood Chalice": {
-      "": "优质的血圣杯"
+      "": "精良的血圣杯"
     },
     "Cursed Blood Chalice": {
       "": "诅咒的血圣杯"
@@ -2118,7 +2118,7 @@
       "": "锈蚀的铁胸甲"
     },
     "Superior Iron Cuirass": {
-      "": "优质的铁胸甲"
+      "": "精良的铁胸甲"
     },
     "Cursed Iron Cuirass": {
       "": "诅咒的铁胸甲"
@@ -2130,7 +2130,7 @@
       "": "锈蚀的铁盾"
     },
     "Superior Iron Shield": {
-      "": "优质的铁盾"
+      "": "精良的铁盾"
     },
     "Cursed Iron Shield": {
       "": "诅咒的铁盾"
@@ -2142,7 +2142,7 @@
       "": "粗制的皮革软甲"
     },
     "Superior Leather Gambeson": {
-      "": "优质的皮革软甲"
+      "": "精良的皮革软甲"
     },
     "Cursed Leather Gambeson": {
       "": "诅咒的皮革软甲"
@@ -2154,7 +2154,7 @@
       "": "粗制的皮革夹克"
     },
     "Superior Leather Jacket": {
-      "": "优质的皮革夹克"
+      "": "精良的皮革夹克"
     },
     "Cursed Leather Jacket": {
       "": "诅咒的皮革夹克"
@@ -2166,7 +2166,7 @@
       "": "粗制的皮革披风"
     },
     "Superior Leather Manteau": {
-      "": "优质的皮革披风"
+      "": "精良的皮革披风"
     },
     "Cursed Leather Manteau": {
       "": "诅咒的皮革披风"
@@ -2178,7 +2178,7 @@
       "": "粗制的皮革长袍"
     },
     "Superior Leather Robe": {
-      "": "优质的皮革长袍"
+      "": "精良的皮革长袍"
     },
     "Cursed Leather Robe": {
       "": "诅咒的皮革长袍"
@@ -2190,7 +2190,7 @@
       "": "粗制的皮革帽"
     },
     "Superior Leather Hat": {
-      "": "优质的皮革帽"
+      "": "精良的皮革帽"
     },
     "Cursed Leather Hat": {
       "": "诅咒的皮革帽"
@@ -2202,7 +2202,7 @@
       "": "锈蚀的钢胸甲"
     },
     "Superior Steel Cuirass": {
-      "": "优质的钢胸甲"
+      "": "精良的钢胸甲"
     },
     "Cursed Steel Cuirass": {
       "": "诅咒的钢胸甲"
@@ -2214,7 +2214,7 @@
       "": "锈蚀的钢盾"
     },
     "Superior Steel Shield": {
-      "": "优质的钢盾"
+      "": "精良的钢盾"
     },
     "Cursed Steel Shield": {
       "": "诅咒的钢盾"
@@ -2226,7 +2226,7 @@
       "": "粗制的粗棉软甲"
     },
     "Superior Fustian Gambeson": {
-      "": "优质的粗棉软甲"
+      "": "精良的粗棉软甲"
     },
     "Cursed Fustian Gambeson": {
       "": "诅咒的粗棉软甲"
@@ -2238,7 +2238,7 @@
       "": "粗制的粗棉夹克"
     },
     "Superior Fustian Jacket": {
-      "": "优质的粗棉夹克"
+      "": "精良的粗棉夹克"
     },
     "Cursed Fustian Jacket": {
       "": "诅咒的粗棉夹克"
@@ -2250,7 +2250,7 @@
       "": "粗制的粗棉披风"
     },
     "Superior Fustian Manteau": {
-      "": "优质的粗棉披风"
+      "": "精良的粗棉披风"
     },
     "Cursed Fustian Manteau": {
       "": "诅咒的粗棉披风"
@@ -2262,7 +2262,7 @@
       "": "粗制的粗棉长袍"
     },
     "Superior Fustian Robe": {
-      "": "优质的粗棉长袍"
+      "": "精良的粗棉长袍"
     },
     "Cursed Fustian Robe": {
       "": "诅咒的粗棉长袍"
@@ -2274,7 +2274,7 @@
       "": "粗制的粗棉帽"
     },
     "Superior Fustian Hat": {
-      "": "优质的粗棉帽"
+      "": "精良的粗棉帽"
     },
     "Cursed Fustian Hat": {
       "": "诅咒的粗棉帽"
@@ -2286,7 +2286,7 @@
       "": "黯淡的黄金胸甲"
     },
     "Superior Golden Cuirass": {
-      "": "优质的黄金胸甲"
+      "": "精良的黄金胸甲"
     },
     "Cursed Golden Cuirass": {
       "": "诅咒的黄金胸甲"
@@ -2298,7 +2298,7 @@
       "": "黯淡的黄金盾"
     },
     "Superior Golden Shield": {
-      "": "优质的黄金盾"
+      "": "精良的黄金盾"
     },
     "Cursed Golden Shield": {
       "": "诅咒的黄金盾"
@@ -2310,7 +2310,7 @@
       "": "黯淡的黄金软甲"
     },
     "Superior Golden Gambeson": {
-      "": "优质的黄金软甲"
+      "": "精良的黄金软甲"
     },
     "Cursed Golden Gambeson": {
       "": "诅咒的黄金软甲"
@@ -2322,7 +2322,7 @@
       "": "黯淡的黄金夹克"
     },
     "Superior Golden Jacket": {
-      "": "优质的黄金夹克"
+      "": "精良的黄金夹克"
     },
     "Cursed Golden Jacket": {
       "": "诅咒的黄金夹克"
@@ -2334,7 +2334,7 @@
       "": "粗制的黄金披风"
     },
     "Superior Golden Manteau": {
-      "": "优质的黄金披风"
+      "": "精良的黄金披风"
     },
     "Cursed Golden Manteau": {
       "": "诅咒的黄金披风"
@@ -2346,7 +2346,7 @@
       "": "粗制的黄金长袍"
     },
     "Superior Golden Robe": {
-      "": "优质的黄金长袍"
+      "": "精良的黄金长袍"
     },
     "Cursed Golden Robe": {
       "": "诅咒的黄金长袍"
@@ -2358,7 +2358,7 @@
       "": "粗制的黄金帽"
     },
     "Superior Golden Hat": {
-      "": "优质的黄金帽"
+      "": "精良的黄金帽"
     },
     "Cursed Golden Hat": {
       "": "诅咒的黄金帽"
@@ -2370,7 +2370,7 @@
       "": "黯淡的灵魂胸甲"
     },
     "Superior Spirit Cuirass": {
-      "": "优质的灵魂胸甲"
+      "": "精良的灵魂胸甲"
     },
     "Cursed Spirit Cuirass": {
       "": "诅咒的灵魂胸甲"
@@ -2382,7 +2382,7 @@
       "": "黯淡的灵魂盾"
     },
     "Superior Spirit Shield": {
-      "": "优质的灵魂盾"
+      "": "精良的灵魂盾"
     },
     "Cursed Spirit Shield": {
       "": "诅咒的灵魂盾"
@@ -2394,7 +2394,7 @@
       "": "黯淡的灵魂软甲"
     },
     "Superior Spirit Gambeson": {
-      "": "优质的灵魂软甲"
+      "": "精良的灵魂软甲"
     },
     "Cursed Spirit Gambeson": {
       "": "诅咒的灵魂软甲"
@@ -2406,7 +2406,7 @@
       "": "黯淡的灵魂夹克"
     },
     "Superior Spirit Jacket": {
-      "": "优质的灵魂夹克"
+      "": "精良的灵魂夹克"
     },
     "Cursed Spirit Jacket": {
       "": "诅咒的灵魂夹克"
@@ -2418,7 +2418,7 @@
       "": "粗制的灵魂披风"
     },
     "Superior Spirit Manteau": {
-      "": "优质的灵魂披风"
+      "": "精良的灵魂披风"
     },
     "Cursed Spirit Manteau": {
       "": "诅咒的灵魂披风"
@@ -2430,7 +2430,7 @@
       "": "粗制的灵魂长袍"
     },
     "Superior Spirit Robe": {
-      "": "优质的灵魂长袍"
+      "": "精良的灵魂长袍"
     },
     "Cursed Spirit Robe": {
       "": "诅咒的灵魂长袍"
@@ -2442,7 +2442,7 @@
       "": "粗制的灵魂帽"
     },
     "Superior Spirit Hat": {
-      "": "优质的灵魂帽"
+      "": "精良的灵魂帽"
     },
     "Cursed Spirit Hat": {
       "": "诅咒的灵魂帽"
@@ -2454,7 +2454,7 @@
       "": "破损的芦荟护符"
     },
     "Superior Alover Talisman": {
-      "": "优质的芦荟护符"
+      "": "精良的芦荟护符"
     },
     "Cursed Alover Talisman": {
       "": "诅咒的芦荟护符"
@@ -2466,7 +2466,7 @@
       "": "破损的火把"
     },
     "Superior Torch": {
-      "": "优质的火把"
+      "": "精良的火把"
     },
     "Cursed Torch": {
       "": "诅咒的火把"
@@ -2478,7 +2478,7 @@
       "": "破损的心形胸针"
     },
     "Superior Heart Pin": {
-      "": "优质的心形胸针"
+      "": "精良的心形胸针"
     },
     "Cursed Heart Pin": {
       "": "诅咒的心形胸针"
@@ -2490,7 +2490,7 @@
       "": "破损的吊坠"
     },
     "Superior Medallion": {
-      "": "优质的吊坠"
+      "": "精良的吊坠"
     },
     "Cursed Medallion": {
       "": "诅咒的吊坠"
@@ -2502,7 +2502,7 @@
       "": "破损的头盔"
     },
     "Superior Helmet": {
-      "": "优质的头盔"
+      "": "精良的头盔"
     },
     "Cursed Helmet": {
       "": "诅咒的头盔"
@@ -2514,7 +2514,7 @@
       "": "破损的战靴"
     },
     "Superior Sabatons": {
-      "": "优质的战靴"
+      "": "精良的战靴"
     },
     "Cursed Sabatons": {
       "": "诅咒的战靴"
@@ -2526,7 +2526,7 @@
       "": "破损的宝珠"
     },
     "Superior Orb": {
-      "": "优质的宝珠"
+      "": "精良的宝珠"
     },
     "Cursed Orb": {
       "": "诅咒的宝珠"
@@ -2538,7 +2538,7 @@
       "": "破损的共鸣器"
     },
     "Superior Resonator": {
-      "": "优质的共鸣器"
+      "": "精良的共鸣器"
     },
     "Cursed Resonator": {
       "": "诅咒的共鸣器"
@@ -2550,7 +2550,7 @@
       "": "破损的熔岩靴"
     },
     "Superior Lava Boots": {
-      "": "优质的熔岩靴"
+      "": "精良的熔岩靴"
     },
     "Cursed Lava Boots": {
       "": "诅咒的熔岩靴"
@@ -2562,7 +2562,7 @@
       "": "破损的冰川吊坠"
     },
     "Superior Glacier Medallion": {
-      "": "优质的冰川吊坠"
+      "": "精良的冰川吊坠"
     },
     "Cursed Glacier Medallion": {
       "": "诅咒的冰川吊坠"
@@ -2574,7 +2574,7 @@
       "": "破损的雷霆头盔"
     },
     "Superior Thunder Helmet": {
-      "": "优质的雷霆头盔"
+      "": "精良的雷霆头盔"
     },
     "Cursed Thunder Helmet": {
       "": "诅咒的雷霆头盔"
@@ -2586,7 +2586,7 @@
       "": "破损的翡翠宝珠"
     },
     "Superior Emerald Orb": {
-      "": "优质的翡翠宝珠"
+      "": "精良的翡翠宝珠"
     },
     "Cursed Emerald Orb": {
       "": "诅咒的翡翠宝珠"
@@ -2598,7 +2598,7 @@
       "": "破损的护身符"
     },
     "Superior Amulet": {
-      "": "优质的护身符"
+      "": "精良的护身符"
     },
     "Cursed Amulet": {
       "": "诅咒的护身符"
@@ -2607,196 +2607,196 @@
       "": "附魔的护身符"
     },
     "Weak Regeneration": {
-      "": "虚弱的再生"
+      "": "弱效再生"
     },
     "Superior Regeneration": {
-      "": "优质的再生"
+      "": "强效再生"
     },
     "Cursed Regeneration": {
-      "": "诅咒的再生"
+      "": "诅咒再生"
     },
     "Enchanted Regeneration": {
-      "": "附魔的再生"
+      "": "增幅再生"
     },
     "Weak Firebolt": {
-      "": "虚弱的火焰箭"
+      "": "弱效火焰箭"
     },
     "Superior Firebolt": {
-      "": "优质的火焰箭"
+      "": "强效火焰箭"
     },
     "Cursed Firebolt": {
-      "": "诅咒的火焰箭"
+      "": "诅咒火焰箭"
     },
     "Enchanted Firebolt": {
-      "": "附魔的火焰箭"
+      "": "增幅火焰箭"
     },
     "Weak Blink": {
-      "": "虚弱的闪现"
+      "": "弱效闪现"
     },
     "Superior Blink": {
-      "": "优质的闪现"
+      "": "强效闪现"
     },
     "Cursed Blink": {
-      "": "诅咒的闪现"
+      "": "诅咒闪现"
     },
     "Enchanted Blink": {
-      "": "附魔的闪现"
+      "": "增幅闪现"
     },
     "Weak Haste": {
-      "": "虚弱的加速"
+      "": "弱效加速"
     },
     "Superior Haste": {
-      "": "优质的加速"
+      "": "强效加速"
     },
     "Cursed Haste": {
-      "": "诅咒的加速"
+      "": "诅咒加速"
     },
     "Enchanted Haste": {
-      "": "附魔的加速"
+      "": "增幅加速"
     },
     "Weak Ice Ring": {
-      "": "虚弱的冰环"
+      "": "弱效冰环"
     },
     "Superior Ice Ring": {
-      "": "优质的冰环"
+      "": "强效冰环"
     },
     "Cursed Ice Ring": {
-      "": "诅咒的冰环"
+      "": "诅咒冰环"
     },
     "Enchanted Ice Ring": {
-      "": "附魔的冰环"
+      "": "增幅冰环"
     },
     "Weak Thunderbolt": {
-      "": "虚弱的雷击"
+      "": "弱效雷击"
     },
     "Superior Thunderbolt": {
-      "": "优质的雷击"
+      "": "强效雷击"
     },
     "Cursed Thunderbolt": {
-      "": "诅咒的雷击"
+      "": "诅咒雷击"
     },
     "Enchanted Thunderbolt": {
-      "": "附魔的雷击"
+      "": "增幅雷击"
     },
     "Weak Stoneskin": {
-      "": "虚弱的石肤"
+      "": "弱效石肤"
     },
     "Superior Stoneskin": {
-      "": "优质的石肤"
+      "": "强效石肤"
     },
     "Cursed Stoneskin": {
-      "": "诅咒的石肤"
+      "": "诅咒石肤"
     },
     "Enchanted Stoneskin": {
-      "": "附魔的石肤"
+      "": "增幅石肤"
     },
     "Weak Rage": {
-      "": "虚弱的狂暴"
+      "": "弱效狂暴"
     },
     "Superior Rage": {
-      "": "优质的狂暴"
+      "": "强效狂暴"
     },
     "Cursed Rage": {
-      "": "诅咒的狂暴"
+      "": "诅咒狂暴"
     },
     "Enchanted Rage": {
-      "": "附魔的狂暴"
+      "": "增幅狂暴"
     },
     "Summon Weak Yig Warrior": {
       "": "召唤虚弱的伊格战士"
     },
     "Summon Superior Yig Warrior": {
-      "": "召唤优质的伊格战士"
+      "": "召唤精英伊格战士"
     },
     "Summon Cursed Yig Warrior": {
-      "": "召唤诅咒的伊格战士"
+      "": "召唤受诅咒的伊格战士"
     },
     "Summon Enchanted Yig Warrior": {
-      "": "召唤附魔的伊格战士"
+      "": "召唤魔化伊格战士"
     },
     "Summon Weak Yig Mage": {
       "": "召唤虚弱的伊格法师"
     },
     "Summon Superior Yig Mage": {
-      "": "召唤优质的伊格法师"
+      "": "召唤精英伊格法师"
     },
     "Summon Cursed Yig Mage": {
-      "": "召唤诅咒的伊格法师"
+      "": "召唤受诅咒的伊格法师"
     },
     "Summon Enchanted Yig Mage": {
-      "": "召唤附魔的伊格法师"
+      "": "召唤魔化伊格法师"
     },
     "Summon Weak Yig Spirit": {
       "": "召唤虚弱的伊格之灵"
     },
     "Summon Superior Yig Spirit": {
-      "": "召唤优质的伊格之灵"
+      "": "召唤精英伊格之灵"
     },
     "Summon Cursed Yig Spirit": {
-      "": "召唤诅咒的伊格之灵"
+      "": "召唤受诅咒的伊格之灵"
     },
     "Summon Enchanted Yig Spirit": {
-      "": "召唤附魔的伊格之灵"
+      "": "召唤魔化伊格之灵"
     },
     "Weak Barrier": {
-      "": "虚弱的屏障"
+      "": "弱效屏障"
     },
     "Superior Barrier": {
-      "": "优质的屏障"
+      "": "强效屏障"
     },
     "Cursed Barrier": {
-      "": "诅咒的屏障"
+      "": "诅咒屏障"
     },
     "Enchanted Barrier": {
-      "": "附魔的屏障"
+      "": "增幅屏障"
     },
     "Weak Charm": {
-      "": "虚弱的魅惑"
+      "": "弱效魅惑"
     },
     "Superior Charm": {
-      "": "优质的魅惑"
+      "": "强效魅惑"
     },
     "Cursed Charm": {
-      "": "诅咒的魅惑"
+      "": "诅咒魅惑"
     },
     "Enchanted Charm": {
-      "": "附魔的魅惑"
+      "": "增幅魅惑"
     },
     "Weak Void Orb": {
-      "": "虚弱的虚空宝珠"
+      "": "弱效虚空宝珠"
     },
     "Superior Void Orb": {
-      "": "优质的虚空宝珠"
+      "": "强效虚空宝珠"
     },
     "Cursed Void Orb": {
-      "": "诅咒的虚空宝珠"
+      "": "诅咒虚空宝珠"
     },
     "Enchanted Void Orb": {
-      "": "附魔的虚空宝珠"
+      "": "增幅虚空宝珠"
     },
     "Weak Reaper": {
-      "": "虚弱的收割者"
+      "": "弱效收割者"
     },
     "Superior Reaper": {
-      "": "优质的收割者"
+      "": "强效收割者"
     },
     "Cursed Reaper": {
-      "": "诅咒的收割者"
+      "": "诅咒收割者"
     },
     "Enchanted Reaper": {
-      "": "附魔的收割者"
+      "": "增幅收割者"
     },
     "Weak Drain": {
-      "": "虚弱的汲取"
+      "": "弱效汲取"
     },
     "Superior Drain": {
-      "": "优质的汲取"
+      "": "强效汲取"
     },
     "Cursed Drain": {
-      "": "诅咒的汲取"
+      "": "诅咒汲取"
     },
     "Enchanted Drain": {
-      "": "附魔的汲取"
+      "": "增幅汲取"
     },
     "Skeleton": {
       "": "骷髅"
@@ -2811,22 +2811,22 @@
       "": "虚弱的骷髅"
     },
     "Superior Skeleton": {
-      "": "优质的骷髅"
+      "": "精英骷髅"
     },
     "superior skeleton": {
-      "": "优质的骷髅"
+      "": "精英骷髅"
     },
     "Cursed Skeleton": {
-      "": "诅咒的骷髅"
+      "": "受诅咒的骷髅"
     },
     "cursed skeleton": {
-      "": "诅咒的骷髅"
+      "": "受诅咒的骷髅"
     },
     "Enchanted Skeleton": {
-      "": "附魔的骷髅"
+      "": "魔化骷髅"
     },
     "enchanted skeleton": {
-      "": "附魔的骷髅"
+      "": "魔化骷髅"
     },
     "skeleton mage": {
       "": "骷髅法师"
@@ -2838,22 +2838,22 @@
       "": "虚弱的骷髅法师"
     },
     "Superior Skeleton Mage": {
-      "": "优质的骷髅法师"
+      "": "精英骷髅法师"
     },
     "superior skeleton mage": {
-      "": "优质的骷髅法师"
+      "": "精英骷髅法师"
     },
     "Cursed Skeleton Mage": {
-      "": "诅咒的骷髅法师"
+      "": "受诅咒的骷髅法师"
     },
     "cursed skeleton mage": {
-      "": "诅咒的骷髅法师"
+      "": "受诅咒的骷髅法师"
     },
     "Enchanted Skeleton Mage": {
-      "": "附魔的骷髅法师"
+      "": "魔化骷髅法师"
     },
     "enchanted skeleton mage": {
-      "": "附魔的骷髅法师"
+      "": "魔化骷髅法师"
     },
     "Kobold": {
       "": "狗头人"
@@ -2868,22 +2868,22 @@
       "": "虚弱的狗头人"
     },
     "Superior Kobold": {
-      "": "优质的狗头人"
+      "": "精英狗头人"
     },
     "superior kobold": {
-      "": "优质的狗头人"
+      "": "精英狗头人"
     },
     "Cursed Kobold": {
-      "": "诅咒的狗头人"
+      "": "受诅咒的狗头人"
     },
     "cursed kobold": {
-      "": "诅咒的狗头人"
+      "": "受诅咒的狗头人"
     },
     "Enchanted Kobold": {
-      "": "附魔的狗头人"
+      "": "魔化狗头人"
     },
     "enchanted kobold": {
-      "": "附魔的狗头人"
+      "": "魔化狗头人"
     },
     "sandworm": {
       "": "沙虫"
@@ -2895,22 +2895,22 @@
       "": "虚弱的沙虫"
     },
     "Superior Sandworm": {
-      "": "优质的沙虫"
+      "": "精英沙虫"
     },
     "superior sandworm": {
-      "": "优质的沙虫"
+      "": "精英沙虫"
     },
     "Cursed Sandworm": {
-      "": "诅咒的沙虫"
+      "": "受诅咒的沙虫"
     },
     "cursed sandworm": {
-      "": "诅咒的沙虫"
+      "": "受诅咒的沙虫"
     },
     "Enchanted Sandworm": {
-      "": "附魔的沙虫"
+      "": "魔化沙虫"
     },
     "enchanted sandworm": {
-      "": "附魔的沙虫"
+      "": "魔化沙虫"
     },
     "goblin mage": {
       "": "哥布林法师"
@@ -2922,22 +2922,22 @@
       "": "虚弱的哥布林法师"
     },
     "Superior Goblin Mage": {
-      "": "优质的哥布林法师"
+      "": "精英哥布林法师"
     },
     "superior goblin mage": {
-      "": "优质的哥布林法师"
+      "": "精英哥布林法师"
     },
     "Cursed Goblin Mage": {
-      "": "诅咒的哥布林法师"
+      "": "受诅咒的哥布林法师"
     },
     "cursed goblin mage": {
-      "": "诅咒的哥布林法师"
+      "": "受诅咒的哥布林法师"
     },
     "Enchanted Goblin Mage": {
-      "": "附魔的哥布林法师"
+      "": "魔化哥布林法师"
     },
     "enchanted goblin mage": {
-      "": "附魔的哥布林法师"
+      "": "魔化哥布林法师"
     },
     "goblin king": {
       "": "哥布林王"
@@ -2949,22 +2949,22 @@
       "": "虚弱的哥布林王"
     },
     "Superior Goblin King": {
-      "": "优质的哥布林王"
+      "": "精英哥布林王"
     },
     "superior goblin king": {
-      "": "优质的哥布林王"
+      "": "精英哥布林王"
     },
     "Cursed Goblin King": {
-      "": "诅咒的哥布林王"
+      "": "受诅咒的哥布林王"
     },
     "cursed goblin king": {
-      "": "诅咒的哥布林王"
+      "": "受诅咒的哥布林王"
     },
     "Enchanted Goblin King": {
-      "": "附魔的哥布林王"
+      "": "魔化哥布林王"
     },
     "enchanted goblin king": {
-      "": "附魔的哥布林王"
+      "": "魔化哥布林王"
     },
     "Golem": {
       "": "魔像"
@@ -2979,22 +2979,22 @@
       "": "虚弱的魔像"
     },
     "Superior Golem": {
-      "": "优质的魔像"
+      "": "精英魔像"
     },
     "superior golem": {
-      "": "优质的魔像"
+      "": "精英魔像"
     },
     "Cursed Golem": {
-      "": "诅咒的魔像"
+      "": "受诅咒的魔像"
     },
     "cursed golem": {
-      "": "诅咒的魔像"
+      "": "受诅咒的魔像"
     },
     "Enchanted Golem": {
-      "": "附魔的魔像"
+      "": "魔化魔像"
     },
     "enchanted golem": {
-      "": "附魔的魔像"
+      "": "魔化魔像"
     },
     "goblin grunt": {
       "": "哥布林喽啰"
@@ -3006,22 +3006,22 @@
       "": "虚弱的哥布林喽啰"
     },
     "Superior Goblin Grunt": {
-      "": "优质的哥布林喽啰"
+      "": "精英哥布林喽啰"
     },
     "superior goblin grunt": {
-      "": "优质的哥布林喽啰"
+      "": "精英哥布林喽啰"
     },
     "Cursed Goblin Grunt": {
-      "": "诅咒的哥布林喽啰"
+      "": "受诅咒的哥布林喽啰"
     },
     "cursed goblin grunt": {
-      "": "诅咒的哥布林喽啰"
+      "": "受诅咒的哥布林喽啰"
     },
     "Enchanted Goblin Grunt": {
-      "": "附魔的哥布林喽啰"
+      "": "魔化哥布林喽啰"
     },
     "enchanted goblin grunt": {
-      "": "附魔的哥布林喽啰"
+      "": "魔化哥布林喽啰"
     },
     "Slime": {
       "": "史莱姆"
@@ -3036,22 +3036,22 @@
       "": "虚弱的史莱姆"
     },
     "Superior Slime": {
-      "": "优质的史莱姆"
+      "": "精英史莱姆"
     },
     "superior slime": {
-      "": "优质的史莱姆"
+      "": "精英史莱姆"
     },
     "Cursed Slime": {
-      "": "诅咒的史莱姆"
+      "": "受诅咒的史莱姆"
     },
     "cursed slime": {
-      "": "诅咒的史莱姆"
+      "": "受诅咒的史莱姆"
     },
     "Enchanted Slime": {
-      "": "附魔的史莱姆"
+      "": "魔化史莱姆"
     },
     "enchanted slime": {
-      "": "附魔的史莱姆"
+      "": "魔化史莱姆"
     },
     "horned slime": {
       "": "独角史莱姆"
@@ -3063,22 +3063,22 @@
       "": "虚弱的独角史莱姆"
     },
     "Superior Horned Slime": {
-      "": "优质的独角史莱姆"
+      "": "精英独角史莱姆"
     },
     "superior horned slime": {
-      "": "优质的独角史莱姆"
+      "": "精英独角史莱姆"
     },
     "Cursed Horned Slime": {
-      "": "诅咒的独角史莱姆"
+      "": "受诅咒的独角史莱姆"
     },
     "cursed horned slime": {
-      "": "诅咒的独角史莱姆"
+      "": "受诅咒的独角史莱姆"
     },
     "Enchanted Horned Slime": {
-      "": "附魔的独角史莱姆"
+      "": "魔化独角史莱姆"
     },
     "enchanted horned slime": {
-      "": "附魔的独角史莱姆"
+      "": "魔化独角史莱姆"
     },
     "Demon": {
       "": "恶魔"
@@ -3093,22 +3093,22 @@
       "": "虚弱的恶魔"
     },
     "Superior Demon": {
-      "": "优质的恶魔"
+      "": "精英恶魔"
     },
     "superior demon": {
-      "": "优质的恶魔"
+      "": "精英恶魔"
     },
     "Cursed Demon": {
-      "": "诅咒的恶魔"
+      "": "受诅咒的恶魔"
     },
     "cursed demon": {
-      "": "诅咒的恶魔"
+      "": "受诅咒的恶魔"
     },
     "Enchanted Demon": {
-      "": "附魔的恶魔"
+      "": "魔化恶魔"
     },
     "enchanted demon": {
-      "": "附魔的恶魔"
+      "": "魔化恶魔"
     },
     "Lumberjack": {
       "": "樵夫"
@@ -3123,22 +3123,22 @@
       "": "虚弱的樵夫"
     },
     "Superior Lumberjack": {
-      "": "优质的樵夫"
+      "": "精英樵夫"
     },
     "superior lumberjack": {
-      "": "优质的樵夫"
+      "": "精英樵夫"
     },
     "Cursed Lumberjack": {
-      "": "诅咒的樵夫"
+      "": "受诅咒的樵夫"
     },
     "cursed lumberjack": {
-      "": "诅咒的樵夫"
+      "": "受诅咒的樵夫"
     },
     "Enchanted Lumberjack": {
-      "": "附魔的樵夫"
+      "": "魔化樵夫"
     },
     "enchanted lumberjack": {
-      "": "附魔的樵夫"
+      "": "魔化樵夫"
     },
     "Miner": {
       "": "矿工"
@@ -3153,22 +3153,22 @@
       "": "虚弱的矿工"
     },
     "Superior Miner": {
-      "": "优质的矿工"
+      "": "精英矿工"
     },
     "superior miner": {
-      "": "优质的矿工"
+      "": "精英矿工"
     },
     "Cursed Miner": {
-      "": "诅咒的矿工"
+      "": "受诅咒的矿工"
     },
     "cursed miner": {
-      "": "诅咒的矿工"
+      "": "受诅咒的矿工"
     },
     "Enchanted Miner": {
-      "": "附魔的矿工"
+      "": "魔化矿工"
     },
     "enchanted miner": {
-      "": "附魔的矿工"
+      "": "魔化矿工"
     },
     "Bandit": {
       "": "强盗"
@@ -3183,22 +3183,22 @@
       "": "虚弱的强盗"
     },
     "Superior Bandit": {
-      "": "优质的强盗"
+      "": "精英强盗"
     },
     "superior bandit": {
-      "": "优质的强盗"
+      "": "精英强盗"
     },
     "Cursed Bandit": {
-      "": "诅咒的强盗"
+      "": "受诅咒的强盗"
     },
     "cursed bandit": {
-      "": "诅咒的强盗"
+      "": "受诅咒的强盗"
     },
     "Enchanted Bandit": {
-      "": "附魔的强盗"
+      "": "魔化强盗"
     },
     "enchanted bandit": {
-      "": "附魔的强盗"
+      "": "魔化强盗"
     },
     "Shade": {
       "": "暗影"
@@ -3213,22 +3213,22 @@
       "": "虚弱的暗影"
     },
     "Superior Shade": {
-      "": "优质的暗影"
+      "": "精英暗影"
     },
     "superior shade": {
-      "": "优质的暗影"
+      "": "精英暗影"
     },
     "Cursed Shade": {
-      "": "诅咒的暗影"
+      "": "受诅咒的暗影"
     },
     "cursed shade": {
-      "": "诅咒的暗影"
+      "": "受诅咒的暗影"
     },
     "Enchanted Shade": {
-      "": "附魔的暗影"
+      "": "魔化暗影"
     },
     "enchanted shade": {
-      "": "附魔的暗影"
+      "": "魔化暗影"
     },
     "Parishioner": {
       "": "教徒"
@@ -3243,22 +3243,22 @@
       "": "虚弱的教徒"
     },
     "Superior Parishioner": {
-      "": "优质的教徒"
+      "": "精英教徒"
     },
     "superior parishioner": {
-      "": "优质的教徒"
+      "": "精英教徒"
     },
     "Cursed Parishioner": {
-      "": "诅咒的教徒"
+      "": "受诅咒的教徒"
     },
     "cursed parishioner": {
-      "": "诅咒的教徒"
+      "": "受诅咒的教徒"
     },
     "Enchanted Parishioner": {
-      "": "附魔的教徒"
+      "": "魔化教徒"
     },
     "enchanted parishioner": {
-      "": "附魔的教徒"
+      "": "魔化教徒"
     },
     "Chanter": {
       "": "吟唱者"
@@ -3273,22 +3273,22 @@
       "": "虚弱的吟唱者"
     },
     "Superior Chanter": {
-      "": "优质的吟唱者"
+      "": "精英吟唱者"
     },
     "superior chanter": {
-      "": "优质的吟唱者"
+      "": "精英吟唱者"
     },
     "Cursed Chanter": {
-      "": "诅咒的吟唱者"
+      "": "受诅咒的吟唱者"
     },
     "cursed chanter": {
-      "": "诅咒的吟唱者"
+      "": "受诅咒的吟唱者"
     },
     "Enchanted Chanter": {
-      "": "附魔的吟唱者"
+      "": "魔化吟唱者"
     },
     "enchanted chanter": {
-      "": "附魔的吟唱者"
+      "": "魔化吟唱者"
     },
     "Ent": {
       "": "树人"
@@ -3303,22 +3303,22 @@
       "": "虚弱的树人"
     },
     "Superior Ent": {
-      "": "优质的树人"
+      "": "精英树人"
     },
     "superior ent": {
-      "": "优质的树人"
+      "": "精英树人"
     },
     "Cursed Ent": {
-      "": "诅咒的树人"
+      "": "受诅咒的树人"
     },
     "cursed ent": {
-      "": "诅咒的树人"
+      "": "受诅咒的树人"
     },
     "Enchanted Ent": {
-      "": "附魔的树人"
+      "": "魔化树人"
     },
     "enchanted ent": {
-      "": "附魔的树人"
+      "": "魔化树人"
     },
     "Zombie": {
       "": "僵尸"
@@ -3333,22 +3333,22 @@
       "": "虚弱的僵尸"
     },
     "Superior Zombie": {
-      "": "优质的僵尸"
+      "": "精英僵尸"
     },
     "superior zombie": {
-      "": "优质的僵尸"
+      "": "精英僵尸"
     },
     "Cursed Zombie": {
-      "": "诅咒的僵尸"
+      "": "受诅咒的僵尸"
     },
     "cursed zombie": {
-      "": "诅咒的僵尸"
+      "": "受诅咒的僵尸"
     },
     "Enchanted Zombie": {
-      "": "附魔的僵尸"
+      "": "魔化僵尸"
     },
     "enchanted zombie": {
-      "": "附魔的僵尸"
+      "": "魔化僵尸"
     },
     "Fuzhu": {
       "": "夫诸"
@@ -3363,22 +3363,22 @@
       "": "虚弱的夫诸"
     },
     "Superior Fuzhu": {
-      "": "优质的夫诸"
+      "": "精英夫诸"
     },
     "superior fuzhu": {
-      "": "优质的夫诸"
+      "": "精英夫诸"
     },
     "Cursed Fuzhu": {
-      "": "诅咒的夫诸"
+      "": "受诅咒的夫诸"
     },
     "cursed fuzhu": {
-      "": "诅咒的夫诸"
+      "": "受诅咒的夫诸"
     },
     "Enchanted Fuzhu": {
-      "": "附魔的夫诸"
+      "": "魔化夫诸"
     },
     "enchanted fuzhu": {
-      "": "附魔的夫诸"
+      "": "魔化夫诸"
     },
     "Hound": {
       "": "猎犬"
@@ -3393,22 +3393,22 @@
       "": "虚弱的猎犬"
     },
     "Superior Hound": {
-      "": "优质的猎犬"
+      "": "精英猎犬"
     },
     "superior hound": {
-      "": "优质的猎犬"
+      "": "精英猎犬"
     },
     "Cursed Hound": {
-      "": "诅咒的猎犬"
+      "": "受诅咒的猎犬"
     },
     "cursed hound": {
-      "": "诅咒的猎犬"
+      "": "受诅咒的猎犬"
     },
     "Enchanted Hound": {
-      "": "附魔的猎犬"
+      "": "魔化猎犬"
     },
     "enchanted hound": {
-      "": "附魔的猎犬"
+      "": "魔化猎犬"
     },
     "kobold duelist": {
       "": "狗头人决斗者"
@@ -3420,22 +3420,22 @@
       "": "虚弱的狗头人决斗者"
     },
     "Superior Kobold Duelist": {
-      "": "优质的狗头人决斗者"
+      "": "精英狗头人决斗者"
     },
     "superior kobold duelist": {
-      "": "优质的狗头人决斗者"
+      "": "精英狗头人决斗者"
     },
     "Cursed Kobold Duelist": {
-      "": "诅咒的狗头人决斗者"
+      "": "受诅咒的狗头人决斗者"
     },
     "cursed kobold duelist": {
-      "": "诅咒的狗头人决斗者"
+      "": "受诅咒的狗头人决斗者"
     },
     "Enchanted Kobold Duelist": {
-      "": "附魔的狗头人决斗者"
+      "": "魔化狗头人决斗者"
     },
     "enchanted kobold duelist": {
-      "": "附魔的狗头人决斗者"
+      "": "魔化狗头人决斗者"
     },
     "acolyte": {
       "": "侍僧"
@@ -3447,22 +3447,22 @@
       "": "虚弱的侍僧"
     },
     "Superior Acolyte": {
-      "": "优质的侍僧"
+      "": "精英侍僧"
     },
     "superior acolyte": {
-      "": "优质的侍僧"
+      "": "精英侍僧"
     },
     "Cursed Acolyte": {
-      "": "诅咒的侍僧"
+      "": "受诅咒的侍僧"
     },
     "cursed acolyte": {
-      "": "诅咒的侍僧"
+      "": "受诅咒的侍僧"
     },
     "Enchanted Acolyte": {
-      "": "附魔的侍僧"
+      "": "魔化侍僧"
     },
     "enchanted acolyte": {
-      "": "附魔的侍僧"
+      "": "魔化侍僧"
     },
     "skeleton archer": {
       "": "骷髅弓手"
@@ -3474,22 +3474,22 @@
       "": "虚弱的骷髅弓手"
     },
     "Superior Skeleton Archer": {
-      "": "优质的骷髅弓手"
+      "": "精英骷髅弓手"
     },
     "superior skeleton archer": {
-      "": "优质的骷髅弓手"
+      "": "精英骷髅弓手"
     },
     "Cursed Skeleton Archer": {
-      "": "诅咒的骷髅弓手"
+      "": "受诅咒的骷髅弓手"
     },
     "cursed skeleton archer": {
-      "": "诅咒的骷髅弓手"
+      "": "受诅咒的骷髅弓手"
     },
     "Enchanted Skeleton Archer": {
-      "": "附魔的骷髅弓手"
+      "": "魔化骷髅弓手"
     },
     "enchanted skeleton archer": {
-      "": "附魔的骷髅弓手"
+      "": "魔化骷髅弓手"
     },
     "Wraith": {
       "": "怨灵"
@@ -3504,22 +3504,22 @@
       "": "虚弱的怨灵"
     },
     "Superior Wraith": {
-      "": "优质的怨灵"
+      "": "精英怨灵"
     },
     "superior wraith": {
-      "": "优质的怨灵"
+      "": "精英怨灵"
     },
     "Cursed Wraith": {
-      "": "诅咒的怨灵"
+      "": "受诅咒的怨灵"
     },
     "cursed wraith": {
-      "": "诅咒的怨灵"
+      "": "受诅咒的怨灵"
     },
     "Enchanted Wraith": {
-      "": "附魔的怨灵"
+      "": "魔化怨灵"
     },
     "enchanted wraith": {
-      "": "附魔的怨灵"
+      "": "魔化怨灵"
     },
     "villager": {
       "": "村民"
@@ -3531,22 +3531,22 @@
       "": "虚弱的村民"
     },
     "Superior Villager": {
-      "": "优质的村民"
+      "": "精英村民"
     },
     "superior villager": {
-      "": "优质的村民"
+      "": "精英村民"
     },
     "Cursed Villager": {
-      "": "诅咒的村民"
+      "": "受诅咒的村民"
     },
     "cursed villager": {
-      "": "诅咒的村民"
+      "": "受诅咒的村民"
     },
     "Enchanted Villager": {
-      "": "附魔的村民"
+      "": "魔化村民"
     },
     "enchanted villager": {
-      "": "附魔的村民"
+      "": "魔化村民"
     },
     "goblin soldier": {
       "": "哥布林士兵"
@@ -3558,22 +3558,22 @@
       "": "虚弱的哥布林士兵"
     },
     "Superior Goblin Soldier": {
-      "": "优质的哥布林士兵"
+      "": "精英哥布林士兵"
     },
     "superior goblin soldier": {
-      "": "优质的哥布林士兵"
+      "": "精英哥布林士兵"
     },
     "Cursed Goblin Soldier": {
-      "": "诅咒的哥布林士兵"
+      "": "受诅咒的哥布林士兵"
     },
     "cursed goblin soldier": {
-      "": "诅咒的哥布林士兵"
+      "": "受诅咒的哥布林士兵"
     },
     "Enchanted Goblin Soldier": {
-      "": "附魔的哥布林士兵"
+      "": "魔化哥布林士兵"
     },
     "enchanted goblin soldier": {
-      "": "附魔的哥布林士兵"
+      "": "魔化哥布林士兵"
     },
     "goblin bulwark": {
       "": "哥布林盾卫"
@@ -3585,22 +3585,22 @@
       "": "虚弱的哥布林盾卫"
     },
     "Superior Goblin Bulwark": {
-      "": "优质的哥布林盾卫"
+      "": "精英哥布林盾卫"
     },
     "superior goblin bulwark": {
-      "": "优质的哥布林盾卫"
+      "": "精英哥布林盾卫"
     },
     "Cursed Goblin Bulwark": {
-      "": "诅咒的哥布林盾卫"
+      "": "受诅咒的哥布林盾卫"
     },
     "cursed goblin bulwark": {
-      "": "诅咒的哥布林盾卫"
+      "": "受诅咒的哥布林盾卫"
     },
     "Enchanted Goblin Bulwark": {
-      "": "附魔的哥布林盾卫"
+      "": "魔化哥布林盾卫"
     },
     "enchanted goblin bulwark": {
-      "": "附魔的哥布林盾卫"
+      "": "魔化哥布林盾卫"
     },
     "earth worm": {
       "": "地虫"
@@ -3612,22 +3612,22 @@
       "": "虚弱的地虫"
     },
     "Superior Earth Worm": {
-      "": "优质的地虫"
+      "": "精英地虫"
     },
     "superior earth worm": {
-      "": "优质的地虫"
+      "": "精英地虫"
     },
     "Cursed Earth Worm": {
-      "": "诅咒的地虫"
+      "": "受诅咒的地虫"
     },
     "cursed earth worm": {
-      "": "诅咒的地虫"
+      "": "受诅咒的地虫"
     },
     "Enchanted Earth Worm": {
-      "": "附魔的地虫"
+      "": "魔化地虫"
     },
     "enchanted earth worm": {
-      "": "附魔的地虫"
+      "": "魔化地虫"
     },
     "earth stone worm": {
       "": "岩石地虫"
@@ -3639,22 +3639,22 @@
       "": "虚弱的岩石地虫"
     },
     "Superior Earth Stone Worm": {
-      "": "优质的岩石地虫"
+      "": "精英岩石地虫"
     },
     "superior earth stone worm": {
-      "": "优质的岩石地虫"
+      "": "精英岩石地虫"
     },
     "Cursed Earth Stone Worm": {
-      "": "诅咒的岩石地虫"
+      "": "受诅咒的岩石地虫"
     },
     "cursed earth stone worm": {
-      "": "诅咒的岩石地虫"
+      "": "受诅咒的岩石地虫"
     },
     "Enchanted Earth Stone Worm": {
-      "": "附魔的岩石地虫"
+      "": "魔化岩石地虫"
     },
     "enchanted earth stone worm": {
-      "": "附魔的岩石地虫"
+      "": "魔化岩石地虫"
     },
     "Archaeologist": {
       "": "考古学家"
@@ -3669,22 +3669,22 @@
       "": "虚弱的考古学家"
     },
     "Superior Archaeologist": {
-      "": "优质的考古学家"
+      "": "精英考古学家"
     },
     "superior archaeologist": {
-      "": "优质的考古学家"
+      "": "精英考古学家"
     },
     "Cursed Archaeologist": {
-      "": "诅咒的考古学家"
+      "": "受诅咒的考古学家"
     },
     "cursed archaeologist": {
-      "": "诅咒的考古学家"
+      "": "受诅咒的考古学家"
     },
     "Enchanted Archaeologist": {
-      "": "附魔的考古学家"
+      "": "魔化考古学家"
     },
     "enchanted archaeologist": {
-      "": "附魔的考古学家"
+      "": "魔化考古学家"
     },
     "Lich": {
       "": "巫妖"
@@ -3699,22 +3699,22 @@
       "": "虚弱的巫妖"
     },
     "Superior Lich": {
-      "": "优质的巫妖"
+      "": "精英巫妖"
     },
     "superior lich": {
-      "": "优质的巫妖"
+      "": "精英巫妖"
     },
     "Cursed Lich": {
-      "": "诅咒的巫妖"
+      "": "受诅咒的巫妖"
     },
     "cursed lich": {
-      "": "诅咒的巫妖"
+      "": "受诅咒的巫妖"
     },
     "Enchanted Lich": {
-      "": "附魔的巫妖"
+      "": "魔化巫妖"
     },
     "enchanted lich": {
-      "": "附魔的巫妖"
+      "": "魔化巫妖"
     },
     "iron hound": {
       "": "铁甲猎犬"
@@ -3726,22 +3726,22 @@
       "": "虚弱的铁甲猎犬"
     },
     "Superior Iron Hound": {
-      "": "优质的铁甲猎犬"
+      "": "精英铁甲猎犬"
     },
     "superior iron hound": {
-      "": "优质的铁甲猎犬"
+      "": "精英铁甲猎犬"
     },
     "Cursed Iron Hound": {
-      "": "诅咒的铁甲猎犬"
+      "": "受诅咒的铁甲猎犬"
     },
     "cursed iron hound": {
-      "": "诅咒的铁甲猎犬"
+      "": "受诅咒的铁甲猎犬"
     },
     "Enchanted Iron Hound": {
-      "": "附魔的铁甲猎犬"
+      "": "魔化铁甲猎犬"
     },
     "enchanted iron hound": {
-      "": "附魔的铁甲猎犬"
+      "": "魔化铁甲猎犬"
     },
     "fighter": {
       "": "战士"

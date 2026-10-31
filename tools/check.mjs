@@ -14,6 +14,24 @@ for(const [key,value] of Object.entries(zh.strings)) {
  assert.deepEqual((value.match(/<\/?\w*>/g)||[]).sort(),(key.match(/<\/?\w*>/g)||[]).sort(),`Color tags: ${key}`);
 }
 for(const [key,value] of Object.entries(zh.nouns)) assert.ok(value[''] && /[\u3400-\u9fff]/u.test(value['']),`Missing Chinese noun: ${key}`);
+// Regression: shared English quality affixes must respect the kind of noun.
+const contexts = JSON.parse(await readFile(new URL('./noun-contexts.json',import.meta.url)));
+for (const creature of contexts.creatures) {
+ for (const name of [`Superior ${creature}`, `superior ${creature}`]) {
+  const key = Object.keys(zh.nouns).find(k => k.toLowerCase() === name.toLowerCase());
+  if (key) assert.ok(zh.nouns[key][''].startsWith('精英'), `Creature quality: ${key}`);
+ }
+}
+for (const [key,value] of Object.entries({
+ 'Superior Slime':'精英史莱姆', 'superior slime':'精英史莱姆',
+ 'Superior Iron Sword':'精良的铁剑', 'Enchanted Iron Sword':'附魔的铁剑',
+ 'Superior Firebolt':'强效火焰箭', 'Weak Firebolt':'弱效火焰箭',
+ 'Enchanted Slime':'魔化史莱姆', 'Cursed Slime':'受诅咒的史莱姆',
+ 'Summon Superior Yig Warrior':'召唤精英伊格战士'
+})) assert.equal(zh.nouns[key][''],value,`Contextual translation: ${key}`);
+for (const affix of ['Weak','Superior','Cursed','Enchanted']) {
+ assert.equal(zh.nouns[`Summon ${affix} Yig Warrior`][''], '召唤'+zh.strings[affix]+zh.nouns['Yig Warrior'][''], `Summon/display consistency: ${affix}`);
+}
 const sample='恢复 20 HP，随后获得石肤效果。';
 const lines=wrapChinese(sample,s=>[...s].length,8);
 assert.ok(lines.every(s=>[...s].length<=8));

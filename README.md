@@ -48,6 +48,7 @@ npm run check
 - `dist/lang/zh-CN.json`：生成后的中文语言包。
 - `tools/strings-{a,b,c}.json`：分段翻译源文件。
 - `tools/nouns-base.tsv`：统一术语和名词基础翻译。
+- `tools/noun-contexts.json`：区分生物与技能名称；词缀按语境翻译，如精英史莱姆、精良的铁剑、强效火焰箭。召唤技能的词缀修饰召唤物。
 - `tools/build-language.py`：合并翻译并生成名词变体。
 - `tools/apply-localization.py`：基于 `tools/original/` 中的备份重建汉化模块。
 - `dist/zh-font.js`、`dist/web/zh-font.css`：中文像素字体渲染与加载。
