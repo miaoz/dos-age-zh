@@ -4,7 +4,8 @@ import {spawnSync} from 'node:child_process';
 import {wrapChinese} from '../dist/zh-layout.js';
 const reference = JSON.parse(await readFile(new URL('./reference-es.json',import.meta.url)));
 const zh = JSON.parse(await readFile(new URL('../dist/lang/zh-CN.json',import.meta.url)));
-assert.deepEqual(Object.keys(zh.strings).sort(),Object.keys(reference.strings).sort());
+const supplemental = JSON.parse(await readFile(new URL('./strings-dynamic.json',import.meta.url)));
+assert.deepEqual(Object.keys(zh.strings).sort(), [...new Set([...Object.keys(reference.strings), ...Object.keys(supplemental)])].sort());
 assert.deepEqual(Object.keys(zh.nouns).sort(),Object.keys(reference.nouns).sort());
 const placeholders = s => [...new Set([...s.matchAll(/\{([^{}]+)\}/g)].map(m => m[1].split(/[|:]/)[0]))].sort();
 for(const [key,value] of Object.entries(zh.strings)) {
@@ -58,3 +59,5 @@ async function checkPublicFiles(dir) {
 }
 await checkPublicFiles(new URL('../dist/',import.meta.url));
 console.log('PASS: offline API responses, static fallback, public asset file boundaries.');
+
+await import('./check-dynamic.mjs');

@@ -37,4 +37,4 @@ for k in list(strings):
     if k in nouns: strings[k]=nouns[k]['']
 (ROOT/'dist/lang').mkdir(exist_ok=True)
 (ROOT/'dist/lang/zh-CN.json').write_text(json.dumps({'strings':strings,'nouns':nouns},ensure_ascii=False,indent=2)+'\n')
-print(f'{len(strings)}/{len(ref["strings"])} strings; {len(nouns)}/{len(ref["nouns"])} nouns')
+print(f'{len(strings)} strings ({len(ref["strings"])} upstream + {len(strings)-len(ref["strings"])} supplemental); {len(nouns)} nouns')

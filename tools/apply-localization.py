@@ -5,6 +5,13 @@ def save(name,s): (R/'dist'/name).write_text(s)
 s=load('lang.js')
 a=s.index('export const LANGUAGES = '); b=s.index(';',a)
 s=s[:a]+'export const LANGUAGES = { "zh-CN": "简体中文", en: "English" }'+s[b:]
+# Composite ally spell names are internal identifiers too (buff detection uses English).
+# Translate their parts only when displayed, preserving gameplay identifiers.
+s=s.replace('const lower = form.charAt(0)', """const owned = name.match(/^(.+)'s (.+)$/);
+  if (lang !== "en" && owned && nouns.has(owned[2])) {
+    return tl("{owner}'s {spell}", { owner: named(owned[1]), spell: named(owned[2]) });
+  }
+  const lower = form.charAt(0)""")
 save('lang.js',s)
 s=load('settings.js').replace('lang: "auto"','lang: "zh-CN"').replace('"dosage.settings"','"dosage.zh.settings"')
 save('settings.js',s)
@@ -17,6 +24,19 @@ s=s.replace('const sansGlyph = (ch, font = sansFont) => font.glyphs[ch] ?', 'con
 s=s.replace('const [from, [gx, adv]] = sansGlyph(ch, font);', 'if (isCJK(ch)) { drawCJK(ctx, ch, x, y, f, colour); x += CJK_ADVANCE * f; continue; }\n      const [from, [gx, adv]] = sansGlyph(ch, font);')
 save('text.js',s)
 s=load('game.js')
+# Keep floor numbers as variables, and translate when entering (not when caching a map).
+for old, new in [
+    ('says: `You climb back up to floor ${depth - 1} of the cave.`',
+     'get says() { return tl("You climb back up to floor {n} of the cave.", { n: depth - 1 }); }'),
+    ('says: depth > 1 ? `You climb down to floor ${depth} of the cave.` : "You climb down into the cave. It\'s dark."',
+     'get says() { return depth > 1 ? tl("You climb down to floor {n} of the cave.", { n: depth }) : tl("You climb down into the cave. It\'s dark."); }'),
+    ('english("freezes solid")', 'english("{foe:The} freezes solid!")'),
+    ('english("is paralysed")', 'english("{foe:The} is paralysed!")'),
+    ('skill.held ? "{foe:The} is stunned!" : `{foe:The} ${says}!`',
+     'skill.held ? "{foe:The} is stunned!" : says'),
+]:
+    assert s.count(old) == 1, f'Localization patch no longer matches: {old}'
+    s=s.replace(old,new)
 s='import { wrapChinese, chineseTokens } from "./zh-layout.js";\n'+s
 s=s.replace('function wrap(text, colour, w, scale) {','function wrap(text, colour, w, scale) {\n  if (/[\\u2e80-\\u9fff]/u.test(tl(text))) return wrapChinese(tl(text), t => Math.round((textWidth([[t]]) - 1) * scale), w).map(t => [[t, colour]]);')
 s=s.replace('function sheetWrap(text, ink, w, size, font) {','function sheetWrap(text, ink, w, size, font) {\n  if (/[\\u2e80-\\u9fff]/u.test(text)) return wrapChinese(text, t => sheetW([[t]], size, font), w).map(t => [[t, ink]]);')

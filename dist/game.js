@@ -1202,11 +1202,11 @@ function caveMap(depth, entrance = world.entrance) {
     if (forge && c.forge && !smith) smith = { map: id, met: false, heard: false, floorHp: 0, lost: 0, upgrades: 0 };
     const [ex, ey] = entrance;
     const up = depth > 1
-      ? { to: () => caveMap(depth - 1, entrance), spawn: () => caveMap(depth - 1, entrance).cave.below, says: `You climb back up to floor ${depth - 1} of the cave.` }
+      ? { to: () => caveMap(depth - 1, entrance), spawn: () => caveMap(depth - 1, entrance).cave.below, get says() { return tl("You climb back up to floor {n} of the cave.", { n: depth - 1 }); } }
       : { to: () => MAPS.outside, spawn: [ex, ey + 1] };
     const m = {
       id, cave: c, depth, entrance, spawn: c.spawn, ...CAVE,
-      says: depth > 1 ? `You climb down to floor ${depth} of the cave.` : "You climb down into the cave. It's dark.",
+      get says() { return depth > 1 ? tl("You climb down to floor {n} of the cave.", { n: depth }) : tl("You climb down into the cave. It's dark."); },
       open: (x, y) => c.isFloor(x, y) && !c.blocks(x, y), opaque: (x, y) => !c.isFloor(x, y) || c.shut(x, y),   // (a shut door too, see openDoor())
       interactables: [...c.chests], drops: new Map(), remembered: new Set(), dug: new Map(),
       loot: new Map(c.chests.map(at => [key(...at), chestLoot(Math.min(4, depth))])),
@@ -6582,10 +6582,10 @@ function afflict(s, skill, mag, now) {
     s.burnDmg = Math.max(1, Math.round(BURN.base + BURN.perMag * mag));
     say(tr("{foe:The} catches fire!", { foe: noun(s.called) }, AIM.ink), at);
   }
-  for (const [held, is, says] of [["freeze", "frozen", english("freezes solid")], ["paralyse", "paralysed", english("is paralysed")]]) {
+  for (const [held, is, says] of [["freeze", "frozen", english("{foe:The} freezes solid!")], ["paralyse", "paralysed", english("{foe:The} is paralysed!")]]) {
     if (!(random() * 100 < (skill[held] ?? 0))) continue;
     s[is] = skill.held ?? HELD[held];   // (marked over it while it lasts, see drawAlert())
-    say(tr(skill.held ? "{foe:The} is stunned!" : `{foe:The} ${says}!`, { foe: noun(s.called) }, HELD.ink[held]), at);
+    say(tr(skill.held ? "{foe:The} is stunned!" : says, { foe: noun(s.called) }, HELD.ink[held]), at);
   }
 }
 // A fire dwindles to the small flame (type=fire-small, 158:25461) when it's almost out: a tree's

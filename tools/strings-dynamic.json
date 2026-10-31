@@ -1,0 +1,6 @@
+{
+  "You climb down to floor {n} of the cave.": "你向下爬到了洞穴第 {n} 层。",
+  "You climb back up to floor {n} of the cave.": "你向上爬回了洞穴第 {n} 层。",
+  "{foe:The} freezes solid!": "{foe:The}冻成了冰块！",
+  "{owner}'s {spell}": "{owner}的{spell}"
+}

@@ -10,7 +10,7 @@ DOS-AGE v0.13 的非官方简体中文汉化，保留原作的像素风格、回
 
 ## 汉化内容
 
-- 1,167 条界面与叙事文本，870 个名词及变体。
+- 1,171 条界面与叙事文本，870 个名词及变体。
 - 主菜单、职业、装备、技能、对话、战斗日志、帮助与设置。
 - 默认简体中文，可在设置中切换英语。
 - Fusion Pixel Font 12px 简体中文等宽像素字体，随项目内置，无需在线字体服务。
@@ -47,12 +47,14 @@ npm run check
 
 - `dist/lang/zh-CN.json`：生成后的中文语言包。
 - `tools/strings-{a,b,c}.json`：分段翻译源文件。
+- `tools/strings-dynamic.json`：原始词条表遗漏的动态文本，如洞穴楼层、冻结日志及召唤物法术名称。
 - `tools/nouns-base.tsv`：统一术语和名词基础翻译。
 - `tools/noun-contexts.json`：区分生物与技能名称；词缀按语境翻译，如精英史莱姆、精良的铁剑、强效火焰箭。召唤技能的词缀修饰召唤物。
 - `tools/build-language.py`：合并翻译并生成名词变体。
 - `tools/apply-localization.py`：基于 `tools/original/` 中的备份重建汉化模块。
 - `dist/zh-font.js`、`dist/web/zh-font.css`：中文像素字体渲染与加载。
 - `tools/check.mjs`：语言包覆盖度、变量、颜色标签、中文换行、语法、模块依赖和离线接口检查。
+- `tools/check-dynamic.mjs`：执行楼层日志、战斗状态及法术名称的实际翻译路径，检查已有地图切换语言，并核对源码中的直接文本调用；这项检查不代表已穷尽所有运行时拼接文本。
 
 GitHub Actions 在 push / pull request 时执行检查。对翻译源的修改应运行上述生成命令并提交生成结果。`tools/fetch-original.py` 是最初下载资源的辅助脚本，不能当作无条件更新工具；升级原版需要重新匹配资源和语言模板。
 

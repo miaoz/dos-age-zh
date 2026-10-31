@@ -76,6 +76,10 @@ export const noun = (name, ink, proper = false) => ({ noun: name, ink, proper })
 const cap = s => s.charAt(0).toLocaleUpperCase(lang) + s.slice(1);
 // A name in a form (see above)
 function named(name, form = "", proper = false) {
+  const owned = name.match(/^(.+)'s (.+)$/);
+  if (lang !== "en" && owned && nouns.has(owned[2])) {
+    return tl("{owner}'s {spell}", { owner: named(owned[1]), spell: named(owned[2]) });
+  }
   const lower = form.charAt(0).toLowerCase() + form.slice(1), own = nouns.get(name);
   let s = own?.[lower] || (lang === "en" && !proper ? englishForm(name, lower) : null) || own?.[""] || strings.get(name) || name;
   if (lower === "low" && !own?.low) s = s.toLocaleLowerCase(lang);   // (lower case in any language, unless a name says otherwise)
