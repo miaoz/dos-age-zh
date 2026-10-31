@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- every page (/about, /works/<slug>...) is this file: its links and the game's assets are from the root -->
+  <base href="/">
+  <title>DOS-AGE Roguelike Game</title>
+  <meta name="description" content="A competitive turn-based DOS pixel roguelike you can finish over a coffee: 5–15 minute runs, free in your browser on any device — no install.">
+  <meta name="theme-color" content="#071324">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="/site-dos-age.webmanifest">
+  <!-- the title, description, picture and address here are home's: worker/pages.js makes them
+       each page's own -->
+  <link rel="canonical" href="https://dos-age.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DOS-AGE">
+  <meta property="og:title" content="DOS-AGE Roguelike Game">
+  <meta property="og:description" content="A competitive turn-based DOS pixel roguelike you can finish over a coffee: 5–15 minute runs, free in your browser on any device — no install.">
+  <meta property="og:url" content="https://dos-age.com/">
+  <!-- Figma 800:55287, exported at 1600x900 -->
+  <meta property="og:image" content="https://dos-age.com/assets/web/dos-age-share.png?v=2">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DOS AGE: the title and its cross of stat icons in yellow over the game's art in gold">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- who MEK.txt is, for search engines (schema.org); dos-age.com's is the game's instead (worker/index.js GAME_LD) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"DOS-AGE","url":"https://dos-age.com/","description":"A competitive turn-based DOS pixel roguelike you can finish over a coffee: 5–15 minute runs, free in your browser on any device — no install.","image":"https://dos-age.com/assets/web/dos-age-share.png?v=2","genre":["Roguelike","Turn-based","Pixel art"],"gamePlatform":"Web browser","applicationCategory":"Game","operatingSystem":"Any","playMode":"SinglePlayer","isAccessibleForFree":true,"offers":{"@type":"Offer","price":0,"priceCurrency":"USD"},"author":[{"@type":"Person","name":"MEK.txt","url":"https://mektxt.com/"},{"@type":"Person","name":".TIFF","url":"https://x.com/alexandratiff"}],"sameAs":["https://about.dos-age.com/"]}</script>
+  <link rel="preload" href="assets/fonts/MEKZANTINE-Mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/MEKSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="web/site.css">
+</head>
+<body data-mode="web" data-switch="web" data-page="home" data-game-only="">
+  <!-- a restart (game.js's startOver), or a link with ?play, reloads into the game: the website's kept hidden from the
+       first paint, not shown till main.js has loaded (main.js clears the note). dos-age.com is the game
+       alone: no website, no way to it (the Worker puts data-game-only on the body, see worker/index.js GAME_HOST) -->
+  <script>try { if (sessionStorage.getItem("mektxt.restart") === "1" || /[?&]play(&|=|$)/.test(location.search) || "gameOnly" in document.body.dataset) document.body.dataset.mode = document.body.dataset.switch = "game"; } catch {}</script>
+  <div id="game"><canvas id="screen" aria-label="mektxt game"></canvas>
+    <!-- Loading (the user's pick B, 2026-10-28): five forest-1 trees felled and growing back in a wave,
+         over the game till its first frame (game.js takes it away), its replay fetched too; the seven
+         tiles (tree, two hits, stump, sprout, sapling, young tree) are here, as tiles.png is what's loading,
+         a step brighter than the game's (#663931 > #8f563b, #524b24 > #8a6f30, the user's, 2026-10-28);
+         game.js GROWING draws the same on the leaderboard -->
+    <div id="loading" aria-label="Loading"><canvas width="50" height="12"></canvas></div>
+    <script>(() => {
+      const box = document.getElementById("loading"), c = box.firstElementChild, x = c.getContext("2d"), img = new Image();
+      const seq = [[0, 500], [1, 110], [2, 110], [3, 260], [4, 200], [5, 200], [6, 200]], total = 1580, lag = 170;
+      const frameAt = t => { t = ((t % total) + total) % total; for (const [f, ms] of seq) { if (t < ms) return f; t -= ms; } return 0; };
+      const draw = t => { if (!box.isConnected) return; x.clearRect(0, 0, 50, 12);
+        for (let i = 0; i < 5; i++) x.drawImage(img, frameAt(t - i * lag) * 8, 0, 8, 12, 1 + i * 10, 0, 8, 12);
+        requestAnimationFrame(draw); };
+      img.onload = () => requestAnimationFrame(draw);
+      img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAMCAYAAAA3bX6lAAAAt0lEQVR42mNkF1b5zzCMARO6QHMMD0NzDM/w8yC6x3B5crAHALrbmPB5ZqgCZP8wEathoGMYZiY+e4nKgzBQu+QLXgsJyVMb1C75wtAcw4PXXmyeZMLlWGTFhORJycOkOI7UAMDGZqJnLHQ4ixOMIXweRlaDSx5nHoRJotPUkEf3GDofW2pANx/d8/jkccYgoXROrnzF3pckxR45anDJ0y2JVux9SXGhRU7Bx0ROUUyuPL3qP2T7AWxZgMn0buuDAAAAAElFTkSuQmCC";
+    })();</script>
+    <!-- Figma "error" (631:80641): over the game when its pictures won't load (game.js) -->
+    <div id="load-error" role="alert" hidden>
+      <div class="logo" aria-label="DOS-AGE"><span>DOS</span><i class="cross" aria-hidden="true"><img src="assets/web/cross-top.svg" alt=""><img src="assets/web/cross-left.svg" alt=""><img src="assets/web/cross-right.svg" alt=""><img src="assets/web/cross-bottom.svg" alt=""></i><span>AGE</span></div>
+      <p>Couldn’t load the game. Refresh to try again, or <button type="button">click here</button></p>
+    </div>
+  </div>
+  <!-- Ko-fi's Support me, over the game's title screen alone (kofi.js) -->
+  <div id="kofi" hidden></div>
+
+  <main id="web" aria-label="mektxt.com">
+    <section data-page="home"></section>
+    <section data-page="works"></section>
+    <section data-page="about"></section>
+    <section data-page="art-market"></section>
+    <section data-page="devlog"></section>
+    <section data-page="wiki"></section>
+    <nav class="quick-links" aria-label="Quick links"></nav>
+  </main>
+
+  <!-- Figma "header" (178:25050): this is its game variant; site.js lays a copy over it as the web one -->
+  <header id="header" class="header">
+    <nav class="left">
+      <a class="logo" href="/" data-to="home" aria-label="mektxt home"><i class="icon mek"></i><span class="wide">MEK.TXT<kbd>Z</kbd></span></a>
+      <a href="/works" data-to="works">WORKS<kbd>X</kbd></a>
+      <a href="/about" data-to="about">ABOUT<kbd>C</kbd></a>
+      <a href="/art-market" data-to="art-market">ART-MARKET<kbd>V</kbd></a>
+    </nav>
+    <div class="right">
+      <button class="mute" type="button" aria-label="Mute"><i class="icon speaker"></i></button>
+      <button class="esc" type="button" aria-label="Switch between the game and the website"><span class="wide">ESC</span><i class="slider"><i class="knob"></i></i></button>
+    </div>
+  </header>
+
+  <!-- mektxt.com's gear for the game's settings, under the header (dos-age.com's is the header's speaker) -->
+  <button class="gear" type="button" aria-label="Settings"><i class="icon"></i></button>
+
+  <script type="module" src="main.js"></script>
+<noscript><h1>DOS-AGE</h1><p>A competitive turn-based DOS pixel roguelike you can finish over a coffee: 5–15 minute runs, free in your browser on any device — no install.</p><p>Turn on JavaScript to play, or read <a href="https://about.dos-age.com/">about DOS-AGE</a>.</p></noscript></body>
+</html>

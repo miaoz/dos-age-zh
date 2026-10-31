@@ -1,0 +1,4 @@
+Fusion Pixel Font — TakWolf
+12px monospaced, Simplified Chinese, release 2026.10.25
+https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.10.25
+Font distributed unmodified under SIL Open Font License 1.1; see OFL.txt and LICENSES/.

@@ -1,0 +1,3783 @@
+{
+  "strings": {
+    "That journey was played on an older version of the game.": "这段旅程使用的是旧版游戏。",
+    "That journey can't be found.": "找不到这段旅程。",
+    "+7% dmg reduction": "伤害减免 +7%",
+    "+7% dodge": "闪避 +7%",
+    "can't use weapon": "无法使用武器",
+    "always double attack": "每次攻击均为双击",
+    "+2 attribute/lvl up": "每次升级 +2 属性点",
+    "+10% bonus exp": "额外经验 +10%",
+    "4% hiccup chance": "4% 概率打嗝",
+    "regen +3 HP / 5 turns": "每 5 回合回复 3 生命",
+    " and ": "和",
+    "{affixes} {cls} {day}": "{affixes} {cls} {day}",
+    "{cls} {day}": "{cls} {day}",
+    "{affixes} {day}": "{affixes} {day}",
+    "Attack": "攻击",
+    "Defence": "防御",
+    "Magic": "魔力",
+    "Speed": "速度",
+    "Each level up gives you a point to raise one stat by. Speed goes up by 2, the rest by 1.": "每次升级获得 1 点属性点。速度每次增加 2，其他属性增加 1。",
+    "Every third level you also get to pick a spell.": "每升 3 级，还可选择一个法术。",
+    "The priest blesses one stat of your choice, once in your whole journey.": "牧师可赐福你选定的一项属性。每段旅程仅限一次。",
+    "Pick a spell from the row: its card shows what it does.": "从这一排中选择法术，卡片上会显示效果。",
+    "A spell you already know is offered a step better, as an Upgrade.": "已学会的法术会以更高一级的升级选项出现。",
+    "Skip passes on them, once you say yes.": "选择跳过并确认后，将放弃本次选择。",
+    "Keys: arrows pick, Enter raise, 1-4 raise.": "按键：方向键选择，Enter 或 1–4 提升。",
+    "Keys: arrows pick, L or Enter learn, 1-3 learn, P skip.": "按键：方向键选择，L、Enter 或 1–3 学习，P 跳过。",
+    "Keys: arrows or move keys pick, F or Enter learn, 1-3 learn, P skip.": "按键：方向键或移动键选择，F、Enter 或 1–3 学习，P 跳过。",
+    "You can cut trees": "可以砍树",
+    "You can dig": "可以挖掘",
+    "weapon": "武器",
+    "armour": "护甲",
+    "trinket": "饰品",
+    "Weapon": "武器",
+    "Armour": "护甲",
+    "Trinket": "饰品",
+    "Bonebreaker": "碎骨者",
+    "Goblinbane": "哥布林克星",
+    "Koboldbane": "狗头人克星",
+    "Slimecleaver": "史莱姆斩杀者",
+    "Fangbreaker": "断牙者",
+    "Kinslayer": "弑亲者",
+    "Giantfeller": "巨人杀手",
+    "Demonbane": "恶魔克星",
+    "undead": "亡灵",
+    "goblins": "哥布林",
+    "kobolds": "狗头人",
+    "slimes": "史莱姆",
+    "beasts": "野兽",
+    "folk": "人类",
+    "giants": "巨人",
+    "demons": "恶魔",
+    "{n} undead": "{n} 个亡灵",
+    "{n} {n|one:goblin|other:goblins}": "{n} 个哥布林",
+    "{n} {n|one:kobold|other:kobolds}": "{n} 个狗头人",
+    "{n} {n|one:slime|other:slimes}": "{n} 只史莱姆",
+    "{n} {n|one:beast|other:beasts}": "{n} 只野兽",
+    "{n} folk": "{n} 个人类",
+    "{n} {n|one:giant|other:giants}": "{n} 个巨人",
+    "{n} {n|one:demon|other:demons}": "{n} 个恶魔",
+    "the Unsated": "饥渴难餍",
+    "the Long Night": "漫漫长夜",
+    "the Last Word": "最后遗言",
+    "the Widow's Due": "寡妇之债",
+    "the Red Hymn": "猩红赞歌",
+    "the Quiet End": "寂静终焉",
+    "You hit": "你击中",
+    "Critical! You hit": "暴击！你击中",
+    "You lunge at": "你突刺",
+    "Your arrow hits": "你的箭矢击中",
+    "Your shockwave hits": "你的冲击波击中",
+    "Your pike hits": "你的长枪击中",
+    "{name}, {epithet}": "{name}，{epithet}",
+    "Very easy": "极易",
+    "Easy": "简单",
+    "Medium": "普通",
+    "Hard": "困难",
+    "Miniboss": "小头目",
+    "evasive": "善于闪避",
+    "passive": "被动",
+    "aggressive": "好斗",
+    "Weak": "弱小",
+    "Normal": "普通",
+    "Superior": "精良",
+    "Cursed": "诅咒",
+    "Enchanted": "附魔",
+    "Lumberjack": "樵夫",
+    "lumberjack": "樵夫",
+    "Miner": "矿工",
+    "miner": "矿工",
+    "Archaeologist": "考古学家",
+    "archaeologist": "考古学家",
+    "{who:The} turns on you!": "{who:The}与你反目了！",
+    "The villagers turn on you!": "村民们与你反目了！",
+    "Chanter": "吟唱者",
+    "Parishioner": "教徒",
+    "Priest": "牧师",
+    "You feel grace upon you. You'll heal <up>{hp} hp</> every {turns} turns.": "恩典降临。你每 {turns} 回合将回复 <up>{hp} 生命</>。",
+    "Man": "男人",
+    "Woman": "女人",
+    "Boy": "男孩",
+    "Girl": "女孩",
+    "Burning Bush": "燃烧的荆棘",
+    "traveller": "旅人",
+    "Here lies {name}, {who:a}. Fell on day {day} to {by:a}.": "{name}长眠于此，生前是{who:a}。第 {day} 天死于{by:a}之手。",
+    "Here lies {name}, {who:a}. Fell on day {day}.": "{name}长眠于此，生前是{who:a}。于第 {day} 天陨落。",
+    "the Dread": "恐惧化身",
+    "Bane of {cls:pl}": "{cls:pl}之灾",
+    "Who Walks at Night": "夜行者",
+    "of {forest}": "来自{forest}",
+    "It killed {cls:a}, and every traveller remembers it.": "它杀过一位{cls:a}，每个旅人都记得此事。",
+    "It killed a traveller, and every traveller remembers it.": "它杀过一位旅人，每个旅人都记得此事。",
+    "It has killed {n} travellers, most of them {cls:pl}, and grown stronger with each.": "它已杀死 {n} 位旅人，大多是{cls:pl}。每次杀戮都让它更强。",
+    "It has killed {n} travellers, and grown stronger with each.": "它已杀死 {n} 位旅人，每次杀戮都让它更强。",
+    "{name}, {title}": "{name}，{title}",
+    "{name} the {kind}": "{kind}·{name}",
+    "{kind} {name}": "{kind}·{name}",
+    "{name}, {title}, has caught your scent.": "{title}·{name}嗅到了你的气息。",
+    "{name} is slain. Every traveller will hear of it.": "{name}已被击杀。每个旅人都会听闻此事。",
+    "ghost": "幽灵",
+    "“{text}”": "“{text}”",
+    "Blacksmith": "铁匠",
+    "Your {old} becomes {made}.": "你的{old}变成了{made}。",
+    "wolf": "狼",
+    "owl": "猫头鹰",
+    "bear": "熊",
+    "fox": "狐狸",
+    "horse": "马",
+    "+{n} max hp.": "生命上限 +{n}。",
+    "+{n} {stat}.": "{stat} +{n}。",
+    "-{n} to another stat, at random.": "随机另一项属性 -{n}。",
+    "You feel {gain} and {loss}.": "你感到{gain}，也感到{loss}。",
+    "+{n} max hp": "生命上限 +{n}",
+    "+{n} {stat}": "{stat} +{n}",
+    "-{n} {stat}": "{stat} -{n}",
+    "You bear the {pact}. {gift} {cost}": "你接受了{pact}。{gift} {cost}",
+    "Your {was} has had its fill of {kinds}. It is {name} now.": "你的{was}已饱尝{kinds}之血。如今，它名为{name}。",
+    "{name} remembers every one of them. It is {full} now, and it strikes harder.": "{name}铭记每个亡魂。如今，它名为{full}，攻击也更强了。",
+    "Once {item:a}.": "曾是{item:a}。",
+    "{n} {n|one:kill|other:kills}: {list}.": "击杀 {n} 个：{list}。",
+    ", ": "、",
+    "+{n} attack.": "攻击 +{n}。",
+    "You feel <hunt>{n} demons</> hunting you now.": "你感觉有 <hunt>{n} 个恶魔</>正在追猎你。",
+    "Lv. <lit>{n}</>": "等级 <lit>{n}</>",
+    "Green Wood": "翠绿森林",
+    "Red Woods": "赤红森林",
+    "Dark Wood": "幽暗森林",
+    "Thorned Wood": "荆棘森林",
+    "Cave, floor {n}": "洞穴，第 {n} 层",
+    "Church": "教堂",
+    "Indoors": "室内",
+    "Grace": "恩典",
+    "HP": "生命",
+    "ATK": "攻击",
+    "DEF": "防御",
+    "MAG": "魔力",
+    "SPD": "速度",
+    "hp": "生命",
+    "attack": "攻击",
+    "defence": "防御",
+    "magic": "魔力",
+    "speed": "速度",
+    "% damage reduction": "% 伤害减免",
+    "{name}: {gift}, {cost}": "{name}：{gift}，{cost}",
+    "{name}: {gain} every {every} turns, for good": "{name}：每 {every} 回合{gain}，永久生效",
+    "absorbs {n} damage": "吸收 {n} 点伤害",
+    "{name}: {change}, {left} {left|one:turn|other:turns} left": "{name}：{change}，剩余 {left} 回合",
+    "{who}: ": "{who}：",
+    "Log": "日志",
+    "Players": "玩家",
+    "Chat": "聊天",
+    "You're in chatroom #{n}.": "你在 #{n} 聊天室。",
+    "{name} {did}": "{name}{did}",
+    "You give your name: ": "你报上姓名：",
+    "[{walk}] / [Arrow Keys] move + attack": "[{walk}] / [方向键] 移动与攻击",
+    "[{use}] use / [1-8] quick shortcut": "[{use}] 使用 / [1–8] 快捷栏",
+    "Bag": "背包",
+    "You feel <hunt>{n} iron hounds</> hunting you now.": "你感觉有 <hunt>{n} 只钢铁猎犬</>正在追猎你。",
+    "You feel <hunt>the iron hound</> hunting you now.": "你感觉<hunt>钢铁猎犬</>正在追猎你。",
+    "Night falls. The dead are stirring.": "夜幕降临。亡者开始躁动。",
+    "Ghost of {name}": "{name}的幽灵",
+    "ghost of {name}": "{name}的幽灵",
+    "the cave": "洞穴",
+    "the forest": "森林",
+    "{name} walks {where} tonight, in what you died in.": "今晚，{name}穿着你死时的装备，在{where}游荡。",
+    "The {name} walks {where} tonight.": "今晚，{name}在{where}游荡。",
+    "It carries {blade}.": "它带着{blade}。",
+    "The last day dawns.": "最后一天破晓了。",
+    "Day {n} dawns.": "第 {n} 天破晓了。",
+    "Your {name} fades with the dawn.": "你的{name}随黎明消散。",
+    "Your {item} rings.": "你的{item}发出鸣响。",
+    "{spell} is ready again.": "{spell}已冷却完毕。",
+    "{spell} fades.": "{spell}消散了。",
+    "{spell}'s {stats} loss wears off.": "{spell}造成的{stats}减益消失了。",
+    "{spell} wears off.": "{spell}失效了。",
+    "The ghost sighs, and is gone.": "幽灵叹息一声，消失了。",
+    "Something turns up in the dirt: {item:a}.": "泥土中翻出了{item:a}。",
+    "Something glints among the shards: {item:a}.": "碎片间闪着光，是{item:a}。",
+    "Something falls out of the tree: {item:a}.": "树上掉下了{item:a}。",
+    "The fire burns": "烈火灼烧",
+    "{foe:The} stops burning.": "{foe:The}不再燃烧。",
+    "You spot {foe:a}.": "你发现了{foe:a}。",
+    "{foe:The} thaws out.": "{foe:The}解冻了。",
+    "{foe:The} can move freely again.": "{foe:The}又能自由行动了。",
+    "{foe:The} gathers its courage.": "{foe:The}鼓起了勇气。",
+    "{foe:The} shakes off your charm!": "{foe:The}摆脱了你的魅惑！",
+    "{foe:The} flees from you!": "{foe:The}逃离了你！",
+    "{foe:The} raises the dead!": "{foe:The}唤醒了亡者！",
+    "{foe:The} notices you!": "{foe:The}注意到了你！",
+    "{foe:The} loses track of you.": "{foe:The}跟丢了你。",
+    "{foe:The} has found you!": "{foe:The}找到你了！",
+    "{foe:The} catches fire!": "{foe:The}着火了！",
+    "You gain {n} exp.": "你获得 {n} 点经验。",
+    "You reach <lv>level {n}</>!": "你升到了 <lv>{n} 级</>！",
+    "{foe:The} dodges {what}.": "{foe:The}躲开了{what}。",
+    "{how} {foe:the} for {n} damage.": "{how}{foe:the}，造成 {n} 点伤害。",
+    "{foe:The} {dies}.": "{foe:The}{dies}。",
+    "It leaves {item:a}. <relic>A relic!</>": "它留下了{item:a}。<relic>一件遗物！</>",
+    "You": "你",
+    "It leaves {item:a}.": "它留下了{item:a}。",
+    "It leaves {blade}. <title>It remembers its way in your hand.</>": "它留下了{blade}。<title>它仍记得你手中的挥舞轨迹。</>",
+    "It drops {item:a}.": "它掉落了{item:a}。",
+    "“{line}”": "“{line}”",
+    "{spell} isn't ready yet ({n} {n|one:turn|other:turns}).": "{spell}尚未冷却，还需 {n} 回合。",
+    "{foe:The} is paralysed!": "{foe:The}麻痹了！",
+    "freezes solid": "冻成了冰块",
+    "is paralysed": "麻痹了",
+    "Something falls from the burning tree: {item:a}.": "燃烧的树上掉下了{item:a}。",
+    "You cast {spell} and your wounds begin to close.": "你施放{spell}，伤口开始愈合。",
+    "You cast {spell}.": "你施放了{spell}。",
+    "You cast {spell} and reappear {n} {n|one:cell|other:cells} away.": "你施放{spell}，出现在 {n} 格之外。",
+    "You cast {spell} and feel quick.": "你施放{spell}，身手变得敏捷。",
+    "You cast {spell} and your skin hardens into stone.": "你施放{spell}，皮肤硬化如石。",
+    "You cast {spell} and a shimmering barrier surrounds you.": "你施放{spell}，一道闪耀屏障环绕着你。",
+    "You cast {spell} and trade {hp} hp for fury.": "你施放{spell}，以 {hp} 生命换取狂怒。",
+    "You {spell}!": "你使出了{spell}！",
+    "You {spell:low} into the shadows.": "你使用{spell:low}，遁入暗影。",
+    "A rush of {spell:low} boils your blood.": "{spell:low}使你热血沸腾。",
+    "You {spell:low}.": "你使出了{spell:low}。",
+    "You {spell:low} your pike.": "你用长枪使出了{spell:low}。",
+    "You raise your {spell:low}.": "你摆出{spell:low}架势。",
+    "It's {spell}": "{spell}来了",
+    "You {spell:low} and the echoes show you everything round you.": "你发出{spell:low}，回声揭示了周围的一切。",
+    "{foe:The} is too strong-willed to be charmed.": "{foe:The}意志坚定，无法被魅惑。",
+    "You cast {spell} and {foe:the} turns to fight for you.": "你施放{spell}，{foe:the}转而为你战斗。",
+    "You cast {spell} and give up {hp} hp.": "你施放{spell}，牺牲了 {hp} 生命。",
+    "You drain {n} hp.": "你吸取了 {n} 生命。",
+    "Your {yig} dodges your {spell}.": "你的{yig}躲开了你的{spell}。",
+    "Your {spell} hits your {yig} for {n} damage.": "你的{spell}击中你的{yig}，造成 {n} 点伤害。",
+    "Your {yig} falls.": "你的{yig}倒下了。",
+    "You dodge your own {spell}.": "你躲开了自己施放的{spell}。",
+    "Your {barrier} absorbs your {spell}.": "你的{barrier}吸收了你的{spell}。",
+    "Your {spell} hits you for {n} damage.": "你的{spell}击中自己，造成 {n} 点伤害。",
+    "Your {barrier} breaks.": "你的{barrier}破碎了。",
+    "Your charmed {ours} dodges {foe:the}'s blow.": "被你魅惑的{ours}躲开了{foe:the}的攻击。",
+    "{foe:The} hits your charmed {ours} for {n} damage.": "{foe:The}击中被你魅惑的{ours}，造成 {n} 点伤害。",
+    "{foe:The} is scared and flees!": "{foe:The}惊恐地逃走了！",
+    "{foe:The} casts {spell} and its wounds begin to close.": "{foe:The}施放{spell}，伤口开始愈合。",
+    "{foe:The} casts {spell}<down>!</>": "{foe:The}施放了{spell}<down>！</>",
+    "{foe:The} shoots an arrow!": "{foe:The}射出一支箭！",
+    "{foe:The} casts {spell}<down> and its skin hardens!</>": "{foe:The}施放{spell}<down>，皮肤变硬了！</>",
+    "{foe:The} casts {spell}<down> and flies into a fury!</>": "{foe:The}施放{spell}<down>，陷入狂怒！</>",
+    "{foe:The} casts {spell}<down> and reappears closer!</>": "{foe:The}施放{spell}<down>，闪现到了近处！</>",
+    "{foe:The} casts {spell}<down> and speeds up!</>": "{foe:The}施放{spell}<down>，速度变快了！</>",
+    "Skeleton": "骷髅",
+    "A skeleton claws its way up beside you, and bows to your {item}.": "一具骷髅从你身旁破土而出，向你的{item}俯首。",
+    "Lost Soul of {name}": "{name}的迷失之魂",
+    "Your lantern flickers. The {soul} rises beside you, and fights for you tonight.": "你的提灯闪烁。{soul}在身旁浮现，今夜为你而战。",
+    "lost soul of {name}": "{name}的迷失之魂",
+    "Your {yig} is still with you.": "你的{yig}仍伴你左右。",
+    "{affix} {yig}": "{affix}{yig}",
+    "You cast {spell}, and {yig:a} appears beside you.": "你施放{spell}，{yig:a}出现在身旁。",
+    "Your {yig} catches up with you.": "你的{yig}追上了你。",
+    "Your {yig} heals you for {n} hp.": "你的{yig}为你回复 {n} 生命。",
+    "Your {yig} casts {spell}.": "你的{yig}施放了{spell}。",
+    "Your {yig} casts {spell} on {foe:the}.": "你的{yig}对{foe:the}施放了{spell}。",
+    "Your {yig} casts {spell} on you.": "你的{yig}对你施放了{spell}。",
+    "You dodge {foe:the}'s {spell}.": "你躲开了{foe:the}的{spell}。",
+    "{foe:The}'s {spell} hits you for {n} damage.": "{foe:The}的{spell}击中你，造成 {n} 点伤害。",
+    "You dodge {foe:the}'s blow.": "你躲开了{foe:the}的攻击。",
+    "{foe:The} hits you with its {weapon} for {n} damage.": "{foe:The}用{weapon}击中你，造成 {n} 点伤害。",
+    "{foe:The} hits you for {n} damage.": "{foe:The}击中你，造成 {n} 点伤害。",
+    "Your {barrier} absorbs {n} of it.": "你的{barrier}吸收了其中 {n} 点伤害。",
+    "+max HP": "+生命上限",
+    "-{n} turns": "-{n} 回合",
+    "{n} turns": "{n} 回合",
+    "+cut trees": "+砍树",
+    "+dig": "+挖掘",
+    "+{n}% dmg reduction": "+{n}% 伤害减免",
+    "+{n}% dodge": "+{n}% 闪避",
+    "+{n} light radius": "+{n} 照明半径",
+    "+1HP / {n} turns": "每 {n} 回合 +1 生命",
+    "+drain": "+生命吸取",
+    "+fiery footprints": "+烈焰足迹",
+    "+detect enemies on screen as a red \"?\".": "+用红色“?”标出屏幕内敌人。",
+    "+miniboss radar": "+小头目雷达",
+    "-all minibosses hunt you": "-所有小头目都会追猎你",
+    "+slow aura, -{spd} SPD to foes {n} tiles radius from you.": "+减速光环：周围 {n} 格内敌人速度 -{spd}。",
+    "+{n}% paralyse chance on normal & magic attacks.": "+普通及魔法攻击有 {n}% 概率造成麻痹。",
+    "+{n} range to all skills": "+所有技能射程 {n}",
+    "+{n} less cooldown on all skills": "所有技能冷却缩短 {n} 回合",
+    "{n}% burn": "{n}% 燃烧",
+    "{n}% freeze": "{n}% 冰冻",
+    "{n}% paralyse": "{n}% 麻痹",
+    "dmg {n} turns": "伤害持续 {n} 回合",
+    "for good": "永久",
+    "consumable": "消耗品",
+    "skill": "技能",
+    "You already know this spell": "你已学会这个法术",
+    "Your bag is full ({n}/{n})": "背包已满（{n}/{n}）",
+    "HELP": "帮助",
+    "GIVES": "获得",
+    "TAKES": "代价",
+    "BURNING BUSH": "燃烧的荆棘",
+    "{name}, a level {level} {who}, lived through all {day} days.": "{name}，{level} 级{who}，活过了全部 {day} 天。",
+    "Here lies {name}, a level {level} {who}. Slain by {foe:a} on day {day}, in {place}.": "{name}长眠于此，生前是 {level} 级{who}。第 {day} 天在{place}被{foe:a}杀死。",
+    "Here lies {name}, a level {level} {who}. Fell on day {day}, in {place}.": "{name}长眠于此，生前是 {level} 级{who}。第 {day} 天在{place}陨落。",
+    "All Rank": "总排名",
+    "Class Rank": "职业排名",
+    "YOU SUCCUMBED TO DEATH ON DAY {n}": "你在第 {n} 天迎来了死亡",
+    "YOU": "你",
+    "SCORE": "得分",
+    "RANK": "排名",
+    "CLASS RANK": "职业排名",
+    "Leaderboard": "排行榜",
+    "DAILY": "每日",
+    "COMPETITIVE": "竞技",
+    "Submit Name": "提交姓名",
+    "Try Again": "再试一次",
+    "low": "低",
+    "day": "白昼",
+    "night": "夜晚",
+    "all-day": "全天",
+    "Auto Sort": "自动整理",
+    "Auto Equip": "自动装备",
+    "EMPTY": "空",
+    "Unequip": "卸下",
+    "Equip": "装备",
+    "Use": "使用",
+    "Upgrade: -{n} max HP": "升级：生命上限 -{n}",
+    "LEAVE WHAT?": "要舍弃什么？",
+    "GEARS": "装备",
+    "SHORTCUT": "快捷栏",
+    "BAG": "背包",
+    "Tap": "轻触",
+    "Click": "点击",
+    "You take the {item}.": "你拾取了{item}。",
+    "You can't leave {spell}, your class's own.": "{spell}是职业专属技能，无法舍弃。",
+    "Your bag is full. Pick what to leave for {thing:the}.": "背包已满。选择舍弃一件物品，为{thing:the}腾出空间。",
+    "That isn't worn as {slot:a}.": "这件物品无法装备在{slot:a}栏。",
+    "You can't wear {slot:a}.": "你无法装备{slot:a}。",
+    "You equip the {item}.": "你装备了{item}。",
+    "You take off the {item}.": "你卸下了{item}。",
+    "You put on the {a}, the {b} and the {c}.": "你装备了{a}、{b}和{c}。",
+    "You put on the {a} and the {b}.": "你装备了{a}和{b}。",
+    "You put on the {a}.": "你装备了{a}。",
+    "You can't drop {spell}, your class's own.": "{spell}是职业专属技能，无法丢弃。",
+    "You drop {thing:the}.": "你丢弃了{thing:the}。",
+    "You leave {old:the} and take the {item}.": "你舍弃了{old:the}，拾取了{item}。",
+    "You drink the {item}. It's {truly:a}!": "你喝下{item}。原来是{truly:a}！",
+    "You drink the {item}.": "你喝下了{item}。",
+    "You feel blessed. Your {stat:low} goes up to {n}.": "你感到祝福降临，{stat:low}升至 {n}。",
+    "Your {stat:low} goes up to {n}.": "你的{stat:low}升至 {n}。",
+    "Your bag is full. Pick what to leave for {thing}.": "背包已满。选择舍弃一件物品，为{thing}腾出空间。",
+    "You learn {spell}.": "你学会了{spell}。",
+    "BLESSING": "祝福",
+    "LEVEL UP": "升级",
+    "Pick skill": "选择技能",
+    "Pick stats": "选择属性",
+    "Lv. {n}": "{n} 级",
+    "Upgrade": "升级",
+    "Learn": "学习",
+    "Daily Challenge: {name}. {n} days on the same map as everyone today, and the best scores go on today's leaderboard.": "每日挑战：{name}。今天所有人共享同一张地图，生存 {n} 天，最佳得分将登上今日排行榜。",
+    "Competitive mode: {n} days, and the best scores go on the leaderboard.": "竞技模式：生存 {n} 天，最佳得分将登上排行榜。",
+    "Today everyone is {cls:a}.": "今天所有人都是{cls:a}。",
+    "You're {cls:a}.": "你是一位{cls:a}。",
+    "You are now {cls:a}.": "你现在是一位{cls:a}。",
+    "DAILY CHALLENGE": "每日挑战",
+    "New in {h}h {m}m": "{h} 小时 {m} 分后更新",
+    "THE BEST OF {version}": "{version} 最佳成绩",
+    "ALL": "全部",
+    "{n}m": "{n} 分",
+    "The leaderboard can't be reached.": "无法连接排行榜。",
+    "LEADERBOARD": "排行榜",
+    "The tabs at the top": "顶部标签页",
+    "Tab": "标签页",
+    "SETTINGS": "设置",
+    "LANGUAGE": "语言",
+    "Language": "语言",
+    "SOUND": "声音",
+    "DISPLAY": "显示",
+    "CONTROLS": "操作",
+    "Custom": "自定义",
+    "TOUCH": "触屏",
+    "Right": "右",
+    "Left": "左",
+    "Up": "上",
+    "Down": "下",
+    "That key's taken": "该按键已被占用",
+    "Press a key for {what}": "为“{what}”按下新按键",
+    "Play": "开始游戏",
+    "Pause": "暂停",
+    "STARTING SKILL": "初始技能",
+    "Swap skill": "替换技能",
+    "Back": "返回",
+    "Swap": "替换",
+    "Drop": "丢弃",
+    "Take": "拾取",
+    "No": "否",
+    "Yes": "是",
+    "Submit Score": "提交分数",
+    "Share to X": "分享到 X",
+    "Restart Game": "重新开始",
+    "Play More on DOS-AGE.COM": "前往 DOS-AGE.COM 继续冒险",
+    "Select": "选择",
+    "Skip": "跳过",
+    "Reset": "重置",
+    "Choose": "选择",
+    "Cancel": "取消",
+    "Skip skill?": "跳过技能？",
+    "You won't learn any of these skills this level.": "本次升级将不学习这些技能。",
+    "You feel weak.": "你感到虚弱。",
+    "You're about to collapse!": "你快撑不住了！",
+    "You step back outside.": "你回到外面。",
+    "You enter the house.": "你走进房屋。",
+    "You enter the church.": "你走进教堂。",
+    "You climb up and out, into the forest.": "你爬出洞穴，回到森林。",
+    "falls apart": "散了架",
+    "An animated skeleton holding past grudges.": "一具带着往日怨恨复活的骷髅。",
+    "crumbles to dust": "碎成尘埃",
+    "It still remembers the words.": "它仍记得那些咒语。",
+    "squeals and falls": "尖叫着倒下",
+    "Small, quick, and gone before your blow lands.": "矮小敏捷，攻击还没落下便已跑远。",
+    "goes still": "不再动弹",
+    "It waits under the sand for something warm.": "它潜伏在沙下，等待温热的猎物。",
+    "drops dead": "倒地身亡",
+    "It learnt one spell, and it likes it a lot.": "它只学会了一个法术，却乐此不疲。",
+    "falls, and his halls go quiet": "倒下了，大厅随之沉寂",
+    "Every tunnel down here is his, and he's coming through.": "地下的每条隧道都归他所有，而他正朝你而来。",
+    "crumbles into a heap of stone": "崩成一堆碎石",
+    "A mountain that learnt to walk. Slowly.": "一座学会行走的山。走得很慢。",
+    "A small, mean thing, and quicker than it looks.": "矮小凶恶，比看上去敏捷。",
+    "bursts": "爆裂了",
+    "A wobbling blob that dissolves its prey.": "摇摇晃晃的胶团，能溶解猎物。",
+    "A horned wobbling blob that dissolves its prey.": "长着角的胶团，能溶解猎物。",
+    "is banished": "被放逐了",
+    "It hunts you through the first forest, and it never stops.": "它在第一片森林中追猎你，永不停歇。",
+    "falls": "倒下了",
+    "He had trees to cut. Now he has you.": "从前他砍树，如今他砍你。",
+    "He had rock to dig. Now he has you.": "从前他挖石头，如今他盯上了你。",
+    "Lives off whatever comes down the road.": "靠掠夺过路者为生。",
+    "fades away": "消散了",
+    "Someone who walked this forest before you, and won't rest.": "曾经走过这片森林，却无法安息的人。",
+    "Here to pray.": "来此祈祷的人。",
+    "falls silent": "归于寂静",
+    "Here to sing the hours.": "来此吟唱时辰祷文的人。",
+    "crashes down": "轰然倒下",
+    "An old tree that pulled up its roots.": "一棵拔起树根的古树。",
+    "Slow, rotten, and it doesn't feel a thing.": "缓慢腐朽，毫无知觉。",
+    "falls, and the ground goes dry": "倒下了，大地随之干涸",
+    "A white deer with four horns. Floods follow wherever it's seen.": "四角白鹿，所现之处必有洪水。",
+    "yelps and goes still": "哀鸣一声，不再动弹",
+    "It hunts by night, and by smell.": "它在夜间循着气味狩猎。",
+    "A kobold that learnt to fence, and won't let you forget it.": "学会剑术的狗头人，生怕你忘了这点。",
+    "Sworn to something under the graves, and glad to show you.": "向墓地下的存在宣誓效忠，并乐于向你展示。",
+    "Its aim outlived its eyes.": "眼睛早已腐朽，准头却依旧。",
+    "fades into the cold": "消散于寒气中",
+    "Cold air in the shape of a grudge.": "怨恨凝成的寒气。",
+    "You picked a fight with the wrong neighbour.": "你招惹了不该惹的邻居。",
+    "A grunt with a helmet, and the attitude to match.": "戴上头盔的小兵，脾气也跟着见长。",
+    "drops dead behind its shield": "倒在盾牌后死去",
+    "Mostly shield. The rest is spite.": "几乎全是盾牌，剩下的都是恶意。",
+    "curls up and goes still": "蜷缩起来，不再动弹",
+    "A worm the size of a tunnel. It only wants the dirt.": "隧道般粗的巨虫。它只想吃土。",
+    "crumbles": "碎裂了",
+    "Its skin is rock, and so is its patience.": "皮肤如岩石，耐心也一样。",
+    "You're standing on a find. Soon you'll be one.": "你脚下踩着文物，很快你也会成为文物。",
+    "crumbles, and its notes with it": "与它的笔记一同化为尘埃",
+    "It cheated death, and kept the notes.": "它骗过了死亡，还留下了笔记。",
+    "clangs to the ground": "哐当一声倒地",
+    "Iron jaws, iron nerves, and your scent in the second forest.": "铁牙钢胆，在第二片森林中追寻你的气味。",
+    "Peace be with you, traveller. The forest is dark and your road is long. May I pray for you?": "愿平安与你同在，旅人。森林幽暗，前路漫长。我能为你祈祷吗？",
+    "What do you seek?": "你追寻什么？",
+    "See cursed and mighty foes when they're near.": "察觉附近受诅咒或强大的敌人。",
+    "Then see them, as I see them.": "那就如我一般，看清它们。",
+    "See chests, and sheds with chests, when they're near.": "察觉附近的宝箱，以及藏着宝箱的棚屋。",
+    "Seek, and you shall find.": "寻找，便会寻见。",
+    "Find better gear for the rest of your journey.": "此后的旅途中更容易找到优质装备。",
+    "The land will give you its finest.": "这片土地将献出最好的馈赠。",
+    "Here lies {name}.": "{name}长眠于此。",
+    "Don't look for me.": "别来找我。",
+    "Your gear is dull and rusted. You'll stand no chance in this darkness. Hand it over.": "你的装备又钝又锈。在这黑暗里，你毫无胜算。交给我。",
+    "UPGRADE WHAT?": "升级哪件装备？",
+    "It gives, and it takes.": "有所赐予，亦有所索取。",
+    "ITEM": "物品",
+    "GAME OVER": "游戏结束",
+    "OBSERVE": "观察",
+    "Environment": "环境",
+    "Gameplay": "游戏",
+    "Mute": "静音",
+    "Show Blood": "显示血迹",
+    "Reduce Motion": "减少动态效果",
+    "Screen Curve": "屏幕曲率",
+    "Move": "移动",
+    "Keys": "按键",
+    "Use / Talk": "使用／交谈",
+    "D-Pad": "方向键盘",
+    "D-Pad Side": "方向键盘位置",
+    "REPLAY": "回放",
+    "PICK A CLASS": "选择职业",
+    "For gear, the small numbers show how it compares with what you're wearing now.": "装备旁的小数字表示它与当前穿戴装备的差值。",
+    "With more than one thing here, pick one from the row at the top.": "若此处有多件物品，请在上方一排中选择。",
+    "Keys: T take, E take and put on, S swap, D leave it, arrows pick.": "按键：T 拾取，E 拾取并装备，S 替换，D 放弃，方向键选择。",
+    "{Click} a thing to see it, drag it to move it.": "{Click}物品可查看，拖动可移动。",
+    "Onto another slot: swaps them.": "拖到其他格子：交换位置。",
+    "Gear onto GEARS: wears it.": "将装备拖到装备栏：穿戴。",
+    "A spell or potion onto a key: use it with 1-8.": "将法术或药水拖到快捷栏：用 1–8 键使用。",
+    "Out of the bag: drops it.": "拖出背包：丢弃。",
+    "Wearing, using and dropping take a turn.": "穿戴、使用和丢弃都会消耗一回合。",
+    "Spells take a slot too; your class's own can't be dropped.": "法术也占背包格；职业自带的技能无法丢弃。",
+    "Auto Equip wears what suits your class best (a turn); Auto Sort tidies the bag.": "自动装备会穿戴最适合职业的装备，消耗一回合；自动整理会整理背包。",
+    "Keys: arrows pick, S move, D drop, U use, E equip, G auto equip, T auto sort, 1-8 key.": "按键：方向键选择，S 移动，D 丢弃，U 使用，E 装备，G 自动装备，T 自动整理，1–8 设快捷键。",
+    "Esc X": "Esc X",
+    "hunts you": "正在追猎你",
+    "Your observation level is affected by your MAG. The more MAG you have, the more you'll learn about a monster.": "观察等级受魔力影响。魔力越高，能看出的怪物信息就越多。",
+    "Superior, cursed and enchanted monsters each know a randomly chosen spell.": "精英、诅咒和附魔怪物各自掌握一个随机法术。",
+    "You're playing in competitive mode, which is limited by days.": "你正在游玩有天数限制的竞技模式。",
+    "You've reached the last of your days, so your score is final.": "最后一天已经结束，得分已结算。",
+    "Your score goes on the leaderboard if it's in the top 30.": "得分进入前 30 名才会显示在排行榜上。",
+    "Below the top 30 it isn't listed, and below 100th it isn't ranked at all.": "前 30 名以外不显示，100 名以后不再计算名次。",
+    "You've died.": "你死了。",
+    "In competitive mode, your score goes on the leaderboard if it's in the top 30.": "在竞技模式中，得分进入前 30 名才会显示在排行榜上。",
+    "Death is permanent: your character can't be brought back.": "死亡是永久的：角色无法复活。",
+    "Today's Daily Challenge has a leaderboard of its own: your best score today is the one that counts.": "今日挑战有独立排行榜，仅记录你今天的最高分。",
+    "Play it again as often as you like, on the same map, till the next challenge comes at midnight (UTC).": "下次挑战于 UTC 午夜更新；在此之前可在同一地图上反复挑战。",
+    "You enter the shed.": "你走进棚屋。",
+    "You enter the hall.": "你走进大厅。",
+    "You climb down into the cave. It's dark.": "你爬下洞穴。里面一片漆黑。",
+    "Skeleton Mage": "骷髅法师",
+    "Goblin Mage": "哥布林法师",
+    "Goblin King": "哥布林王",
+    "Goblin Grunt": "哥布林喽啰",
+    "Horned Slime": "独角史莱姆",
+    "Kobold Duelist": "狗头人决斗者",
+    "Skeleton Archer": "骷髅弓手",
+    "Goblin Soldier": "哥布林士兵",
+    "Goblin Bulwark": "哥布林盾卫",
+    "Earth Worm": "地虫",
+    "Earth Stone Worm": "岩石地虫",
+    "Iron Hound": "铁甲猎犬",
+    "You hear the sound of wailing.": "你听到了哀嚎声。",
+    "A faint wailing drifts through the air.": "隐约的哀嚎飘荡在空气中。",
+    "Someone is weeping, somewhere close.": "附近某处有人在哭泣。",
+    "A soft wail sends a chill down your spine.": "低低的哀鸣让你背脊发凉。",
+    "You hear a woman sobbing in the dark.": "你听到一个女人在黑暗中啜泣。",
+    "The trees won't cut themselves.": "树可不会自己倒下。",
+    "Out of my way, I've got work to do.": "让开，我还得干活。",
+    "Can't you see I'm busy?": "没看见我正忙着吗？",
+    "Move it. Daylight's burning.": "快让开，天都要黑了。",
+    "Unless you're here to chop, keep walking.": "不帮忙砍树就继续走。",
+    "Less talking, more chopping.": "少说话，多砍树。",
+    "Mind the axe. I won't say it twice.": "小心斧头。我不说第二遍。",
+    "Something walks these woods that no axe can stop. Folk call it the demon.": "林子里有个东西，什么斧头也拦不住。人们管它叫恶魔。",
+    "Trees crashing down to the east, nobody swinging. Keep moving.": "东边的树一棵棵倒下，却没人挥斧。别停留。",
+    "There's a golem in the red woods. Slow as winter, hits like an oak.": "红林里有个魔像。慢得像寒冬，打人像巨橡砸下来。",
+    "My brother took an axe to a golem once. The ground shook for a week.": "我兄弟曾拿斧头砍过魔像。大地震了一星期。",
+    "Miners say a goblin king rules under the hills. Digs like it's water.": "矿工说山底下有个哥布林王，挖起土来像趟水。",
+    "There's a hound in the red woods made of iron. It never tires.": "红林里有条铁做的猎犬。它从不疲倦。",
+    "My axe rang off its hide like a bell. I didn't swing twice.": "我的斧头砍在它身上，像敲钟一样。我没敢再砍第二下。",
+    "Who forges a hound? Smiths make tools. Someone made that to hunt.": "谁会铸造猎犬？铁匠做的是工具。造它的人是为了狩猎。",
+    "It stops at the edge of the red woods. Like it's been told to.": "它走到红林边缘就停下，像是得过命令。",
+    "There's a dead man out here who won't lie down.": "林子里有个死人，怎么也不肯躺下。",
+    "They say the lich was a man once. Wanted what the forest had.": "据说巫妖曾经也是人。他想得到森林的东西。",
+    "Don't chop near the lone graves. Something answers.": "别在孤坟附近砍树。会有东西回应。",
+    "A dead man should stay dead, otherwise...": "死人就该安分地死着，否则……",
+    "My gran called this the Mother's wood. Said she gave, once.": "奶奶管这里叫母亲之林。说她曾经赐予万物。",
+    "No sun gets in here. Folk say the wood's in mourning.": "阳光照不进这里。人们说森林正在哀悼。",
+    "The acolytes say Mother's forsaken us. Can't blame her.": "侍僧说母亲抛弃了我们。这也怪不了她。",
+    "Cut a tree in the dark wood, and she hears it. So they say.": "在暗林里砍树，她就会听见。大家都这么说。",
+    "The rock won't dig itself.": "石头可不会自己挖开。",
+    "Mind your head, the ceiling's loose.": "留神头顶，岩顶松了。",
+    "Out of my light, friend.": "朋友，别挡着光。",
+    "Pick, swing, pick, swing. That's the job.": "举镐，挥下；举镐，挥下。这就是我的活。",
+    "Keep your voice down. They listen, down here.": "小声点。下面的东西听着呢。",
+    "Dig your own tunnel.": "自己挖隧道去。",
+    "Hear that digging? Pray it's mine.": "听见挖掘声了吗？祈祷是我挖的吧。",
+    "The goblin king makes his own tunnels, straight to whoever he's after.": "哥布林王自己挖隧道，直奔他的猎物。",
+    "The goblin king keeps to his halls. Most days.": "哥布林王待在自己的大厅里。大多数时候是。",
+    "The demon up top won't follow you down here. Small mercies.": "上面的恶魔不会跟到这儿。算是一点恩典。",
+    "Saw a golem once, out in the red woods.": "我在红林里见过一次魔像。",
+    "A torch is the only friend you've got down here. Keep one close.": "在下面，火把是你唯一的朋友。带好它。",
+    "Careful where you step. Everything down here is a find.": "小心脚下。这下面全是文物。",
+    "Please don't touch anything.": "拜托，什么都别碰。",
+    "Do you know how old this dirt is?": "你知道这土有多少年历史吗？",
+    "Brush, don't swing. Brush.": "用刷子，别挥砍。用刷子。",
+    "I'm cataloguing. Go away.": "我正在编目。走开。",
+    "If you break it, you're the exhibit.": "弄坏了，你就是展品。",
+    "The goblins think these halls are theirs. The carvings disagree.": "哥布林以为大厅是它们的。石刻可不这么说。",
+    "Found a page in a dead man's hand. Notes on how not to die.": "在死人手里找到一页纸。记着如何不死。",
+    "Some worms here have skin like stone. Avoid the grey ones.": "这里有些虫子的皮像石头。离灰色的远点。",
+    "The goblin king digs his own tunnels. Bad technique. Fast, though.": "哥布林王自己挖隧道。技术糟糕，但确实快。",
+    "A hound of iron hunts the red woods. Nobody's found its maker.": "一条铁猎犬在红林里狩猎。没人找到它的造主。",
+    "These halls are older than the goblins. Older than the hills.": "这些大厅比哥布林古老，比群山还古老。",
+    "Someone buried something big down here. Not the goblins.": "有人把庞然大物埋在了下面。不是哥布林。",
+    "You see {who:a} resting by the water.": "你看见{who:a}在水边休息。",
+    "You see {who:a} at work.": "你看见{who:a}正在干活。",
+    "Bless you, my child.": "愿你蒙福，孩子。",
+    "Go in peace.": "平安地去吧。",
+    "I'm still praying for you.": "我仍在为你祈祷。",
+    "Divine Liturgy is starting.": "圣礼即将开始。",
+    "Glory be to God for all things!": "愿一切荣耀归于上帝！",
+    "It is later than you think.": "时辰比你以为的更晚了。",
+    "Lord, forgive me a sinner.": "主啊，赦免我这罪人。",
+    "Lord Jesus Christ, Son of God, have mercy on me, a sinner.": "主耶稣基督，上帝之子，怜悯我这罪人。",
+    "Christ is risen!": "基督复活了！",
+    "God became man so that man might become god, by grace.": "神成为人，使人借着恩典成为神。",
+    "Beauty will save the world.": "美将拯救世界。",
+    "Christ is risen from the dead!": "基督从死者中复活了！",
+    "Kyrie eleison.": "主啊，求你怜悯。",
+    "Glory to the Father, to the Son, and to the Holy Spirit.": "荣耀归于圣父、圣子、圣灵。",
+    "Now and ever and unto ages of ages. Amen.": "从今直到永远，世世无尽。阿门。",
+    "Holy God, Holy Mighty, Holy Immortal, have mercy on us.": "至圣、至强、永生的上帝，求你怜悯我们。",
+    "Lord, have mercy.": "主啊，求你怜悯。",
+    "Glory to God! Welcome home, child. Christ is in our midst.": "荣耀归于上帝！欢迎回家，孩子。基督就在我们中间。",
+    "You see a priest walking among the grass.": "你看见一位牧师走过草地。",
+    "The villagers hurry inside.": "村民们匆匆躲进屋内。",
+    "You are not one of them.": "你不是他们中的一员。",
+    "We don't want any trouble.": "我们不想惹麻烦。",
+    "Keep walking, stranger.": "继续走吧，陌生人。",
+    "Stay away from my children.": "离我的孩子远点。",
+    "The man looks you over and says nothing.": "男人打量着你，一言不发。",
+    "Shut the door behind you. Quickly.": "进来把门关上。快点。",
+    "You are not from here.": "你不是这里的人。",
+    "Please, leave us be.": "求你别打扰我们。",
+    "The woman averts her eyes from you.": "女人避开了你的目光。",
+    "Quiet. They'll hear you.": "安静。它们会听见。",
+    "Who are you?": "你是谁？",
+    "Mama said I can't talk to strangers.": "妈妈不让我和陌生人说话。",
+    "Are you lost?": "你迷路了吗？",
+    "Papa says the woods aren't safe.": "爸爸说林子里不安全。",
+    "Have you seen the trees falling? Nobody's chopping them.": "你看见那些树倒了吗？根本没人砍。",
+    "Is it gone?": "它走了吗？",
+    "Mama says we have to be quiet.": "妈妈说我们得安静。",
+    "Have you... seen my child?": "你有没有……见过我的孩子？",
+    "She doesn't look up from the small shoe in her lap.": "她低头看着膝上的小鞋子，始终没有抬头。",
+    "lake home": "湖畔小屋",
+    "A girl stacks pebbles by the water. For a moment, the forest feels far away.": "女孩在水边叠着石子。有那么一瞬，森林仿佛远去了。",
+    "The house is quiet.": "屋里静悄悄的。",
+    "A girl sits by the water, watching the trees.": "女孩坐在水边，望着树林。",
+    "Day off. Even the trees need a rest from me.": "歇一天。树也得歇歇，躲躲我的斧头。",
+    "That's my girl. Don't scare her.": "那是我女儿。别吓着她。",
+    "A few more trees, and we're gone from here.": "再砍几棵树，我们就离开这里。",
+    "This place won't stay safe for long. I can feel it.": "这里安全不了多久。我能感觉到。",
+    "Sit if you like. Just keep your weapon down.": "想坐就坐，把武器放下就行。",
+    "Papa's resting. He chops all day.": "爸爸在休息。他砍了一整天的树。",
+    "Are you a lumberjack too?": "你也是伐木工吗？",
+    "Papa says we're leaving soon.": "爸爸说我们很快就走。",
+    "Have you seen my papa?": "你见过我爸爸吗？",
+    "He's chopping wood. He always comes back before dark.": "他在砍柴。他总在天黑前回来。",
+    "I'll wait. He promised.": "我会等。他答应过的。",
+    "It's getting dark. He's never this late.": "天要黑了。他从没这么晚过。",
+    "Speak your name, O human.": "报上你的名字，人类。",
+    "The executioner": "刽子手",
+    "The fire leaps into your eyes. The Evil can no longer hide from you.": "火光跃入你的双眼。邪恶再也无处遁形。",
+    "The treasure": "宝藏",
+    "The fire leaps into your eyes. You sense what the land hides.": "火光跃入你的双眼。你感知到大地隐藏之物。",
+    "The glory": "荣耀",
+    "The fire settles in your hands. They feel blessed.": "火焰融入你的双手，仿佛赐下祝福。",
+    "I see you have forsaken the light.": "我看出你已背弃光明。",
+    "The flames turn away from you, and the dark draws close.": "火焰背过身去，黑暗向你逼近。",
+    "Your {item} laughs softly.": "你的{item}轻轻笑了。",
+    "The dark lets you go.": "黑暗放开了你。",
+    "The fire burns on, and says nothing more.": "火焰继续燃烧，不再言语。",
+    "the Green Wood": "青林",
+    "the Red Woods": "红林",
+    "the Dark Wood": "暗林",
+    "the Thorned Wood": "荆棘林",
+    "Your friend's door is ajar.": "朋友家的门半掩着。",
+    "You enter the house. It's empty. A note is pinned to the wall.": "你走进屋内。空无一人。墙上钉着一张字条。",
+    "It's your friend's hand. The last word tore through the page.": "是你朋友的笔迹。最后一个字划破了纸。",
+    "A note is pinned to the wall.": "墙上钉着一张字条。",
+    "A carving lies among the stones.": "石堆间躺着一块刻字石。",
+    "Only something of its own could cut her. So we used what we took from the little one.": "只有同源之物才能伤到她。于是，我们用了从小家伙身上取走的东西。",
+    "It took twelve of us to carry the head down. It wept the whole way.": "十二个人才把那颗头抬下去。它一路都在哭。",
+    "We buried it as deep as the hills go. You can still hear her.": "我们把它埋到群山最深处。你仍能听见她。",
+    "There's a smith down here who won't say what he made. His hands shake when I ask.": "下面有个铁匠，不肯说自己造过什么。每次问起，他的手就发抖。",
+    "I followed the weeping down three floors. It's always one floor further.": "我循着哭声下了三层。它永远在下一层。",
+    "Found my brother's shield by the river. No sign of him. There never is.": "在河边找到了兄弟的盾牌，却找不到他。总是如此。",
+    "Everyone in town has a cousin who went in. Nobody has a cousin who came out.": "镇上人人都有亲戚走进去，却没有谁的亲戚走出来。",
+    "They say whoever reaches the heart of the forest comes back a hero. Nobody's met one.": "据说到达森林深处的人会成为英雄归来。可没人见过。",
+    "Day three. The trees came down behind us. Not the wind.": "第三天。身后的树纷纷倒下。不是风。",
+    "Grandmother says the forest used to give. Now it only takes.": "祖母说森林从前赐予万物，如今只会索取。",
+    "Treasure. Glory. Miracles. Pick a rumour. They all point the same way: in.": "宝藏、荣耀、奇迹。随你信哪个传闻，都指向同一个方向：更深处。",
+    "Every brother I've buried went in for glory. Not one knew what he was walking into. I mean to find out.": "我埋葬的每个兄弟都是为了荣耀进去的。他们无人知道前方是什么。我定要查清。",
+    "Nobody remembers who walked in first, or why. Only that we keep walking in.": "没人记得第一个走进去的是谁，为何而去。只知道我们不断走进去。",
+    "Another child gone. The elders say the forest only takes back what it's owed.": "又一个孩子失踪了。长老说，森林只是收回欠它的。",
+    "Something was taken from this forest. You can feel it, like a house after a funeral.": "有人从森林夺走了什么。你能感觉到，像走进刚办过葬礼的家。",
+    "Flowers opened wherever it stepped. Why should a beast have that, and not us?": "它走到哪里，鲜花就开到哪里。凭什么野兽能有这种力量，我们却没有？",
+    "We shared out its things. Whoever held them would hold its gift. That was the idea.": "我们瓜分了它的东西。谁拿着，谁就能得到它的天赋。我们当时是这么想的。",
+    "The flowers still die in my hands.": "鲜花在我手里依旧枯萎。",
+    "It wasn't a beast. It was a child. Hers.": "那不是野兽。那是个孩子。她的孩子。",
+    "Mother has forsaken us.": "母亲抛弃了我们。",
+    "We don't pray for forgiveness. We pray she forgets us.": "我们不求宽恕，只求她忘了我们。",
+    "You hear a flurry of cackles and bones ripped apart.": "你听见一阵狂笑，夹杂着骨骼撕裂声。",
+    "You are not welcome here.": "这里不欢迎你。",
+    "A bad move.": "走错了一步。",
+    "They lunge at you like starving hounds.": "它们像饿犬般扑向你。",
+    "You hear iron being hammered somewhere in the dark.": "你听见黑暗中某处传来打铁声。",
+    "Tell me... is the sun still up there?": "告诉我……上面还有太阳吗？",
+    "How many winters has it been?": "已经过了多少个冬天？",
+    "It has been years since I saw another human.": "我已多年未见其他人类。",
+    "Your gear could bite deeper. Hand it over.": "你的装备还能更锋利。交给我。",
+    "Your gear is sound. Pity.": "你的装备完好无损。可惜。",
+    "You hear whispering from his hammer.": "你听见他的锤子在低语。",
+    "It drank well.": "它喝得很满足。",
+    "You feel your strength wane.": "你感到力量在流逝。",
+    "Suit yourself.": "随你的便。",
+    "His eyes are pools of black tar.": "他的双眼如两潭漆黑的焦油。",
+    "More for the anvil?": "再给铁砧些养料？",
+    "The hammer is fed. Go.": "锤子吃饱了。走吧。",
+    "There's not enough of you left.": "你剩下的血肉不够了。",
+    "You stop yourself upon seeing his blackened eyes on you.": "看见他漆黑的双眼盯着你，你止住了脚步。",
+    "Behind you, the hammer starts again.": "身后，锤声再次响起。",
+    "Upgrade 1 gear at the cost of 15% max HP.": "消耗 15% 最大生命值，升级一件装备。",
+    "Shrine of the Wolf": "狼之神龛",
+    "Shrine of the Owl": "鸮之神龛",
+    "Shrine of the Bear": "熊之神龛",
+    "Shrine of the Fox": "狐之神龛",
+    "Shrine of the Horse": "马之神龛",
+    "Shrine of Envy": "嫉妒神龛",
+    "Pact of Envy": "嫉妒契约",
+    "Your blows and spells drain life.": "攻击与法术吸取生命。",
+    "Lose 1 hp every 4 steps.": "每走 4 步损失 1 点生命。",
+    "drains life": "吸取生命",
+    "-1 hp every 4 steps": "每 4 步 -1 生命",
+    "Shrine of the Blade": "利刃神龛",
+    "Pact of the Blade": "刀锋契约",
+    "Your blows have a 50% chance to deal double damage.": "攻击有 50% 概率造成双倍伤害。",
+    "-4 speed.": "速度 -4。",
+    "50% double blows": "50% 双倍攻击",
+    "-4 speed": "速度 -4",
+    "Shrine of Blight": "枯萎神龛",
+    "Pact of Blight": "枯萎契约",
+    "Your spells leap on to the next enemy nearby.": "法术会弹射至附近的下一个敌人。",
+    "-4 defence.": "防御 -4。",
+    "spells leap on": "法术弹射",
+    "-4 defence": "防御 -4",
+    "Shrine of the Little Crown": "小王冠神龛",
+    "Pact of the Little Crown": "小王冠契约",
+    "Everything in your bag goes up a tier.": "背包中所有物品提升一个品质等级。",
+    "-50 max hp.": "最大生命 -50。",
+    "bag a tier up": "背包物品升一阶",
+    "-50 max hp": "最大生命 -50",
+    "You come upon an old shrine. A {animal} is carved into its stone.": "你发现一座古老祭坛，石上刻着{animal}。",
+    "You come upon an old shrine, red as a wound.": "你发现一座古老祭坛，红得像一道伤口。",
+    "You leave the shrine be.": "你离开了祭坛。",
+    "The shrine is silent now.": "祭坛已归于寂静。",
+    "You already bear this pact.": "你已立下此契约。",
+    "The shrine takes its due.": "祭坛收取了代价。",
+    "your {by}": "你的{by}",
+    "Your {by} leaps to": "你的{by}弹射至",
+    "You climb the tower and look out over the forest.": "你爬上高塔，俯瞰森林。",
+    "You climb back down.": "你爬回地面。",
+    "night <lit>{n}/{of}</>": "夜晚 <lit>{n}/{of}</>",
+    "day <lit>{n}/{of}</>": "白昼 <lit>{n}/{of}</>",
+    "{n} {stat}": "{stat} {n}",
+    "-the chat is scrollable when expanded or collapsed.": "-聊天栏展开或收起时均可滚动。",
+    "-when expanded, the log and chat toggle is used to hide or view the log on that category.": "-展开后，可用日志／聊天开关控制该分类的日志显示。",
+    "has banished a demon!": "放逐了一个恶魔！",
+    "has slain the goblin king!": "击杀了哥布林王！",
+    "has brought down a golem!": "击倒了一个魔像！",
+    "has destroyed the lich!": "消灭了巫妖！",
+    "has brought down the iron hound!": "击倒了铁猎犬！",
+    "New here? Press Enter and type /help to learn how to play.": "新手？按 Enter，输入 /help 查看玩法。",
+    "New here? Tap Chat and type /help to learn how to play.": "新手？轻点聊天，输入 /help 查看玩法。",
+    "[B] bag / [P] picks class / [G] leaderboard": "[B] 背包／[P] 选择职业／[G] 排行榜",
+    "[Enter] log + chat / [M] mute": "[Enter] 日志与聊天／[M] 静音",
+    "[+/-] zoom / [O] full screen.": "[+/-] 缩放／[O] 全屏。",
+    "[Esc] / [Backspace] Close": "[Esc]／[Backspace] 关闭",
+    "Last 5 days in the forest. Explore, fight and open chests for points: the best scores go on the leaderboard.": "在森林中生存 5 天。探索、战斗、开启宝箱来赚取积分，最高分可登上排行榜。",
+    "Hold a finger on the side you want to go, and slide it to turn. Walk into a monster to fight it, into a tree to chop it.": "按住想前往的方向，滑动手指可转向。走向怪物即可战斗，走向树木即可砍伐。",
+    "Tap a monster to look at it. Tap the bag on the HUD for your bag, a spell beside it to cast it.": "轻点怪物可查看信息。轻点状态栏的背包可打开背包，点旁边的法术即可施放。",
+    "Tap [F] when it shows to use what's beside you: chests, doors, people. Pinch to zoom.": "出现 [F] 时轻点即可使用附近的宝箱、门或与人交谈。双指捏合可缩放。",
+    "At night the dead rise, and the demon never stops looking for you. Caves go deep: take a torch.": "入夜后死者复苏，恶魔永不停歇地寻找你。洞穴很深，记得带火把。",
+    "The branches close overhead. In this forest it's always night.": "枝叶在头顶合拢。这片森林永远是黑夜。",
+    "You leave the dark forest behind.": "你离开了暗林。",
+    "You feel <hunt>{n} {one:pl}</> hunting you again.": "你感觉<hunt>{n}个{one:pl}</>又在追猎你。",
+    "You feel {one:the} hunting you again.": "你感觉{one:the}又在追猎你。",
+    "{n} {one:pl} stop hunting you, and stand their ground.": "{n}个{one:pl}不再追猎你，停在原地。",
+    "{one:The} stops hunting you, and stands its ground.": "{one:The}不再追猎你，停在原地。",
+    "Your Ghost": "你的亡魂",
+    "The skeletons crumble in the morning light.": "骷髅在晨光中化为碎骨。",
+    "{name} fades with the dawn.": "{name}随着黎明消散。",
+    "The {name} fades with the dawn.": "{name}随着黎明消散。",
+    "You stop sneaking.": "你结束了潜行。",
+    "The echoes fade.": "回声渐渐消失。",
+    "The sun is setting.": "太阳即将落山。",
+    "Your {item} whispers your name.": "你的{item}低语着你的名字。",
+    "Something in your {item} murmurs.": "你的{item}里有什么在呢喃。",
+    "You hear whispering from your {item}.": "你听见{item}传来低语。",
+    "Your {item} murmurs: \"{word}\"": "你的{item}低语道：“{word}”",
+    "Where she stood, there's a chest.": "她站过的地方出现了一个宝箱。",
+    "*Hic!* You lose your footing.": "*嗝！* 你脚下一滑。",
+    "You open the door.": "你打开了门。",
+    "You dig through.": "你挖通了道路。",
+    "The crystal shatters.": "水晶碎裂了。",
+    "The tree falls.": "树倒下了。",
+    "You come upon a church in a great clearing.": "你在一大片空地上发现了一座教堂。",
+    "You come upon a graveyard. Something stirs among the graves.": "你发现了一片墓地。坟墓间有什么在蠢动。",
+    "You come upon a bandits' hideout. Someone's keeping watch.": "你发现了强盗的藏身处。有人正在放哨。",
+    "You come upon a ring of grass, a red altar at its heart.": "你发现一圈草地，中央是一座赤红祭坛。",
+    "You come upon a few small houses in a clearing.": "你在空地上发现了几间小屋。",
+    "You come upon a tree that burns, yet is not burnt.": "你发现了一棵燃烧却不焚毁的树。",
+    "You come upon a battlefield.": "你发现了一处战场。",
+    "You find a clearing hidden in the trees.": "你发现了藏在林间的空地。",
+    "The air smells of old iron.": "空气中弥漫着陈铁的气味。",
+    "The bones begin to stir.": "白骨开始蠢动。",
+    "Broken blades, split shields, bones. Whoever fought here lost.": "断刃、碎盾、白骨。在这里战斗的人都败了。",
+    "Whatever they fought, it isn't among the dead.": "无论他们的敌人是什么，它都不在死者之中。",
+    "They all fell facing the same way: deeper in.": "他们倒下时都朝着同一个方向：更深处。",
+    "The altar drinks the light. The ring stirs...": "祭坛吞噬着光。草环开始躁动……",
+    "You leave the ring, and the rite is broken.": "你离开草环，仪式中断了。",
+    "More slimes rise from the ring!": "更多史莱姆从草环中涌出！",
+    "Slimes rise from the ring!": "史莱姆从草环中涌出！",
+    "The ring falls quiet. Something waits by the altar.": "草环归于寂静。祭坛旁有什么在等着。",
+    "A white deer watches you from the trees. It looks young.": "一头白鹿在林间望着你。它看起来还很年幼。",
+    "It bolts, stops, and looks back at you.": "它奔出几步，停下，又回头望向你。",
+    "The forest goes very quiet.": "森林变得异常寂静。",
+    "Somewhere in the dark, something is tunnelling.": "黑暗中，有什么正在掘进。",
+    "Somewhere in the forest, trees are falling.": "森林的某处，树木正接连倒下。",
+    "Somewhere in the dark, something is digging.": "黑暗中，有什么正在挖掘。",
+    "your blow": "你的攻击",
+    "He wouldn't just leave.": "他不会就这样离开。",
+    "Where are you?": "你在哪里？",
+    "I didn't come all this way to turn back.": "我走了这么远，可不是为了回头。",
+    "'Don't look for me.' As if.": "“别来找我。”怎么可能。",
+    "Not yet.": "还不行。",
+    "I've had worse. I think.": "更糟的我都熬过了。大概吧。",
+    "I hate this forest at night.": "我讨厌夜里的这片森林。",
+    "Why does this place feel like it's grieving?": "为什么这里像是在哀悼？",
+    "Someone's crying down here.": "下面有人在哭。",
+    "Were the slimes at the altar guarding something? Why would they be there?": "祭坛边的史莱姆在守护什么吗？它们为何聚在那里？",
+    "Someone cast that summoning circle. How malicious.": "有人布下了那个召唤法阵。真是恶毒。",
+    "That altar drank the light. Who would build such a thing?": "那座祭坛吞噬光明。谁会造出这种东西？",
+    "I ran from that ring. I'd do it again.": "我逃离了那个草环。再来一次也一样。",
+    "Even the dead keep watch out here.": "就连死者也在这里守望。",
+    "Bandits, this far in. What are they hiding from?": "强盗竟躲得这么深。他们在躲什么？",
+    "'Them.' Who are they so afraid of?": "“它们。”究竟是什么，让他们如此恐惧？",
+    "Waiting all night for her child... I hope it comes home.": "等了孩子整整一夜……但愿孩子能回家。",
+    "Whose bones were they eating?": "它们啃的是谁的骨头？",
+    "The fire's still in me. I can feel it.": "那团火还在我体内。我能感觉到。",
+    "It's so dark. Ever since that bush.": "好黑。自从那棵灌木之后就这样了。",
+    "He asked if the sun's still up. How long has he been down there?": "他问太阳是否还在。他在下面待了多久？",
+    "Those eyes. Like pools of tar.": "那双眼睛，像两潭沥青。",
+    "A church, this far out. Who still comes to pray?": "这么偏僻的教堂。还有谁会来祈祷？",
+    "She's at rest now. I hope.": "她终于安息了。但愿如此。",
+    "Who was she waiting for?": "她在等谁？",
+    "They all fell facing deeper in. What were they walking towards?": "他们倒下时都朝着深处。他们要去哪里？",
+    "Someone else came looking. Like me.": "还有人也来寻找过。和我一样。",
+    "That deer looked back at me. Like it wanted me to follow.": "那头鹿回头看着我，像是想让我跟上。",
+    "Why tear down the trees just to reach me?": "为什么非要推倒树木来接近我？",
+    "Who makes a hound out of iron?": "谁会用铁造猎犬？",
+    "Notes on how not to die. Did they work?": "教人如何活下去的笔记。真的管用吗？",
+    "A king of tunnels. Who dug them before him?": "地道之王。在他之前，又是谁挖的地道？",
+    "Gives me hope.": "这让我看到了希望。",
+    "They robbed a family just for this axe?": "他们抢劫一家人，只为这把斧头？",
+    "Should I tell her the truth?": "我该告诉她真相吗？",
+    "Skills don't work on a Null day.": "虚无日无法使用技能。",
+    "Tap where to cast it, or the HUD to cancel.": "点击施法位置，或点击状态栏取消。",
+    "Pick where to cast it: arrows or mouse, Enter or click to cast, Esc to cancel.": "方向键或鼠标选择位置，回车或点击施法，Esc 取消。",
+    "{foe:The} is stunned!": "{foe:The}被击晕了！",
+    "Your {by} hits": "你的{by}命中",
+    "The tree catches fire.": "树燃烧起来。",
+    "The fire burns itself out.": "火焰自行熄灭了。",
+    "You aren't wounded.": "你没有受伤。",
+    "You can't blink there.": "你无法闪现到那里。",
+    "There's nothing close enough to freeze.": "附近没有可冻结的目标。",
+    "Your {by} strikes": "你的{by}击中",
+    "The thunderbolt crackles round the blacksmith and leaves him unharmed.": "雷电环绕铁匠噼啪作响，却没有伤到他。",
+    "The thunderbolt crackles round the priest and leaves him unharmed.": "雷电环绕牧师噼啪作响，却没有伤到他。",
+    "The thunderbolt strikes the ground.": "雷击落在地面上。",
+    "You're too weak to rage.": "你太虚弱，无法狂暴。",
+    "There's nothing to lunge at there.": "那里没有可突刺的目标。",
+    "There's nothing to thrust at there.": "那里没有可穿刺的目标。",
+    "There's nothing close enough to hit.": "附近没有可攻击的目标。",
+    "There's nothing there to charm.": "那里没有可魅惑的目标。",
+    "You can't place it there.": "无法放置在这里。",
+    "You're too weak to cast it.": "你太虚弱，无法施放。",
+    "It strikes nothing.": "没有击中任何目标。",
+    "It finds no one to drain.": "没有找到可汲取的目标。",
+    "The void orb collapses.": "虚空宝珠崩解了。",
+    "the {by}'s blow": "{by}的攻击",
+    "Your charmed {by} hits": "被你魅惑的{by}命中",
+    "You're frozen solid!": "你被冻住了！",
+    "You're paralysed!": "你被麻痹了！",
+    "You're frozen, and can't move.": "你被冻住，无法移动。",
+    "You thaw out.": "你解冻了。",
+    "You're paralysed, and can't move.": "你被麻痹，无法移动。",
+    "Yig Warrior": "伊格战士",
+    "Yig Mage": "伊格法师",
+    "Yig Spirit": "伊格之灵",
+    "There's no room to summon it.": "没有足够空间进行召唤。",
+    "your {by}'s blow": "你的{by}的攻击",
+    "Your {yig} dodges {foe:the}'s {spell}.": "你的{yig}躲开了{foe:the}的{spell}。",
+    "Your {yig} dodges {foe:the}'s blow.": "你的{yig}躲开了{foe:the}的攻击。",
+    "{foe:The}'s {spell} hits your {yig} for {n} damage.": "{foe:The}的{spell}对你的{yig}造成了{n}点伤害。",
+    "{foe:The} hits your {yig} for {n} damage.": "{foe:The}对你的{yig}造成了{n}点伤害。",
+    "Your {barrier} absorbs {foe:the}'s {spell}.": "你的{barrier}吸收了{foe:the}的{spell}。",
+    "Your {barrier} absorbs {foe:the}'s blow.": "你的{barrier}吸收了{foe:the}的攻击。",
+    "[overflow] checking the panels' text": "[overflow] 正在检查面板文字",
+    "Your time is up.": "你的时间到了。",
+    "You die.": "你死了。",
+    "Your name for the scoreboard": "排行榜昵称",
+    "DAILY CHALLENGE MODE": "每日挑战模式",
+    "COMPETITIVE MODE": "竞技模式",
+    "I scored {score} and ranked #{rank} on today's Daily Challenge, {name}, in DOS-AGE by @michaelmicasso. Same map for everyone, free in your browser:": "我在 @michaelmicasso 的 DOS-AGE 今日挑战“{name}”中拿下 {score} 分，排名第 {rank}！所有人使用相同地图，浏览器免费游玩：",
+    "I scored {score} on today's Daily Challenge, {name}, in DOS-AGE by @michaelmicasso. Same map for everyone, free in your browser:": "我在 @michaelmicasso 的 DOS-AGE 今日挑战“{name}”中拿下 {score} 分！所有人使用相同地图，浏览器免费游玩：",
+    "I scored {score} and ranked #{rank} in DOS-AGE by @michaelmicasso, a classic roguelike. Beat my score, free in your browser:": "我在 @michaelmicasso 的经典 Roguelike 游戏 DOS-AGE 中拿下 {score} 分，排名第 {rank}！来超越我的分数，浏览器免费游玩：",
+    "I scored {score} in DOS-AGE by @michaelmicasso, a classic roguelike. Beat my score, free in your browser:": "我在 @michaelmicasso 的经典 Roguelike 游戏 DOS-AGE 中拿下 {score} 分！来超越我的分数，浏览器免费游玩：",
+    "Sharing...": "正在分享……",
+    "Your score card's up: post it on X.": "成绩卡已上传：可以发布到 X。",
+    "No X app? Press Share to X again to post from the browser.": "没有 X 应用？再次点击“分享到 X”，从浏览器发布。",
+    "Your score card's nearly ready...": "成绩卡即将就绪……",
+    "Your score card's up: press Share to X again.": "成绩卡已上传：再次点击“分享到 X”。",
+    "Your score card couldn't go up. Press Share to X again to post without it.": "成绩卡上传失败。再次点击“分享到 X”，不附图片发布。",
+    "no card token": "没有成绩卡令牌",
+    "Your score card's saved and copied: paste it into your post.": "成绩卡已保存并复制：粘贴到帖子中即可。",
+    "Your score card's saved: add it to your post.": "成绩卡已保存：将其添加到帖子中即可。",
+    "\"YOUR JOURNEY ENDS HERE, ADVENTURER!\"": "“冒险者，你的旅途到此为止！”",
+    " Auto Equip": " 自动装备",
+    " Auto Sort": " 自动整理",
+    "Only spells and potions go on shortcut keys.": "只有法术和药水可以设为快捷键。",
+    "You're already wearing your best.": "你已经穿戴了最好的装备。",
+    "Your bag is already tidy.": "背包已经整理好了。",
+    "There's no room to drop it here.": "这里没有丢弃物品的空间。",
+    "There's no room to leave it here.": "这里没有留下物品的空间。",
+    "You can't drink potions on a Fasting day.": "禁食日无法饮用药水。",
+    "None of your spells are cooling down.": "你的法术都已冷却完毕。",
+    "You're too weak to drink it.": "你太虚弱，无法饮用。",
+    "You pass on a new spell.": "你放弃了学习新法术。",
+    "{Tab} switches between the Daily Challenge's board, a new one each day, and competitive mode's.": "{Tab}切换每日更新的挑战榜与竞技榜。",
+    "Each class has its own board: pick one along the top, or ALL.": "每个职业都有独立榜单：在顶部选择职业，或选择“全部”。",
+    "{Click} the green arrow by a score to watch that journey again.": "{Click}分数旁的绿色箭头，即可观看该次冒险的回放。",
+    "A crossed-out arrow was played on an older version of the game: it can't be watched.": "划掉的箭头表示这次冒险使用旧版本，无法回放。",
+    "On each big patch the board is archived and a new one starts.": "每次重大更新都会封存旧榜，并开启新榜。",
+    "Special league boards will come for challenges in new seasons (e.g. a Night-only Adventure).": "新赛季将推出特殊挑战榜，例如仅有夜晚的冒险。",
+    "[ESC] SETTINGS": "[ESC] 设置",
+    "Return to Title": "返回标题画面",
+    "Are you sure? You'll lose this journey.": "确定吗？当前冒险将会丢失。",
+    "The up and down keys pick a setting; left and right change it.": "上下键选择设置，左右键调整。",
+    "Enter, Space or the use key change it too, or set its key: press the key you want, or Esc to keep the old one.": "回车、空格或交互键也可调整设置或修改按键：按下新按键，Esc 保留原按键。",
+    "Y and N answer Show Blood and Reduce Motion. M mutes everything; R puts every setting back.": "Y 和 N 切换血迹与减少动态效果。M 全部静音，R 重置所有设置。",
+    "The arrows always move, whichever keys you pick.": "无论如何设置，方向键始终可以移动。",
+    "On a touch screen, D-Pad puts a pad to walk with over the HUD, on the side you pick.": "触屏模式下，方向键盘会显示在状态栏上方，可选择左右位置。",
+    "Return to Title (T) asks first: say yes, and the journey you're on is over.": "返回标题画面（T）会先询问确认；选择“是”即结束当前冒险。",
+    "Settings are kept in this browser. They change nothing of a journey: its score and its replay are the same.": "设置保存在此浏览器中，不影响冒险的得分和回放。",
+    "Up, down, left, right": "上、下、左、右",
+    "The arrows always move too": "方向键始终可以移动",
+    "Checked: good": "验证：通过",
+    "Checked: not good": "验证：未通过",
+    "Checked: can't tell": "验证：无法判断",
+    "You're watching a journey from the leaderboard, as it was played.": "你正在观看排行榜中的冒险回放，重现当时的过程。",
+    "P or Space pauses it and plays it on; 1-4 picks how fast it goes (1x, 2x, 4x, 8x).": "P 或空格暂停／继续；1—4 选择播放速度（1、2、4、8 倍）。",
+    "R or X starts a journey of your own; G opens the leaderboard.": "R 或 X 开始自己的冒险；G 打开排行榜。",
+    "This journey has gone out of step.": "这次冒险的回放已不同步。",
+    "Its record ends here.": "记录到此结束。",
+    "You're free to choose your class in the first 10 turns of the game.": "开局前 10 回合内，你可以自由选择职业。",
+    "You can only choose one class per run.": "每次冒险只能选择一个职业。",
+    "Each class has its own leaderboard.": "每个职业都有独立排行榜。",
+    "Each class has its own starting skill. The Pikeman's Thrust and Guard take turns: Swap skill (or Tab) shows Guard.": "每个职业都有专属初始技能。长枪兵的“穿刺”和“守卫”交替使用：切换技能（或 Tab）可查看“守卫”。",
+    "HP: your health points, +5 each level up.": "HP：生命值，每次升级增加 5 点。",
+    "ATK: makes your attacks and non-magic skills hit harder.": "攻击：提高普通攻击和非魔法技能的伤害。",
+    "DEF: makes you more resistant to ATK and MAG based hits.": "防御：减少来自攻击和魔法的伤害。",
+    "MAG: makes your magic skills hit harder.": "魔法：提高魔法技能的伤害。",
+    "SPD: how fast you move relative to everything else.": "速度：决定你相对于其他事物的行动速度。",
+    "Each level up gives you +1 attribute.": "每次升级获得 1 个属性点。",
+    "Every 3 levels you gain a random spell.": "每 3 级获得一个随机法术。",
+    "No site laid out yet.": "尚未生成地点。",
+    "No shrine here.": "这里没有神龛。",
+    "Fog: off": "迷雾：关闭",
+    "Fog: on": "迷雾：开启",
+    "Summon demon": "召唤恶魔",
+    "Summon king": "召唤国王",
+    "Cave: down": "进入洞穴",
+    "Go to site": "前往地点",
+    "Go to shrine": "前往神龛",
+    "Time up": "时间耗尽",
+    "Event...": "事件……",
+    "Sound...": "音效……",
+    "a bandit": "一名强盗",
+    "it can't be watched": "无法回放",
+    "by ": "作者：",
+    "Everyone plays the {cls}.": "所有人都使用{cls}。",
+    "Daily Challenge": "每日挑战",
+    "{h}h {m}m": "{h}时{m}分",
+    "Next daily in": "下次挑战还有",
+    "Five days and nights. Score as high as you can for the leaderboard.": "五天五夜。尽可能获得高分，冲击排行榜。",
+    "The best journeys, Daily and Competitive. Watch their replays.": "每日挑战与竞技模式中的精彩冒险，可观看回放。",
+    "What DOS-AGE is, how to play it, and who made it. Opens in a new tab.": "了解 DOS-AGE、玩法和作者。在新标签页打开。",
+    "5 days, 5 nights": "五天，五夜",
+    "Climb the board": "冲击排行榜",
+    "Top journeys": "最佳冒险",
+    "Watch replays": "观看回放",
+    "How to play": "玩法说明",
+    "Credits, contact": "制作人员与联系",
+    "body[data-game-only] .header .mute": "body[data-game-only] .header .mute",
+    "Monsters hit harder (+2 ATK).": "怪物攻击更强（攻击 +2）。",
+    "Monsters are tougher (+2 DEF).": "怪物更加坚韧（防御 +2）。",
+    "Monsters' spells are stronger (+2 MAG).": "怪物法术更强（魔法 +2）。",
+    "Monsters are faster (+2 SPD).": "怪物行动更快（速度 +2）。",
+    "Monsters get +1 ATK and +1 DEF.": "怪物攻击 +1、防御 +1。",
+    "Monsters get +1 ATK and +1 SPD.": "怪物攻击 +1、速度 +1。",
+    "Monsters get +1 ATK and +1 MAG.": "怪物攻击 +1、魔法 +1。",
+    "Monsters get +1 DEF and +1 SPD.": "怪物防御 +1、速度 +1。",
+    "Monsters get +1 DEF and +1 MAG.": "怪物防御 +1、魔法 +1。",
+    "Monsters get +1 MAG and +1 SPD.": "怪物魔法 +1、速度 +1。",
+    "Monsters cast Haste.": "怪物会施放加速。",
+    "Monsters cast Firebolt.": "怪物会施放火焰箭。",
+    "Monsters cast Regeneration.": "怪物会施放再生。",
+    "Monsters cast Stoneskin.": "怪物会施放石肤。",
+    "Monsters cast Rage.": "怪物会施放狂暴。",
+    "Monsters notice you from further off.": "怪物会在更远处发现你。",
+    "Monsters dodge more (+20% dodge).": "怪物更善于闪避（闪避 +20%）。",
+    "There are more monsters about (+20%).": "怪物数量增加 20%。",
+    "Monsters cast Ice Ring.": "怪物会施放冰环。",
+    "Monsters cast Thunderbolt.": "怪物会施放雷击。",
+    "Monsters cast Blink.": "怪物会施放闪现。",
+    "Every monster is cursed.": "所有怪物都受到诅咒。",
+    "Every monster is enchanted.": "所有怪物都获得附魔。",
+    "Days and nights are 25% longer.": "昼夜时长增加 25%。",
+    "Days and nights are 25% shorter.": "昼夜时长缩短 25%。",
+    "Potions can't be drunk.": "无法饮用药水。",
+    "Two players' ghosts rise every night, in the caves too.": "每晚会出现两个玩家亡魂，洞穴中也会出现。",
+    "No one can use skills, monsters or you.": "你和怪物都无法使用技能。",
+    "Everyone hiccups now and then (4%), whatever their class.": "所有职业都会偶尔打嗝（4%）。",
+    "Minibosses come in pairs.": "精英首领成对出现。",
+    "All gear and skills are weak, yours too.": "所有装备和技能都变弱，包括你的。",
+    "Restores a moderate amount of health.": "恢复中等量的生命。",
+    "Reduce the cooldown of all spells.": "缩短所有法术的冷却时间。",
+    "Harden your skin into stone.": "使皮肤坚如岩石。",
+    "Increase your speed over a short period of time.": "短时间提高速度。",
+    "Trade some of your health for fury.": "牺牲一些生命，换取狂怒。",
+    "Unknown potion with random buff/debuff effects.": "效果未知的药水，随机带来增益或减益。",
+    "It burns going down.": "喝下时如火烧一般。",
+    "Your arms grow heavy.": "你的双臂变得沉重。",
+    "Your skin grows thin.": "你的皮肤变得脆弱。",
+    "Your legs grow heavy.": "你的双腿变得沉重。",
+    "It smells of rain.": "它散发着雨水的气息。",
+    "It opens to a photo of a man holding a little girl.": "打开后是一张男子抱着小女孩的照片。",
+    "Every spell you cast rings out again a turn later, at half its strength.": "每次施法后，下一回合会以一半强度再次生效。",
+    "The dead that rise at night leave you be, and one of them walks with you.": "夜里苏醒的死者不再袭击你，其中一个还会与你同行。",
+    "+30% ATK, DEF, MAG and SPD at night, -10% by day.": "夜间攻击、防御、魔法、速度 +30%，白昼 -10%。",
+    "Every kill feeds you. Out of a fight it feeds on you, 1 hp every 7 turns.": "每次击杀都会滋养你。脱离战斗时，它每 7 回合吞噬你 1 点生命。",
+    "Ghosts and graves show through the dark, and each night a lost soul fights beside you.": "亡魂和坟墓在黑暗中显现，每晚都有一个迷失灵魂为你而战。",
+    "Doubles your DEF, but halves your ATK.": "防御翻倍，攻击减半。",
+    "Doubles your SPD, but halves your DEF.": "速度翻倍，防御减半。",
+    "Doubles your ATK, but halves your DEF.": "攻击翻倍，防御减半。",
+    "Doubles your MAG, but halves your DEF.": "魔法翻倍，防御减半。",
+    "Doubles your ATK and MAG, but halves your DEF and SPD.": "攻击和魔法翻倍，防御和速度减半。",
+    "Buff yourself and lunge to hit an enemy {range} tiles away.": "强化自身，并突刺{range}格内的敌人。",
+    "Buff and sneak for 8 turns. Buff and sneak ceases after attack.": "强化自身并潜行 8 回合，攻击后两种效果都结束。",
+    "A rush of blood-boiling adrenaline.": "肾上腺素激增，热血沸腾。",
+    "Shoot the enemy with your bow and arrow from {range} tiles away.": "用弓箭射击{range}格内的敌人。",
+    "Buff yourself and send a shockwave {radius} tiles round you that damages and stuns enemies.": "强化自身，向周围{radius}格释放冲击波，伤害并击晕敌人。",
+    "Thrust your pike at an enemy up to {range} tiles away. Guard comes next.": "用长枪穿刺{range}格内的敌人，随后切换为守卫。",
+    "Brace behind your pike: 15% less damage taken for 2 turns. Thrust comes next.": "架枪防御，2 回合内受到的伤害减少 15%，随后切换为穿刺。",
+    "Unleash a loud screech to feel your surroundings, revealing the map round you for 3 turns. Each enemy it reaches has a 20% chance to flee in fear for 5 turns.": "发出尖啸，感知周围并揭示地图 3 回合。范围内每个敌人有 20% 概率恐惧逃跑 5 回合。",
+    "Gradually restores health.": "逐渐恢复生命。",
+    "Single target spell with a chance to burn.": "单体法术，有概率点燃目标。",
+    "Instantly teleport to another tile, up to {blink} cells away.": "瞬间传送至{blink}格内的另一位置。",
+    "Radiate frost to your surrounding for {radius} tile radius.": "释放寒霜，覆盖周围半径{radius}格。",
+    "Single target spell with a chance to paralyse.": "单体法术，有概率麻痹目标。",
+    "More power, more speed, more blood.": "更强的力量，更快的速度，更多的鲜血。",
+    "Summons a Yig Warrior that attacks nearby enemies in melee combat.": "召唤伊格战士，近战攻击附近的敌人。",
+    "Summon a Yig Mage that heals you and launches ranged attacks at enemies.": "召唤伊格法师，治疗你并远程攻击敌人。",
+    "Summon a Yig Spirit that casts supportive spells on allies and applies debuffs to enemies.": "召唤伊格之灵，为友军施加增益，并削弱敌人。",
+    "Creates a barrier that absorbs incoming attacks.": "生成屏障，吸收袭来的攻击。",
+    "Charm and turn a non-boss enemy to fight for you.": "魅惑一名非首领敌人，使其为你而战。",
+    "Place a void orb that damages everything around it, friends or foe alike.": "放置虚空宝珠，对周围所有目标造成伤害，不分敌我。",
+    "Sacrifice your HP to cast a high-damage, single-target spell.": "牺牲生命，施放高伤害的单体法术。",
+    "Siphon and absorb life essence from a single enemy.": "汲取并吸收一名敌人的生命精华。",
+    "Auto ({name})": "自动（{name}）",
+    "An axe made out of iron.": "一把铁制斧头。",
+    "whispers": "低语",
+    "A pickaxe made out of iron.": "一把铁制镐。",
+    "A dagger made out of iron.": "一把铁制匕首。",
+    "A sword made out of iron.": "一把铁制剑。",
+    "A staff made out of iron.": "一根铁制长杖。",
+    "A wand made out of iron.": "一根铁制魔杖。",
+    "A chalice made out of iron.": "一只铁制圣杯。",
+    "An axe made out of steel.": "一把钢制斧头。",
+    "A pickaxe made out of steel.": "一把钢制镐。",
+    "A dagger made out of steel.": "一把钢制匕首。",
+    "A sword made out of steel.": "一把钢制剑。",
+    "A staff made out of steel.": "一根钢制长杖。",
+    "A wand made out of steel.": "一根钢制魔杖。",
+    "A chalice made out of steel.": "一只钢制圣杯。",
+    "An axe made out of gold.": "一把金制斧头。",
+    "A pickaxe made out of gold.": "一把金制镐。",
+    "A dagger made out of gold.": "一把金制匕首。",
+    "A sword made out of gold.": "一把金制剑。",
+    "A staff made out of gold.": "一根金制长杖。",
+    "A wand made out of gold.": "一根金制魔杖。",
+    "A chalice made out of gold.": "一只金制圣杯。",
+    "An axe of blood-red steel.": "一把血红钢制成的斧头。",
+    "A pickaxe of blood-red steel.": "一把血红钢制成的镐。",
+    "A dagger of blood-red steel.": "一把血红钢制成的匕首。",
+    "A sword of blood-red steel.": "一把血红钢制成的剑。",
+    "A staff of blood-red steel.": "一根血红钢制成的长杖。",
+    "A wand of blood-red steel.": "一根血红钢制成的魔杖。",
+    "A chalice of blood-red steel.": "一只血红钢制成的圣杯。",
+    "A cuirass made out of iron.": "一件铁制胸甲。",
+    "A shield made out of iron.": "一面铁制盾牌。",
+    "A padded gambeson made out of leather.": "一件皮制软甲。",
+    "A jacket made out of leather.": "一件皮制夹克。",
+    "A manteau made out of leather.": "一件皮制斗篷。",
+    "A robe made out of leather.": "一件皮制长袍。",
+    "A hat made out of leather.": "一顶皮帽。",
+    "A cuirass made out of steel.": "一件钢制胸甲。",
+    "A shield made out of steel.": "一面钢制盾牌。",
+    "A padded gambeson made out of fustian.": "一件棉麻软甲。",
+    "A jacket made out of fustian.": "一件棉麻夹克。",
+    "A manteau made out of fustian.": "一件棉麻斗篷。",
+    "A robe made out of fustian.": "一件棉麻长袍。",
+    "A hat made out of fustian.": "一顶棉麻帽。",
+    "A cuirass made out of gold.": "一件金制胸甲。",
+    "A shield made out of gold.": "一面金制盾牌。",
+    "A padded gambeson made out of gold.": "一件金制软甲。",
+    "A jacket made out of gold.": "一件金制夹克。",
+    "A manteau made out of gold.": "一件金制斗篷。",
+    "A robe made out of gold.": "一件金制长袍。",
+    "A hat made out of gold.": "一顶金帽。",
+    "A cuirass woven from spirit.": "一件由灵力编织的胸甲。",
+    "A shield woven from spirit.": "一面由灵力编织的盾牌。",
+    "A padded gambeson woven from spirit.": "一件由灵力编织的软甲。",
+    "A jacket woven from spirit.": "一件由灵力编织的夹克。",
+    "A manteau woven from spirit.": "一件由灵力编织的斗篷。",
+    "A robe woven from spirit.": "一件由灵力编织的长袍。",
+    "A hat woven from spirit.": "一顶由灵力编织的帽子。",
+    "Aloe vera, bound in a charm. It slowly heals.": "将芦荟系成护符，缓慢恢复生命。",
+    "Pushes the dark back.": "驱散黑暗。",
+    "A red pin worn over the heart. It keeps a little more of you.": "佩在心口的红色胸针，为你留住更多生命。",
+    "A medallion that steadies the hand.": "使双手更加沉稳的吊坠。",
+    "A helmet for a hard head.": "护住头颅的坚实头盔。",
+    "Light steel shoes, quick on the feet.": "轻巧的钢靴，让脚步更加敏捷。",
+    "A glass orb that sharpens the mind.": "使思维更加敏锐的玻璃宝珠。",
+    "It hums when something is near.": "有东西靠近时，它会嗡嗡作响。",
+    "Each step leaves fire behind.": "每一步都会留下火焰。",
+    "Cold to the touch. The air round it slows.": "触感冰冷，周围的空气也变得迟缓。",
+    "It crackles when it's struck.": "受到击打时会电光作响。",
+    "A green orb. Spells cast through it carry further.": "一颗绿色宝珠，使法术射得更远。",
+    "A green stone on a cord. Whatever you call on comes back sooner.": "绳上系着一块绿石，使召唤之力更快恢复。",
+    "Buff yourself and lunge to hit an enemy 3 tiles away.": "强化自身，并突刺 3 格内的敌人。",
+    "Shoot the enemy with your bow and arrow from 4 tiles away.": "用弓箭射击 4 格内的敌人。",
+    "Buff yourself and send a shockwave 2 tiles round you that damages and stuns enemies.": "强化自身，向周围 2 格释放冲击波，伤害并击晕敌人。",
+    "Thrust your pike at an enemy up to 2 tiles away. Guard comes next.": "用长枪穿刺 2 格内的敌人，随后切换为守卫。",
+    "Instantly teleport to another tile, up to 3 cells away.": "瞬间传送至 3 格内的另一位置。",
+    "Instantly teleport to another tile, up to 5 cells away.": "瞬间传送至 5 格内的另一位置。",
+    "Instantly teleport to another tile, up to 6 cells away.": "瞬间传送至 6 格内的另一位置。",
+    "Radiate frost to your surrounding for 2 tile radius.": "释放寒霜，覆盖周围半径 2 格。",
+    "Monday": "周一",
+    "Tuesday": "周二",
+    "Wednesday": "周三",
+    "Thursday": "周四",
+    "Friday": "周五",
+    "Saturday": "周六",
+    "Sunday": "周日",
+    "Weekend": "周末"
+  },
+  "nouns": {
+    "Fighter": {
+      "": "战士"
+    },
+    "Rogue": {
+      "": "游荡者"
+    },
+    "Brawler": {
+      "": "斗士"
+    },
+    "Mage": {
+      "": "法师"
+    },
+    "Archer": {
+      "": "弓箭手"
+    },
+    "Pikeman": {
+      "": "长枪兵"
+    },
+    "Prodigy": {
+      "": "神童"
+    },
+    "Cleric": {
+      "": "牧师"
+    },
+    "Drunkard": {
+      "": "醉汉"
+    },
+    "Dweorg": {
+      "": "矮人"
+    },
+    "Siren": {
+      "": "海妖"
+    },
+    "Shieldmaiden": {
+      "": "盾女"
+    },
+    "Melee": {
+      "": "近战"
+    },
+    "Ranged": {
+      "": "远程"
+    },
+    "All-rounded": {
+      "": "全能"
+    },
+    "Special": {
+      "": "特殊"
+    },
+    "Skeleton Mage": {
+      "": "骷髅法师"
+    },
+    "Sandworm": {
+      "": "沙虫"
+    },
+    "Goblin Mage": {
+      "": "哥布林法师"
+    },
+    "Goblin King": {
+      "": "哥布林王"
+    },
+    "Goblin Grunt": {
+      "": "哥布林喽啰"
+    },
+    "Horned Slime": {
+      "": "独角史莱姆"
+    },
+    "Kobold Duelist": {
+      "": "狗头人决斗者"
+    },
+    "Acolyte": {
+      "": "侍僧"
+    },
+    "Skeleton Archer": {
+      "": "骷髅弓手"
+    },
+    "Villager": {
+      "": "村民"
+    },
+    "Goblin Soldier": {
+      "": "哥布林士兵"
+    },
+    "Goblin Bulwark": {
+      "": "哥布林盾卫"
+    },
+    "Earth Worm": {
+      "": "地虫"
+    },
+    "Earth Stone Worm": {
+      "": "岩石地虫"
+    },
+    "Iron Hound": {
+      "": "铁甲猎犬"
+    },
+    "The executioner": {
+      "": "刽子手"
+    },
+    "The treasure": {
+      "": "宝藏"
+    },
+    "The glory": {
+      "": "荣耀"
+    },
+    "Shrine of the Wolf": {
+      "": "狼之神龛"
+    },
+    "Shrine of the Owl": {
+      "": "鸮之神龛"
+    },
+    "Shrine of the Bear": {
+      "": "熊之神龛"
+    },
+    "Shrine of the Fox": {
+      "": "狐之神龛"
+    },
+    "Shrine of the Horse": {
+      "": "马之神龛"
+    },
+    "Shrine of Envy": {
+      "": "嫉妒神龛"
+    },
+    "Shrine of the Blade": {
+      "": "利刃神龛"
+    },
+    "Shrine of Blight": {
+      "": "枯萎神龛"
+    },
+    "Shrine of the Little Crown": {
+      "": "小王冠神龛"
+    },
+    "Your Ghost": {
+      "": "你的亡魂"
+    },
+    "Yig Warrior": {
+      "": "伊格战士"
+    },
+    "Yig Mage": {
+      "": "伊格法师"
+    },
+    "Yig Spirit": {
+      "": "伊格之灵"
+    },
+    "Hex": {
+      "": "妖咒"
+    },
+    "DAILY CHALLENGE": {
+      "": "每日挑战"
+    },
+    "COMPETITIVE MODE": {
+      "": "竞技模式"
+    },
+    "TEST": {
+      "": "测试"
+    },
+    "Grubnak": {
+      "": "格鲁布纳克"
+    },
+    "Daily": {
+      "": "每日挑战"
+    },
+    "Competitive": {
+      "": "竞技模式"
+    },
+    "Leaderboard": {
+      "": "排行榜"
+    },
+    "About": {
+      "": "关于"
+    },
+    "Brutal": {
+      "": "残暴"
+    },
+    "Stoic": {
+      "": "坚忍"
+    },
+    "Arcane": {
+      "": "奥术"
+    },
+    "Swift": {
+      "": "迅捷"
+    },
+    "Bulwark": {
+      "": "壁垒"
+    },
+    "Striker": {
+      "": "突击"
+    },
+    "Spellblade": {
+      "": "魔剑"
+    },
+    "Bruiser": {
+      "": "强击"
+    },
+    "Runic": {
+      "": "符文"
+    },
+    "Kiter": {
+      "": "游击"
+    },
+    "Impatient": {
+      "": "急躁"
+    },
+    "Inferno": {
+      "": "炼狱"
+    },
+    "Vigorous": {
+      "": "活力"
+    },
+    "Marbled": {
+      "": "岩躯"
+    },
+    "Wrath": {
+      "": "狂怒"
+    },
+    "Bright": {
+      "": "光明"
+    },
+    "Elusive": {
+      "": "飘忽"
+    },
+    "Busy": {
+      "": "喧嚣"
+    },
+    "Blizzard": {
+      "": "暴风雪"
+    },
+    "Thunderstorm": {
+      "": "雷暴"
+    },
+    "Phasing": {
+      "": "相移"
+    },
+    "Omen": {
+      "": "凶兆"
+    },
+    "Enchanted": {
+      "": "附魔"
+    },
+    "Saga": {
+      "": "史诗"
+    },
+    "Blitz": {
+      "": "闪击"
+    },
+    "Fasting": {
+      "": "禁食"
+    },
+    "Spooky": {
+      "": "闹鬼"
+    },
+    "Null": {
+      "": "虚无"
+    },
+    "Alcoholic": {
+      "": "酗酒"
+    },
+    "Gemini": {
+      "": "双子"
+    },
+    "Inferior": {
+      "": "劣等"
+    },
+    "Brutal Monday": {
+      "": "残暴星期一"
+    },
+    "Iron Axe": {
+      "": "铁斧"
+    },
+    "Iron Pickaxe": {
+      "": "铁镐"
+    },
+    "Iron Dagger": {
+      "": "铁匕首"
+    },
+    "Iron Sword": {
+      "": "铁剑"
+    },
+    "Iron Staff": {
+      "": "铁长杖"
+    },
+    "Iron Wand": {
+      "": "铁魔杖"
+    },
+    "Iron Chalice": {
+      "": "铁圣杯"
+    },
+    "Steel Axe": {
+      "": "钢斧"
+    },
+    "Steel Pickaxe": {
+      "": "钢镐"
+    },
+    "Steel Dagger": {
+      "": "钢匕首"
+    },
+    "Steel Sword": {
+      "": "钢剑"
+    },
+    "Steel Staff": {
+      "": "钢长杖"
+    },
+    "Steel Wand": {
+      "": "钢魔杖"
+    },
+    "Steel Chalice": {
+      "": "钢圣杯"
+    },
+    "Gold Axe": {
+      "": "金斧"
+    },
+    "Gold Pickaxe": {
+      "": "金镐"
+    },
+    "Gold Dagger": {
+      "": "金匕首"
+    },
+    "Gold Sword": {
+      "": "金剑"
+    },
+    "Gold Staff": {
+      "": "金长杖"
+    },
+    "Gold Wand": {
+      "": "金魔杖"
+    },
+    "Gold Chalice": {
+      "": "金圣杯"
+    },
+    "Blood Axe": {
+      "": "血斧"
+    },
+    "Blood Pickaxe": {
+      "": "血镐"
+    },
+    "Blood Dagger": {
+      "": "血匕首"
+    },
+    "Blood Sword": {
+      "": "血剑"
+    },
+    "Blood Staff": {
+      "": "血长杖"
+    },
+    "Blood Wand": {
+      "": "血魔杖"
+    },
+    "Blood Chalice": {
+      "": "血圣杯"
+    },
+    "Iron Cuirass": {
+      "": "铁胸甲"
+    },
+    "Iron Shield": {
+      "": "铁盾"
+    },
+    "Leather Gambeson": {
+      "": "皮革软甲"
+    },
+    "Leather Jacket": {
+      "": "皮革夹克"
+    },
+    "Leather Manteau": {
+      "": "皮革披风"
+    },
+    "Leather Robe": {
+      "": "皮革长袍"
+    },
+    "Leather Hat": {
+      "": "皮革帽"
+    },
+    "Steel Cuirass": {
+      "": "钢胸甲"
+    },
+    "Steel Shield": {
+      "": "钢盾"
+    },
+    "Fustian Gambeson": {
+      "": "粗棉软甲"
+    },
+    "Fustian Jacket": {
+      "": "粗棉夹克"
+    },
+    "Fustian Manteau": {
+      "": "粗棉披风"
+    },
+    "Fustian Robe": {
+      "": "粗棉长袍"
+    },
+    "Fustian Hat": {
+      "": "粗棉帽"
+    },
+    "Golden Cuirass": {
+      "": "黄金胸甲"
+    },
+    "Golden Shield": {
+      "": "黄金盾"
+    },
+    "Golden Gambeson": {
+      "": "黄金软甲"
+    },
+    "Golden Jacket": {
+      "": "黄金夹克"
+    },
+    "Golden Manteau": {
+      "": "黄金披风"
+    },
+    "Golden Robe": {
+      "": "黄金长袍"
+    },
+    "Golden Hat": {
+      "": "黄金帽"
+    },
+    "Spirit Cuirass": {
+      "": "灵魂胸甲"
+    },
+    "Spirit Shield": {
+      "": "灵魂盾"
+    },
+    "Spirit Gambeson": {
+      "": "灵魂软甲"
+    },
+    "Spirit Jacket": {
+      "": "灵魂夹克"
+    },
+    "Spirit Manteau": {
+      "": "灵魂披风"
+    },
+    "Spirit Robe": {
+      "": "灵魂长袍"
+    },
+    "Spirit Hat": {
+      "": "灵魂帽"
+    },
+    "Alover Talisman": {
+      "": "芦荟护符"
+    },
+    "Torch": {
+      "": "火把"
+    },
+    "Heart Pin": {
+      "": "心形胸针"
+    },
+    "Medallion": {
+      "": "吊坠"
+    },
+    "Helmet": {
+      "": "头盔"
+    },
+    "Sabatons": {
+      "": "战靴"
+    },
+    "Orb": {
+      "": "宝珠"
+    },
+    "Resonator": {
+      "": "共鸣器"
+    },
+    "Lava Boots": {
+      "": "熔岩靴"
+    },
+    "Glacier Medallion": {
+      "": "冰川吊坠"
+    },
+    "Thunder Helmet": {
+      "": "雷霆头盔"
+    },
+    "Emerald Orb": {
+      "": "翡翠宝珠"
+    },
+    "Amulet": {
+      "": "护身符"
+    },
+    "Health Potion": {
+      "": "生命药水"
+    },
+    "Energy Potion": {
+      "": "能量药水"
+    },
+    "Stoneskin Potion": {
+      "": "石肤药水"
+    },
+    "Haste Potion": {
+      "": "加速药水"
+    },
+    "Rage Potion": {
+      "": "狂暴药水"
+    },
+    "Unknown Potion": {
+      "": "未知药水"
+    },
+    "Poison Potion": {
+      "": "毒药"
+    },
+    "Weakness Potion": {
+      "": "虚弱药水"
+    },
+    "Frailty Potion": {
+      "": "脆弱药水"
+    },
+    "Sloth Potion": {
+      "": "迟缓药水"
+    },
+    "White Tuft": {
+      "": "白色毛簇"
+    },
+    "Lumberjack's Locket": {
+      "": "樵夫的挂坠"
+    },
+    "Echo Stone": {
+      "": "回声石"
+    },
+    "Bone Flute": {
+      "": "骨笛"
+    },
+    "Moon Dial": {
+      "": "月晷"
+    },
+    "Hungry Blade": {
+      "": "饥渴之刃"
+    },
+    "Lantern of Lost Souls": {
+      "": "迷魂灯"
+    },
+    "Aegis": {
+      "": "神盾"
+    },
+    "Hermes": {
+      "": "赫尔墨斯"
+    },
+    "Fang": {
+      "": "獠牙"
+    },
+    "Mistral": {
+      "": "寒风"
+    },
+    "Thorn": {
+      "": "荆棘"
+    },
+    "Lunge Attack": {
+      "": "突刺"
+    },
+    "Sneak": {
+      "": "潜行"
+    },
+    "Adrenaline": {
+      "": "肾上腺素"
+    },
+    "Shoot": {
+      "": "射击"
+    },
+    "Hammertime!": {
+      "": "重锤出击！"
+    },
+    "Thrust": {
+      "": "穿刺"
+    },
+    "Guard": {
+      "": "守卫"
+    },
+    "Screech": {
+      "": "尖啸"
+    },
+    "Regeneration": {
+      "": "再生"
+    },
+    "Firebolt": {
+      "": "火焰箭"
+    },
+    "Blink": {
+      "": "闪现"
+    },
+    "Haste": {
+      "": "加速"
+    },
+    "Ice Ring": {
+      "": "冰环"
+    },
+    "Thunderbolt": {
+      "": "雷击"
+    },
+    "Stoneskin": {
+      "": "石肤"
+    },
+    "Rage": {
+      "": "狂暴"
+    },
+    "Summon Yig Warrior": {
+      "": "召唤伊格战士"
+    },
+    "Summon Yig Mage": {
+      "": "召唤伊格法师"
+    },
+    "Summon Yig Spirit": {
+      "": "召唤伊格之灵"
+    },
+    "Barrier": {
+      "": "屏障"
+    },
+    "Charm": {
+      "": "魅惑"
+    },
+    "Void Orb": {
+      "": "虚空宝珠"
+    },
+    "Reaper": {
+      "": "收割者"
+    },
+    "Drain": {
+      "": "汲取"
+    },
+    "Rusted Iron Axe": {
+      "": "锈蚀的铁斧"
+    },
+    "Superior Iron Axe": {
+      "": "优质的铁斧"
+    },
+    "Cursed Iron Axe": {
+      "": "诅咒的铁斧"
+    },
+    "Enchanted Iron Axe": {
+      "": "附魔的铁斧"
+    },
+    "Rusted Iron Pickaxe": {
+      "": "锈蚀的铁镐"
+    },
+    "Superior Iron Pickaxe": {
+      "": "优质的铁镐"
+    },
+    "Cursed Iron Pickaxe": {
+      "": "诅咒的铁镐"
+    },
+    "Enchanted Iron Pickaxe": {
+      "": "附魔的铁镐"
+    },
+    "Rusted Iron Dagger": {
+      "": "锈蚀的铁匕首"
+    },
+    "Superior Iron Dagger": {
+      "": "优质的铁匕首"
+    },
+    "Cursed Iron Dagger": {
+      "": "诅咒的铁匕首"
+    },
+    "Enchanted Iron Dagger": {
+      "": "附魔的铁匕首"
+    },
+    "Rusted Iron Sword": {
+      "": "锈蚀的铁剑"
+    },
+    "Superior Iron Sword": {
+      "": "优质的铁剑"
+    },
+    "Cursed Iron Sword": {
+      "": "诅咒的铁剑"
+    },
+    "Enchanted Iron Sword": {
+      "": "附魔的铁剑"
+    },
+    "Rusted Iron Staff": {
+      "": "锈蚀的铁长杖"
+    },
+    "Superior Iron Staff": {
+      "": "优质的铁长杖"
+    },
+    "Cursed Iron Staff": {
+      "": "诅咒的铁长杖"
+    },
+    "Enchanted Iron Staff": {
+      "": "附魔的铁长杖"
+    },
+    "Rusted Iron Wand": {
+      "": "锈蚀的铁魔杖"
+    },
+    "Superior Iron Wand": {
+      "": "优质的铁魔杖"
+    },
+    "Cursed Iron Wand": {
+      "": "诅咒的铁魔杖"
+    },
+    "Enchanted Iron Wand": {
+      "": "附魔的铁魔杖"
+    },
+    "Rusted Iron Chalice": {
+      "": "锈蚀的铁圣杯"
+    },
+    "Superior Iron Chalice": {
+      "": "优质的铁圣杯"
+    },
+    "Cursed Iron Chalice": {
+      "": "诅咒的铁圣杯"
+    },
+    "Enchanted Iron Chalice": {
+      "": "附魔的铁圣杯"
+    },
+    "Rusted Steel Axe": {
+      "": "锈蚀的钢斧"
+    },
+    "Superior Steel Axe": {
+      "": "优质的钢斧"
+    },
+    "Cursed Steel Axe": {
+      "": "诅咒的钢斧"
+    },
+    "Enchanted Steel Axe": {
+      "": "附魔的钢斧"
+    },
+    "Rusted Steel Pickaxe": {
+      "": "锈蚀的钢镐"
+    },
+    "Superior Steel Pickaxe": {
+      "": "优质的钢镐"
+    },
+    "Cursed Steel Pickaxe": {
+      "": "诅咒的钢镐"
+    },
+    "Enchanted Steel Pickaxe": {
+      "": "附魔的钢镐"
+    },
+    "Rusted Steel Dagger": {
+      "": "锈蚀的钢匕首"
+    },
+    "Superior Steel Dagger": {
+      "": "优质的钢匕首"
+    },
+    "Cursed Steel Dagger": {
+      "": "诅咒的钢匕首"
+    },
+    "Enchanted Steel Dagger": {
+      "": "附魔的钢匕首"
+    },
+    "Rusted Steel Sword": {
+      "": "锈蚀的钢剑"
+    },
+    "Superior Steel Sword": {
+      "": "优质的钢剑"
+    },
+    "Cursed Steel Sword": {
+      "": "诅咒的钢剑"
+    },
+    "Enchanted Steel Sword": {
+      "": "附魔的钢剑"
+    },
+    "Rusted Steel Staff": {
+      "": "锈蚀的钢长杖"
+    },
+    "Superior Steel Staff": {
+      "": "优质的钢长杖"
+    },
+    "Cursed Steel Staff": {
+      "": "诅咒的钢长杖"
+    },
+    "Enchanted Steel Staff": {
+      "": "附魔的钢长杖"
+    },
+    "Rusted Steel Wand": {
+      "": "锈蚀的钢魔杖"
+    },
+    "Superior Steel Wand": {
+      "": "优质的钢魔杖"
+    },
+    "Cursed Steel Wand": {
+      "": "诅咒的钢魔杖"
+    },
+    "Enchanted Steel Wand": {
+      "": "附魔的钢魔杖"
+    },
+    "Rusted Steel Chalice": {
+      "": "锈蚀的钢圣杯"
+    },
+    "Superior Steel Chalice": {
+      "": "优质的钢圣杯"
+    },
+    "Cursed Steel Chalice": {
+      "": "诅咒的钢圣杯"
+    },
+    "Enchanted Steel Chalice": {
+      "": "附魔的钢圣杯"
+    },
+    "Bent Gold Axe": {
+      "": "弯曲的金斧"
+    },
+    "Superior Gold Axe": {
+      "": "优质的金斧"
+    },
+    "Cursed Gold Axe": {
+      "": "诅咒的金斧"
+    },
+    "Enchanted Gold Axe": {
+      "": "附魔的金斧"
+    },
+    "Bent Gold Pickaxe": {
+      "": "弯曲的金镐"
+    },
+    "Superior Gold Pickaxe": {
+      "": "优质的金镐"
+    },
+    "Cursed Gold Pickaxe": {
+      "": "诅咒的金镐"
+    },
+    "Enchanted Gold Pickaxe": {
+      "": "附魔的金镐"
+    },
+    "Bent Gold Dagger": {
+      "": "弯曲的金匕首"
+    },
+    "Superior Gold Dagger": {
+      "": "优质的金匕首"
+    },
+    "Cursed Gold Dagger": {
+      "": "诅咒的金匕首"
+    },
+    "Enchanted Gold Dagger": {
+      "": "附魔的金匕首"
+    },
+    "Bent Gold Sword": {
+      "": "弯曲的金剑"
+    },
+    "Superior Gold Sword": {
+      "": "优质的金剑"
+    },
+    "Cursed Gold Sword": {
+      "": "诅咒的金剑"
+    },
+    "Enchanted Gold Sword": {
+      "": "附魔的金剑"
+    },
+    "Bent Gold Staff": {
+      "": "弯曲的金长杖"
+    },
+    "Superior Gold Staff": {
+      "": "优质的金长杖"
+    },
+    "Cursed Gold Staff": {
+      "": "诅咒的金长杖"
+    },
+    "Enchanted Gold Staff": {
+      "": "附魔的金长杖"
+    },
+    "Bent Gold Wand": {
+      "": "弯曲的金魔杖"
+    },
+    "Superior Gold Wand": {
+      "": "优质的金魔杖"
+    },
+    "Cursed Gold Wand": {
+      "": "诅咒的金魔杖"
+    },
+    "Enchanted Gold Wand": {
+      "": "附魔的金魔杖"
+    },
+    "Bent Gold Chalice": {
+      "": "弯曲的金圣杯"
+    },
+    "Superior Gold Chalice": {
+      "": "优质的金圣杯"
+    },
+    "Cursed Gold Chalice": {
+      "": "诅咒的金圣杯"
+    },
+    "Enchanted Gold Chalice": {
+      "": "附魔的金圣杯"
+    },
+    "Bent Blood Axe": {
+      "": "弯曲的血斧"
+    },
+    "Superior Blood Axe": {
+      "": "优质的血斧"
+    },
+    "Cursed Blood Axe": {
+      "": "诅咒的血斧"
+    },
+    "Enchanted Blood Axe": {
+      "": "附魔的血斧"
+    },
+    "Bent Blood Pickaxe": {
+      "": "弯曲的血镐"
+    },
+    "Superior Blood Pickaxe": {
+      "": "优质的血镐"
+    },
+    "Cursed Blood Pickaxe": {
+      "": "诅咒的血镐"
+    },
+    "Enchanted Blood Pickaxe": {
+      "": "附魔的血镐"
+    },
+    "Bent Blood Dagger": {
+      "": "弯曲的血匕首"
+    },
+    "Superior Blood Dagger": {
+      "": "优质的血匕首"
+    },
+    "Cursed Blood Dagger": {
+      "": "诅咒的血匕首"
+    },
+    "Enchanted Blood Dagger": {
+      "": "附魔的血匕首"
+    },
+    "Bent Blood Sword": {
+      "": "弯曲的血剑"
+    },
+    "Superior Blood Sword": {
+      "": "优质的血剑"
+    },
+    "Cursed Blood Sword": {
+      "": "诅咒的血剑"
+    },
+    "Enchanted Blood Sword": {
+      "": "附魔的血剑"
+    },
+    "Bent Blood Staff": {
+      "": "弯曲的血长杖"
+    },
+    "Superior Blood Staff": {
+      "": "优质的血长杖"
+    },
+    "Cursed Blood Staff": {
+      "": "诅咒的血长杖"
+    },
+    "Enchanted Blood Staff": {
+      "": "附魔的血长杖"
+    },
+    "Bent Blood Wand": {
+      "": "弯曲的血魔杖"
+    },
+    "Superior Blood Wand": {
+      "": "优质的血魔杖"
+    },
+    "Cursed Blood Wand": {
+      "": "诅咒的血魔杖"
+    },
+    "Enchanted Blood Wand": {
+      "": "附魔的血魔杖"
+    },
+    "Bent Blood Chalice": {
+      "": "弯曲的血圣杯"
+    },
+    "Superior Blood Chalice": {
+      "": "优质的血圣杯"
+    },
+    "Cursed Blood Chalice": {
+      "": "诅咒的血圣杯"
+    },
+    "Enchanted Blood Chalice": {
+      "": "附魔的血圣杯"
+    },
+    "Rusted Iron Cuirass": {
+      "": "锈蚀的铁胸甲"
+    },
+    "Superior Iron Cuirass": {
+      "": "优质的铁胸甲"
+    },
+    "Cursed Iron Cuirass": {
+      "": "诅咒的铁胸甲"
+    },
+    "Enchanted Iron Cuirass": {
+      "": "附魔的铁胸甲"
+    },
+    "Rusted Iron Shield": {
+      "": "锈蚀的铁盾"
+    },
+    "Superior Iron Shield": {
+      "": "优质的铁盾"
+    },
+    "Cursed Iron Shield": {
+      "": "诅咒的铁盾"
+    },
+    "Enchanted Iron Shield": {
+      "": "附魔的铁盾"
+    },
+    "Crude Leather Gambeson": {
+      "": "粗制的皮革软甲"
+    },
+    "Superior Leather Gambeson": {
+      "": "优质的皮革软甲"
+    },
+    "Cursed Leather Gambeson": {
+      "": "诅咒的皮革软甲"
+    },
+    "Enchanted Leather Gambeson": {
+      "": "附魔的皮革软甲"
+    },
+    "Crude Leather Jacket": {
+      "": "粗制的皮革夹克"
+    },
+    "Superior Leather Jacket": {
+      "": "优质的皮革夹克"
+    },
+    "Cursed Leather Jacket": {
+      "": "诅咒的皮革夹克"
+    },
+    "Enchanted Leather Jacket": {
+      "": "附魔的皮革夹克"
+    },
+    "Crude Leather Manteau": {
+      "": "粗制的皮革披风"
+    },
+    "Superior Leather Manteau": {
+      "": "优质的皮革披风"
+    },
+    "Cursed Leather Manteau": {
+      "": "诅咒的皮革披风"
+    },
+    "Enchanted Leather Manteau": {
+      "": "附魔的皮革披风"
+    },
+    "Crude Leather Robe": {
+      "": "粗制的皮革长袍"
+    },
+    "Superior Leather Robe": {
+      "": "优质的皮革长袍"
+    },
+    "Cursed Leather Robe": {
+      "": "诅咒的皮革长袍"
+    },
+    "Enchanted Leather Robe": {
+      "": "附魔的皮革长袍"
+    },
+    "Crude Leather Hat": {
+      "": "粗制的皮革帽"
+    },
+    "Superior Leather Hat": {
+      "": "优质的皮革帽"
+    },
+    "Cursed Leather Hat": {
+      "": "诅咒的皮革帽"
+    },
+    "Enchanted Leather Hat": {
+      "": "附魔的皮革帽"
+    },
+    "Rusted Steel Cuirass": {
+      "": "锈蚀的钢胸甲"
+    },
+    "Superior Steel Cuirass": {
+      "": "优质的钢胸甲"
+    },
+    "Cursed Steel Cuirass": {
+      "": "诅咒的钢胸甲"
+    },
+    "Enchanted Steel Cuirass": {
+      "": "附魔的钢胸甲"
+    },
+    "Rusted Steel Shield": {
+      "": "锈蚀的钢盾"
+    },
+    "Superior Steel Shield": {
+      "": "优质的钢盾"
+    },
+    "Cursed Steel Shield": {
+      "": "诅咒的钢盾"
+    },
+    "Enchanted Steel Shield": {
+      "": "附魔的钢盾"
+    },
+    "Crude Fustian Gambeson": {
+      "": "粗制的粗棉软甲"
+    },
+    "Superior Fustian Gambeson": {
+      "": "优质的粗棉软甲"
+    },
+    "Cursed Fustian Gambeson": {
+      "": "诅咒的粗棉软甲"
+    },
+    "Enchanted Fustian Gambeson": {
+      "": "附魔的粗棉软甲"
+    },
+    "Crude Fustian Jacket": {
+      "": "粗制的粗棉夹克"
+    },
+    "Superior Fustian Jacket": {
+      "": "优质的粗棉夹克"
+    },
+    "Cursed Fustian Jacket": {
+      "": "诅咒的粗棉夹克"
+    },
+    "Enchanted Fustian Jacket": {
+      "": "附魔的粗棉夹克"
+    },
+    "Crude Fustian Manteau": {
+      "": "粗制的粗棉披风"
+    },
+    "Superior Fustian Manteau": {
+      "": "优质的粗棉披风"
+    },
+    "Cursed Fustian Manteau": {
+      "": "诅咒的粗棉披风"
+    },
+    "Enchanted Fustian Manteau": {
+      "": "附魔的粗棉披风"
+    },
+    "Crude Fustian Robe": {
+      "": "粗制的粗棉长袍"
+    },
+    "Superior Fustian Robe": {
+      "": "优质的粗棉长袍"
+    },
+    "Cursed Fustian Robe": {
+      "": "诅咒的粗棉长袍"
+    },
+    "Enchanted Fustian Robe": {
+      "": "附魔的粗棉长袍"
+    },
+    "Crude Fustian Hat": {
+      "": "粗制的粗棉帽"
+    },
+    "Superior Fustian Hat": {
+      "": "优质的粗棉帽"
+    },
+    "Cursed Fustian Hat": {
+      "": "诅咒的粗棉帽"
+    },
+    "Enchanted Fustian Hat": {
+      "": "附魔的粗棉帽"
+    },
+    "Tarnished Golden Cuirass": {
+      "": "黯淡的黄金胸甲"
+    },
+    "Superior Golden Cuirass": {
+      "": "优质的黄金胸甲"
+    },
+    "Cursed Golden Cuirass": {
+      "": "诅咒的黄金胸甲"
+    },
+    "Enchanted Golden Cuirass": {
+      "": "附魔的黄金胸甲"
+    },
+    "Tarnished Golden Shield": {
+      "": "黯淡的黄金盾"
+    },
+    "Superior Golden Shield": {
+      "": "优质的黄金盾"
+    },
+    "Cursed Golden Shield": {
+      "": "诅咒的黄金盾"
+    },
+    "Enchanted Golden Shield": {
+      "": "附魔的黄金盾"
+    },
+    "Tarnished Golden Gambeson": {
+      "": "黯淡的黄金软甲"
+    },
+    "Superior Golden Gambeson": {
+      "": "优质的黄金软甲"
+    },
+    "Cursed Golden Gambeson": {
+      "": "诅咒的黄金软甲"
+    },
+    "Enchanted Golden Gambeson": {
+      "": "附魔的黄金软甲"
+    },
+    "Tarnished Golden Jacket": {
+      "": "黯淡的黄金夹克"
+    },
+    "Superior Golden Jacket": {
+      "": "优质的黄金夹克"
+    },
+    "Cursed Golden Jacket": {
+      "": "诅咒的黄金夹克"
+    },
+    "Enchanted Golden Jacket": {
+      "": "附魔的黄金夹克"
+    },
+    "Crude Golden Manteau": {
+      "": "粗制的黄金披风"
+    },
+    "Superior Golden Manteau": {
+      "": "优质的黄金披风"
+    },
+    "Cursed Golden Manteau": {
+      "": "诅咒的黄金披风"
+    },
+    "Enchanted Golden Manteau": {
+      "": "附魔的黄金披风"
+    },
+    "Crude Golden Robe": {
+      "": "粗制的黄金长袍"
+    },
+    "Superior Golden Robe": {
+      "": "优质的黄金长袍"
+    },
+    "Cursed Golden Robe": {
+      "": "诅咒的黄金长袍"
+    },
+    "Enchanted Golden Robe": {
+      "": "附魔的黄金长袍"
+    },
+    "Crude Golden Hat": {
+      "": "粗制的黄金帽"
+    },
+    "Superior Golden Hat": {
+      "": "优质的黄金帽"
+    },
+    "Cursed Golden Hat": {
+      "": "诅咒的黄金帽"
+    },
+    "Enchanted Golden Hat": {
+      "": "附魔的黄金帽"
+    },
+    "Tarnished Spirit Cuirass": {
+      "": "黯淡的灵魂胸甲"
+    },
+    "Superior Spirit Cuirass": {
+      "": "优质的灵魂胸甲"
+    },
+    "Cursed Spirit Cuirass": {
+      "": "诅咒的灵魂胸甲"
+    },
+    "Enchanted Spirit Cuirass": {
+      "": "附魔的灵魂胸甲"
+    },
+    "Tarnished Spirit Shield": {
+      "": "黯淡的灵魂盾"
+    },
+    "Superior Spirit Shield": {
+      "": "优质的灵魂盾"
+    },
+    "Cursed Spirit Shield": {
+      "": "诅咒的灵魂盾"
+    },
+    "Enchanted Spirit Shield": {
+      "": "附魔的灵魂盾"
+    },
+    "Tarnished Spirit Gambeson": {
+      "": "黯淡的灵魂软甲"
+    },
+    "Superior Spirit Gambeson": {
+      "": "优质的灵魂软甲"
+    },
+    "Cursed Spirit Gambeson": {
+      "": "诅咒的灵魂软甲"
+    },
+    "Enchanted Spirit Gambeson": {
+      "": "附魔的灵魂软甲"
+    },
+    "Tarnished Spirit Jacket": {
+      "": "黯淡的灵魂夹克"
+    },
+    "Superior Spirit Jacket": {
+      "": "优质的灵魂夹克"
+    },
+    "Cursed Spirit Jacket": {
+      "": "诅咒的灵魂夹克"
+    },
+    "Enchanted Spirit Jacket": {
+      "": "附魔的灵魂夹克"
+    },
+    "Crude Spirit Manteau": {
+      "": "粗制的灵魂披风"
+    },
+    "Superior Spirit Manteau": {
+      "": "优质的灵魂披风"
+    },
+    "Cursed Spirit Manteau": {
+      "": "诅咒的灵魂披风"
+    },
+    "Enchanted Spirit Manteau": {
+      "": "附魔的灵魂披风"
+    },
+    "Crude Spirit Robe": {
+      "": "粗制的灵魂长袍"
+    },
+    "Superior Spirit Robe": {
+      "": "优质的灵魂长袍"
+    },
+    "Cursed Spirit Robe": {
+      "": "诅咒的灵魂长袍"
+    },
+    "Enchanted Spirit Robe": {
+      "": "附魔的灵魂长袍"
+    },
+    "Crude Spirit Hat": {
+      "": "粗制的灵魂帽"
+    },
+    "Superior Spirit Hat": {
+      "": "优质的灵魂帽"
+    },
+    "Cursed Spirit Hat": {
+      "": "诅咒的灵魂帽"
+    },
+    "Enchanted Spirit Hat": {
+      "": "附魔的灵魂帽"
+    },
+    "Broken Alover Talisman": {
+      "": "破损的芦荟护符"
+    },
+    "Superior Alover Talisman": {
+      "": "优质的芦荟护符"
+    },
+    "Cursed Alover Talisman": {
+      "": "诅咒的芦荟护符"
+    },
+    "Enchanted Alover Talisman": {
+      "": "附魔的芦荟护符"
+    },
+    "Broken Torch": {
+      "": "破损的火把"
+    },
+    "Superior Torch": {
+      "": "优质的火把"
+    },
+    "Cursed Torch": {
+      "": "诅咒的火把"
+    },
+    "Enchanted Torch": {
+      "": "附魔的火把"
+    },
+    "Broken Heart Pin": {
+      "": "破损的心形胸针"
+    },
+    "Superior Heart Pin": {
+      "": "优质的心形胸针"
+    },
+    "Cursed Heart Pin": {
+      "": "诅咒的心形胸针"
+    },
+    "Enchanted Heart Pin": {
+      "": "附魔的心形胸针"
+    },
+    "Broken Medallion": {
+      "": "破损的吊坠"
+    },
+    "Superior Medallion": {
+      "": "优质的吊坠"
+    },
+    "Cursed Medallion": {
+      "": "诅咒的吊坠"
+    },
+    "Enchanted Medallion": {
+      "": "附魔的吊坠"
+    },
+    "Broken Helmet": {
+      "": "破损的头盔"
+    },
+    "Superior Helmet": {
+      "": "优质的头盔"
+    },
+    "Cursed Helmet": {
+      "": "诅咒的头盔"
+    },
+    "Enchanted Helmet": {
+      "": "附魔的头盔"
+    },
+    "Broken Sabatons": {
+      "": "破损的战靴"
+    },
+    "Superior Sabatons": {
+      "": "优质的战靴"
+    },
+    "Cursed Sabatons": {
+      "": "诅咒的战靴"
+    },
+    "Enchanted Sabatons": {
+      "": "附魔的战靴"
+    },
+    "Broken Orb": {
+      "": "破损的宝珠"
+    },
+    "Superior Orb": {
+      "": "优质的宝珠"
+    },
+    "Cursed Orb": {
+      "": "诅咒的宝珠"
+    },
+    "Enchanted Orb": {
+      "": "附魔的宝珠"
+    },
+    "Broken Resonator": {
+      "": "破损的共鸣器"
+    },
+    "Superior Resonator": {
+      "": "优质的共鸣器"
+    },
+    "Cursed Resonator": {
+      "": "诅咒的共鸣器"
+    },
+    "Enchanted Resonator": {
+      "": "附魔的共鸣器"
+    },
+    "Broken Lava Boots": {
+      "": "破损的熔岩靴"
+    },
+    "Superior Lava Boots": {
+      "": "优质的熔岩靴"
+    },
+    "Cursed Lava Boots": {
+      "": "诅咒的熔岩靴"
+    },
+    "Enchanted Lava Boots": {
+      "": "附魔的熔岩靴"
+    },
+    "Broken Glacier Medallion": {
+      "": "破损的冰川吊坠"
+    },
+    "Superior Glacier Medallion": {
+      "": "优质的冰川吊坠"
+    },
+    "Cursed Glacier Medallion": {
+      "": "诅咒的冰川吊坠"
+    },
+    "Enchanted Glacier Medallion": {
+      "": "附魔的冰川吊坠"
+    },
+    "Broken Thunder Helmet": {
+      "": "破损的雷霆头盔"
+    },
+    "Superior Thunder Helmet": {
+      "": "优质的雷霆头盔"
+    },
+    "Cursed Thunder Helmet": {
+      "": "诅咒的雷霆头盔"
+    },
+    "Enchanted Thunder Helmet": {
+      "": "附魔的雷霆头盔"
+    },
+    "Broken Emerald Orb": {
+      "": "破损的翡翠宝珠"
+    },
+    "Superior Emerald Orb": {
+      "": "优质的翡翠宝珠"
+    },
+    "Cursed Emerald Orb": {
+      "": "诅咒的翡翠宝珠"
+    },
+    "Enchanted Emerald Orb": {
+      "": "附魔的翡翠宝珠"
+    },
+    "Broken Amulet": {
+      "": "破损的护身符"
+    },
+    "Superior Amulet": {
+      "": "优质的护身符"
+    },
+    "Cursed Amulet": {
+      "": "诅咒的护身符"
+    },
+    "Enchanted Amulet": {
+      "": "附魔的护身符"
+    },
+    "Weak Regeneration": {
+      "": "虚弱的再生"
+    },
+    "Superior Regeneration": {
+      "": "优质的再生"
+    },
+    "Cursed Regeneration": {
+      "": "诅咒的再生"
+    },
+    "Enchanted Regeneration": {
+      "": "附魔的再生"
+    },
+    "Weak Firebolt": {
+      "": "虚弱的火焰箭"
+    },
+    "Superior Firebolt": {
+      "": "优质的火焰箭"
+    },
+    "Cursed Firebolt": {
+      "": "诅咒的火焰箭"
+    },
+    "Enchanted Firebolt": {
+      "": "附魔的火焰箭"
+    },
+    "Weak Blink": {
+      "": "虚弱的闪现"
+    },
+    "Superior Blink": {
+      "": "优质的闪现"
+    },
+    "Cursed Blink": {
+      "": "诅咒的闪现"
+    },
+    "Enchanted Blink": {
+      "": "附魔的闪现"
+    },
+    "Weak Haste": {
+      "": "虚弱的加速"
+    },
+    "Superior Haste": {
+      "": "优质的加速"
+    },
+    "Cursed Haste": {
+      "": "诅咒的加速"
+    },
+    "Enchanted Haste": {
+      "": "附魔的加速"
+    },
+    "Weak Ice Ring": {
+      "": "虚弱的冰环"
+    },
+    "Superior Ice Ring": {
+      "": "优质的冰环"
+    },
+    "Cursed Ice Ring": {
+      "": "诅咒的冰环"
+    },
+    "Enchanted Ice Ring": {
+      "": "附魔的冰环"
+    },
+    "Weak Thunderbolt": {
+      "": "虚弱的雷击"
+    },
+    "Superior Thunderbolt": {
+      "": "优质的雷击"
+    },
+    "Cursed Thunderbolt": {
+      "": "诅咒的雷击"
+    },
+    "Enchanted Thunderbolt": {
+      "": "附魔的雷击"
+    },
+    "Weak Stoneskin": {
+      "": "虚弱的石肤"
+    },
+    "Superior Stoneskin": {
+      "": "优质的石肤"
+    },
+    "Cursed Stoneskin": {
+      "": "诅咒的石肤"
+    },
+    "Enchanted Stoneskin": {
+      "": "附魔的石肤"
+    },
+    "Weak Rage": {
+      "": "虚弱的狂暴"
+    },
+    "Superior Rage": {
+      "": "优质的狂暴"
+    },
+    "Cursed Rage": {
+      "": "诅咒的狂暴"
+    },
+    "Enchanted Rage": {
+      "": "附魔的狂暴"
+    },
+    "Summon Weak Yig Warrior": {
+      "": "召唤虚弱的伊格战士"
+    },
+    "Summon Superior Yig Warrior": {
+      "": "召唤优质的伊格战士"
+    },
+    "Summon Cursed Yig Warrior": {
+      "": "召唤诅咒的伊格战士"
+    },
+    "Summon Enchanted Yig Warrior": {
+      "": "召唤附魔的伊格战士"
+    },
+    "Summon Weak Yig Mage": {
+      "": "召唤虚弱的伊格法师"
+    },
+    "Summon Superior Yig Mage": {
+      "": "召唤优质的伊格法师"
+    },
+    "Summon Cursed Yig Mage": {
+      "": "召唤诅咒的伊格法师"
+    },
+    "Summon Enchanted Yig Mage": {
+      "": "召唤附魔的伊格法师"
+    },
+    "Summon Weak Yig Spirit": {
+      "": "召唤虚弱的伊格之灵"
+    },
+    "Summon Superior Yig Spirit": {
+      "": "召唤优质的伊格之灵"
+    },
+    "Summon Cursed Yig Spirit": {
+      "": "召唤诅咒的伊格之灵"
+    },
+    "Summon Enchanted Yig Spirit": {
+      "": "召唤附魔的伊格之灵"
+    },
+    "Weak Barrier": {
+      "": "虚弱的屏障"
+    },
+    "Superior Barrier": {
+      "": "优质的屏障"
+    },
+    "Cursed Barrier": {
+      "": "诅咒的屏障"
+    },
+    "Enchanted Barrier": {
+      "": "附魔的屏障"
+    },
+    "Weak Charm": {
+      "": "虚弱的魅惑"
+    },
+    "Superior Charm": {
+      "": "优质的魅惑"
+    },
+    "Cursed Charm": {
+      "": "诅咒的魅惑"
+    },
+    "Enchanted Charm": {
+      "": "附魔的魅惑"
+    },
+    "Weak Void Orb": {
+      "": "虚弱的虚空宝珠"
+    },
+    "Superior Void Orb": {
+      "": "优质的虚空宝珠"
+    },
+    "Cursed Void Orb": {
+      "": "诅咒的虚空宝珠"
+    },
+    "Enchanted Void Orb": {
+      "": "附魔的虚空宝珠"
+    },
+    "Weak Reaper": {
+      "": "虚弱的收割者"
+    },
+    "Superior Reaper": {
+      "": "优质的收割者"
+    },
+    "Cursed Reaper": {
+      "": "诅咒的收割者"
+    },
+    "Enchanted Reaper": {
+      "": "附魔的收割者"
+    },
+    "Weak Drain": {
+      "": "虚弱的汲取"
+    },
+    "Superior Drain": {
+      "": "优质的汲取"
+    },
+    "Cursed Drain": {
+      "": "诅咒的汲取"
+    },
+    "Enchanted Drain": {
+      "": "附魔的汲取"
+    },
+    "Skeleton": {
+      "": "骷髅"
+    },
+    "skeleton": {
+      "": "骷髅"
+    },
+    "Weak Skeleton": {
+      "": "虚弱的骷髅"
+    },
+    "weak skeleton": {
+      "": "虚弱的骷髅"
+    },
+    "Superior Skeleton": {
+      "": "优质的骷髅"
+    },
+    "superior skeleton": {
+      "": "优质的骷髅"
+    },
+    "Cursed Skeleton": {
+      "": "诅咒的骷髅"
+    },
+    "cursed skeleton": {
+      "": "诅咒的骷髅"
+    },
+    "Enchanted Skeleton": {
+      "": "附魔的骷髅"
+    },
+    "enchanted skeleton": {
+      "": "附魔的骷髅"
+    },
+    "skeleton mage": {
+      "": "骷髅法师"
+    },
+    "Weak Skeleton Mage": {
+      "": "虚弱的骷髅法师"
+    },
+    "weak skeleton mage": {
+      "": "虚弱的骷髅法师"
+    },
+    "Superior Skeleton Mage": {
+      "": "优质的骷髅法师"
+    },
+    "superior skeleton mage": {
+      "": "优质的骷髅法师"
+    },
+    "Cursed Skeleton Mage": {
+      "": "诅咒的骷髅法师"
+    },
+    "cursed skeleton mage": {
+      "": "诅咒的骷髅法师"
+    },
+    "Enchanted Skeleton Mage": {
+      "": "附魔的骷髅法师"
+    },
+    "enchanted skeleton mage": {
+      "": "附魔的骷髅法师"
+    },
+    "Kobold": {
+      "": "狗头人"
+    },
+    "kobold": {
+      "": "狗头人"
+    },
+    "Weak Kobold": {
+      "": "虚弱的狗头人"
+    },
+    "weak kobold": {
+      "": "虚弱的狗头人"
+    },
+    "Superior Kobold": {
+      "": "优质的狗头人"
+    },
+    "superior kobold": {
+      "": "优质的狗头人"
+    },
+    "Cursed Kobold": {
+      "": "诅咒的狗头人"
+    },
+    "cursed kobold": {
+      "": "诅咒的狗头人"
+    },
+    "Enchanted Kobold": {
+      "": "附魔的狗头人"
+    },
+    "enchanted kobold": {
+      "": "附魔的狗头人"
+    },
+    "sandworm": {
+      "": "沙虫"
+    },
+    "Weak Sandworm": {
+      "": "虚弱的沙虫"
+    },
+    "weak sandworm": {
+      "": "虚弱的沙虫"
+    },
+    "Superior Sandworm": {
+      "": "优质的沙虫"
+    },
+    "superior sandworm": {
+      "": "优质的沙虫"
+    },
+    "Cursed Sandworm": {
+      "": "诅咒的沙虫"
+    },
+    "cursed sandworm": {
+      "": "诅咒的沙虫"
+    },
+    "Enchanted Sandworm": {
+      "": "附魔的沙虫"
+    },
+    "enchanted sandworm": {
+      "": "附魔的沙虫"
+    },
+    "goblin mage": {
+      "": "哥布林法师"
+    },
+    "Weak Goblin Mage": {
+      "": "虚弱的哥布林法师"
+    },
+    "weak goblin mage": {
+      "": "虚弱的哥布林法师"
+    },
+    "Superior Goblin Mage": {
+      "": "优质的哥布林法师"
+    },
+    "superior goblin mage": {
+      "": "优质的哥布林法师"
+    },
+    "Cursed Goblin Mage": {
+      "": "诅咒的哥布林法师"
+    },
+    "cursed goblin mage": {
+      "": "诅咒的哥布林法师"
+    },
+    "Enchanted Goblin Mage": {
+      "": "附魔的哥布林法师"
+    },
+    "enchanted goblin mage": {
+      "": "附魔的哥布林法师"
+    },
+    "goblin king": {
+      "": "哥布林王"
+    },
+    "Weak Goblin King": {
+      "": "虚弱的哥布林王"
+    },
+    "weak goblin king": {
+      "": "虚弱的哥布林王"
+    },
+    "Superior Goblin King": {
+      "": "优质的哥布林王"
+    },
+    "superior goblin king": {
+      "": "优质的哥布林王"
+    },
+    "Cursed Goblin King": {
+      "": "诅咒的哥布林王"
+    },
+    "cursed goblin king": {
+      "": "诅咒的哥布林王"
+    },
+    "Enchanted Goblin King": {
+      "": "附魔的哥布林王"
+    },
+    "enchanted goblin king": {
+      "": "附魔的哥布林王"
+    },
+    "Golem": {
+      "": "魔像"
+    },
+    "golem": {
+      "": "魔像"
+    },
+    "Weak Golem": {
+      "": "虚弱的魔像"
+    },
+    "weak golem": {
+      "": "虚弱的魔像"
+    },
+    "Superior Golem": {
+      "": "优质的魔像"
+    },
+    "superior golem": {
+      "": "优质的魔像"
+    },
+    "Cursed Golem": {
+      "": "诅咒的魔像"
+    },
+    "cursed golem": {
+      "": "诅咒的魔像"
+    },
+    "Enchanted Golem": {
+      "": "附魔的魔像"
+    },
+    "enchanted golem": {
+      "": "附魔的魔像"
+    },
+    "goblin grunt": {
+      "": "哥布林喽啰"
+    },
+    "Weak Goblin Grunt": {
+      "": "虚弱的哥布林喽啰"
+    },
+    "weak goblin grunt": {
+      "": "虚弱的哥布林喽啰"
+    },
+    "Superior Goblin Grunt": {
+      "": "优质的哥布林喽啰"
+    },
+    "superior goblin grunt": {
+      "": "优质的哥布林喽啰"
+    },
+    "Cursed Goblin Grunt": {
+      "": "诅咒的哥布林喽啰"
+    },
+    "cursed goblin grunt": {
+      "": "诅咒的哥布林喽啰"
+    },
+    "Enchanted Goblin Grunt": {
+      "": "附魔的哥布林喽啰"
+    },
+    "enchanted goblin grunt": {
+      "": "附魔的哥布林喽啰"
+    },
+    "Slime": {
+      "": "史莱姆"
+    },
+    "slime": {
+      "": "史莱姆"
+    },
+    "Weak Slime": {
+      "": "虚弱的史莱姆"
+    },
+    "weak slime": {
+      "": "虚弱的史莱姆"
+    },
+    "Superior Slime": {
+      "": "优质的史莱姆"
+    },
+    "superior slime": {
+      "": "优质的史莱姆"
+    },
+    "Cursed Slime": {
+      "": "诅咒的史莱姆"
+    },
+    "cursed slime": {
+      "": "诅咒的史莱姆"
+    },
+    "Enchanted Slime": {
+      "": "附魔的史莱姆"
+    },
+    "enchanted slime": {
+      "": "附魔的史莱姆"
+    },
+    "horned slime": {
+      "": "独角史莱姆"
+    },
+    "Weak Horned Slime": {
+      "": "虚弱的独角史莱姆"
+    },
+    "weak horned slime": {
+      "": "虚弱的独角史莱姆"
+    },
+    "Superior Horned Slime": {
+      "": "优质的独角史莱姆"
+    },
+    "superior horned slime": {
+      "": "优质的独角史莱姆"
+    },
+    "Cursed Horned Slime": {
+      "": "诅咒的独角史莱姆"
+    },
+    "cursed horned slime": {
+      "": "诅咒的独角史莱姆"
+    },
+    "Enchanted Horned Slime": {
+      "": "附魔的独角史莱姆"
+    },
+    "enchanted horned slime": {
+      "": "附魔的独角史莱姆"
+    },
+    "Demon": {
+      "": "恶魔"
+    },
+    "demon": {
+      "": "恶魔"
+    },
+    "Weak Demon": {
+      "": "虚弱的恶魔"
+    },
+    "weak demon": {
+      "": "虚弱的恶魔"
+    },
+    "Superior Demon": {
+      "": "优质的恶魔"
+    },
+    "superior demon": {
+      "": "优质的恶魔"
+    },
+    "Cursed Demon": {
+      "": "诅咒的恶魔"
+    },
+    "cursed demon": {
+      "": "诅咒的恶魔"
+    },
+    "Enchanted Demon": {
+      "": "附魔的恶魔"
+    },
+    "enchanted demon": {
+      "": "附魔的恶魔"
+    },
+    "Lumberjack": {
+      "": "樵夫"
+    },
+    "lumberjack": {
+      "": "樵夫"
+    },
+    "Weak Lumberjack": {
+      "": "虚弱的樵夫"
+    },
+    "weak lumberjack": {
+      "": "虚弱的樵夫"
+    },
+    "Superior Lumberjack": {
+      "": "优质的樵夫"
+    },
+    "superior lumberjack": {
+      "": "优质的樵夫"
+    },
+    "Cursed Lumberjack": {
+      "": "诅咒的樵夫"
+    },
+    "cursed lumberjack": {
+      "": "诅咒的樵夫"
+    },
+    "Enchanted Lumberjack": {
+      "": "附魔的樵夫"
+    },
+    "enchanted lumberjack": {
+      "": "附魔的樵夫"
+    },
+    "Miner": {
+      "": "矿工"
+    },
+    "miner": {
+      "": "矿工"
+    },
+    "Weak Miner": {
+      "": "虚弱的矿工"
+    },
+    "weak miner": {
+      "": "虚弱的矿工"
+    },
+    "Superior Miner": {
+      "": "优质的矿工"
+    },
+    "superior miner": {
+      "": "优质的矿工"
+    },
+    "Cursed Miner": {
+      "": "诅咒的矿工"
+    },
+    "cursed miner": {
+      "": "诅咒的矿工"
+    },
+    "Enchanted Miner": {
+      "": "附魔的矿工"
+    },
+    "enchanted miner": {
+      "": "附魔的矿工"
+    },
+    "Bandit": {
+      "": "强盗"
+    },
+    "bandit": {
+      "": "强盗"
+    },
+    "Weak Bandit": {
+      "": "虚弱的强盗"
+    },
+    "weak bandit": {
+      "": "虚弱的强盗"
+    },
+    "Superior Bandit": {
+      "": "优质的强盗"
+    },
+    "superior bandit": {
+      "": "优质的强盗"
+    },
+    "Cursed Bandit": {
+      "": "诅咒的强盗"
+    },
+    "cursed bandit": {
+      "": "诅咒的强盗"
+    },
+    "Enchanted Bandit": {
+      "": "附魔的强盗"
+    },
+    "enchanted bandit": {
+      "": "附魔的强盗"
+    },
+    "Shade": {
+      "": "暗影"
+    },
+    "shade": {
+      "": "暗影"
+    },
+    "Weak Shade": {
+      "": "虚弱的暗影"
+    },
+    "weak shade": {
+      "": "虚弱的暗影"
+    },
+    "Superior Shade": {
+      "": "优质的暗影"
+    },
+    "superior shade": {
+      "": "优质的暗影"
+    },
+    "Cursed Shade": {
+      "": "诅咒的暗影"
+    },
+    "cursed shade": {
+      "": "诅咒的暗影"
+    },
+    "Enchanted Shade": {
+      "": "附魔的暗影"
+    },
+    "enchanted shade": {
+      "": "附魔的暗影"
+    },
+    "Parishioner": {
+      "": "教徒"
+    },
+    "parishioner": {
+      "": "教徒"
+    },
+    "Weak Parishioner": {
+      "": "虚弱的教徒"
+    },
+    "weak parishioner": {
+      "": "虚弱的教徒"
+    },
+    "Superior Parishioner": {
+      "": "优质的教徒"
+    },
+    "superior parishioner": {
+      "": "优质的教徒"
+    },
+    "Cursed Parishioner": {
+      "": "诅咒的教徒"
+    },
+    "cursed parishioner": {
+      "": "诅咒的教徒"
+    },
+    "Enchanted Parishioner": {
+      "": "附魔的教徒"
+    },
+    "enchanted parishioner": {
+      "": "附魔的教徒"
+    },
+    "Chanter": {
+      "": "吟唱者"
+    },
+    "chanter": {
+      "": "吟唱者"
+    },
+    "Weak Chanter": {
+      "": "虚弱的吟唱者"
+    },
+    "weak chanter": {
+      "": "虚弱的吟唱者"
+    },
+    "Superior Chanter": {
+      "": "优质的吟唱者"
+    },
+    "superior chanter": {
+      "": "优质的吟唱者"
+    },
+    "Cursed Chanter": {
+      "": "诅咒的吟唱者"
+    },
+    "cursed chanter": {
+      "": "诅咒的吟唱者"
+    },
+    "Enchanted Chanter": {
+      "": "附魔的吟唱者"
+    },
+    "enchanted chanter": {
+      "": "附魔的吟唱者"
+    },
+    "Ent": {
+      "": "树人"
+    },
+    "ent": {
+      "": "树人"
+    },
+    "Weak Ent": {
+      "": "虚弱的树人"
+    },
+    "weak ent": {
+      "": "虚弱的树人"
+    },
+    "Superior Ent": {
+      "": "优质的树人"
+    },
+    "superior ent": {
+      "": "优质的树人"
+    },
+    "Cursed Ent": {
+      "": "诅咒的树人"
+    },
+    "cursed ent": {
+      "": "诅咒的树人"
+    },
+    "Enchanted Ent": {
+      "": "附魔的树人"
+    },
+    "enchanted ent": {
+      "": "附魔的树人"
+    },
+    "Zombie": {
+      "": "僵尸"
+    },
+    "zombie": {
+      "": "僵尸"
+    },
+    "Weak Zombie": {
+      "": "虚弱的僵尸"
+    },
+    "weak zombie": {
+      "": "虚弱的僵尸"
+    },
+    "Superior Zombie": {
+      "": "优质的僵尸"
+    },
+    "superior zombie": {
+      "": "优质的僵尸"
+    },
+    "Cursed Zombie": {
+      "": "诅咒的僵尸"
+    },
+    "cursed zombie": {
+      "": "诅咒的僵尸"
+    },
+    "Enchanted Zombie": {
+      "": "附魔的僵尸"
+    },
+    "enchanted zombie": {
+      "": "附魔的僵尸"
+    },
+    "Fuzhu": {
+      "": "夫诸"
+    },
+    "fuzhu": {
+      "": "夫诸"
+    },
+    "Weak Fuzhu": {
+      "": "虚弱的夫诸"
+    },
+    "weak fuzhu": {
+      "": "虚弱的夫诸"
+    },
+    "Superior Fuzhu": {
+      "": "优质的夫诸"
+    },
+    "superior fuzhu": {
+      "": "优质的夫诸"
+    },
+    "Cursed Fuzhu": {
+      "": "诅咒的夫诸"
+    },
+    "cursed fuzhu": {
+      "": "诅咒的夫诸"
+    },
+    "Enchanted Fuzhu": {
+      "": "附魔的夫诸"
+    },
+    "enchanted fuzhu": {
+      "": "附魔的夫诸"
+    },
+    "Hound": {
+      "": "猎犬"
+    },
+    "hound": {
+      "": "猎犬"
+    },
+    "Weak Hound": {
+      "": "虚弱的猎犬"
+    },
+    "weak hound": {
+      "": "虚弱的猎犬"
+    },
+    "Superior Hound": {
+      "": "优质的猎犬"
+    },
+    "superior hound": {
+      "": "优质的猎犬"
+    },
+    "Cursed Hound": {
+      "": "诅咒的猎犬"
+    },
+    "cursed hound": {
+      "": "诅咒的猎犬"
+    },
+    "Enchanted Hound": {
+      "": "附魔的猎犬"
+    },
+    "enchanted hound": {
+      "": "附魔的猎犬"
+    },
+    "kobold duelist": {
+      "": "狗头人决斗者"
+    },
+    "Weak Kobold Duelist": {
+      "": "虚弱的狗头人决斗者"
+    },
+    "weak kobold duelist": {
+      "": "虚弱的狗头人决斗者"
+    },
+    "Superior Kobold Duelist": {
+      "": "优质的狗头人决斗者"
+    },
+    "superior kobold duelist": {
+      "": "优质的狗头人决斗者"
+    },
+    "Cursed Kobold Duelist": {
+      "": "诅咒的狗头人决斗者"
+    },
+    "cursed kobold duelist": {
+      "": "诅咒的狗头人决斗者"
+    },
+    "Enchanted Kobold Duelist": {
+      "": "附魔的狗头人决斗者"
+    },
+    "enchanted kobold duelist": {
+      "": "附魔的狗头人决斗者"
+    },
+    "acolyte": {
+      "": "侍僧"
+    },
+    "Weak Acolyte": {
+      "": "虚弱的侍僧"
+    },
+    "weak acolyte": {
+      "": "虚弱的侍僧"
+    },
+    "Superior Acolyte": {
+      "": "优质的侍僧"
+    },
+    "superior acolyte": {
+      "": "优质的侍僧"
+    },
+    "Cursed Acolyte": {
+      "": "诅咒的侍僧"
+    },
+    "cursed acolyte": {
+      "": "诅咒的侍僧"
+    },
+    "Enchanted Acolyte": {
+      "": "附魔的侍僧"
+    },
+    "enchanted acolyte": {
+      "": "附魔的侍僧"
+    },
+    "skeleton archer": {
+      "": "骷髅弓手"
+    },
+    "Weak Skeleton Archer": {
+      "": "虚弱的骷髅弓手"
+    },
+    "weak skeleton archer": {
+      "": "虚弱的骷髅弓手"
+    },
+    "Superior Skeleton Archer": {
+      "": "优质的骷髅弓手"
+    },
+    "superior skeleton archer": {
+      "": "优质的骷髅弓手"
+    },
+    "Cursed Skeleton Archer": {
+      "": "诅咒的骷髅弓手"
+    },
+    "cursed skeleton archer": {
+      "": "诅咒的骷髅弓手"
+    },
+    "Enchanted Skeleton Archer": {
+      "": "附魔的骷髅弓手"
+    },
+    "enchanted skeleton archer": {
+      "": "附魔的骷髅弓手"
+    },
+    "Wraith": {
+      "": "怨灵"
+    },
+    "wraith": {
+      "": "怨灵"
+    },
+    "Weak Wraith": {
+      "": "虚弱的怨灵"
+    },
+    "weak wraith": {
+      "": "虚弱的怨灵"
+    },
+    "Superior Wraith": {
+      "": "优质的怨灵"
+    },
+    "superior wraith": {
+      "": "优质的怨灵"
+    },
+    "Cursed Wraith": {
+      "": "诅咒的怨灵"
+    },
+    "cursed wraith": {
+      "": "诅咒的怨灵"
+    },
+    "Enchanted Wraith": {
+      "": "附魔的怨灵"
+    },
+    "enchanted wraith": {
+      "": "附魔的怨灵"
+    },
+    "villager": {
+      "": "村民"
+    },
+    "Weak Villager": {
+      "": "虚弱的村民"
+    },
+    "weak villager": {
+      "": "虚弱的村民"
+    },
+    "Superior Villager": {
+      "": "优质的村民"
+    },
+    "superior villager": {
+      "": "优质的村民"
+    },
+    "Cursed Villager": {
+      "": "诅咒的村民"
+    },
+    "cursed villager": {
+      "": "诅咒的村民"
+    },
+    "Enchanted Villager": {
+      "": "附魔的村民"
+    },
+    "enchanted villager": {
+      "": "附魔的村民"
+    },
+    "goblin soldier": {
+      "": "哥布林士兵"
+    },
+    "Weak Goblin Soldier": {
+      "": "虚弱的哥布林士兵"
+    },
+    "weak goblin soldier": {
+      "": "虚弱的哥布林士兵"
+    },
+    "Superior Goblin Soldier": {
+      "": "优质的哥布林士兵"
+    },
+    "superior goblin soldier": {
+      "": "优质的哥布林士兵"
+    },
+    "Cursed Goblin Soldier": {
+      "": "诅咒的哥布林士兵"
+    },
+    "cursed goblin soldier": {
+      "": "诅咒的哥布林士兵"
+    },
+    "Enchanted Goblin Soldier": {
+      "": "附魔的哥布林士兵"
+    },
+    "enchanted goblin soldier": {
+      "": "附魔的哥布林士兵"
+    },
+    "goblin bulwark": {
+      "": "哥布林盾卫"
+    },
+    "Weak Goblin Bulwark": {
+      "": "虚弱的哥布林盾卫"
+    },
+    "weak goblin bulwark": {
+      "": "虚弱的哥布林盾卫"
+    },
+    "Superior Goblin Bulwark": {
+      "": "优质的哥布林盾卫"
+    },
+    "superior goblin bulwark": {
+      "": "优质的哥布林盾卫"
+    },
+    "Cursed Goblin Bulwark": {
+      "": "诅咒的哥布林盾卫"
+    },
+    "cursed goblin bulwark": {
+      "": "诅咒的哥布林盾卫"
+    },
+    "Enchanted Goblin Bulwark": {
+      "": "附魔的哥布林盾卫"
+    },
+    "enchanted goblin bulwark": {
+      "": "附魔的哥布林盾卫"
+    },
+    "earth worm": {
+      "": "地虫"
+    },
+    "Weak Earth Worm": {
+      "": "虚弱的地虫"
+    },
+    "weak earth worm": {
+      "": "虚弱的地虫"
+    },
+    "Superior Earth Worm": {
+      "": "优质的地虫"
+    },
+    "superior earth worm": {
+      "": "优质的地虫"
+    },
+    "Cursed Earth Worm": {
+      "": "诅咒的地虫"
+    },
+    "cursed earth worm": {
+      "": "诅咒的地虫"
+    },
+    "Enchanted Earth Worm": {
+      "": "附魔的地虫"
+    },
+    "enchanted earth worm": {
+      "": "附魔的地虫"
+    },
+    "earth stone worm": {
+      "": "岩石地虫"
+    },
+    "Weak Earth Stone Worm": {
+      "": "虚弱的岩石地虫"
+    },
+    "weak earth stone worm": {
+      "": "虚弱的岩石地虫"
+    },
+    "Superior Earth Stone Worm": {
+      "": "优质的岩石地虫"
+    },
+    "superior earth stone worm": {
+      "": "优质的岩石地虫"
+    },
+    "Cursed Earth Stone Worm": {
+      "": "诅咒的岩石地虫"
+    },
+    "cursed earth stone worm": {
+      "": "诅咒的岩石地虫"
+    },
+    "Enchanted Earth Stone Worm": {
+      "": "附魔的岩石地虫"
+    },
+    "enchanted earth stone worm": {
+      "": "附魔的岩石地虫"
+    },
+    "Archaeologist": {
+      "": "考古学家"
+    },
+    "archaeologist": {
+      "": "考古学家"
+    },
+    "Weak Archaeologist": {
+      "": "虚弱的考古学家"
+    },
+    "weak archaeologist": {
+      "": "虚弱的考古学家"
+    },
+    "Superior Archaeologist": {
+      "": "优质的考古学家"
+    },
+    "superior archaeologist": {
+      "": "优质的考古学家"
+    },
+    "Cursed Archaeologist": {
+      "": "诅咒的考古学家"
+    },
+    "cursed archaeologist": {
+      "": "诅咒的考古学家"
+    },
+    "Enchanted Archaeologist": {
+      "": "附魔的考古学家"
+    },
+    "enchanted archaeologist": {
+      "": "附魔的考古学家"
+    },
+    "Lich": {
+      "": "巫妖"
+    },
+    "lich": {
+      "": "巫妖"
+    },
+    "Weak Lich": {
+      "": "虚弱的巫妖"
+    },
+    "weak lich": {
+      "": "虚弱的巫妖"
+    },
+    "Superior Lich": {
+      "": "优质的巫妖"
+    },
+    "superior lich": {
+      "": "优质的巫妖"
+    },
+    "Cursed Lich": {
+      "": "诅咒的巫妖"
+    },
+    "cursed lich": {
+      "": "诅咒的巫妖"
+    },
+    "Enchanted Lich": {
+      "": "附魔的巫妖"
+    },
+    "enchanted lich": {
+      "": "附魔的巫妖"
+    },
+    "iron hound": {
+      "": "铁甲猎犬"
+    },
+    "Weak Iron Hound": {
+      "": "虚弱的铁甲猎犬"
+    },
+    "weak iron hound": {
+      "": "虚弱的铁甲猎犬"
+    },
+    "Superior Iron Hound": {
+      "": "优质的铁甲猎犬"
+    },
+    "superior iron hound": {
+      "": "优质的铁甲猎犬"
+    },
+    "Cursed Iron Hound": {
+      "": "诅咒的铁甲猎犬"
+    },
+    "cursed iron hound": {
+      "": "诅咒的铁甲猎犬"
+    },
+    "Enchanted Iron Hound": {
+      "": "附魔的铁甲猎犬"
+    },
+    "enchanted iron hound": {
+      "": "附魔的铁甲猎犬"
+    },
+    "fighter": {
+      "": "战士"
+    },
+    "rogue": {
+      "": "游荡者"
+    },
+    "brawler": {
+      "": "斗士"
+    },
+    "mage": {
+      "": "法师"
+    },
+    "archer": {
+      "": "弓箭手"
+    },
+    "pikeman": {
+      "": "长枪兵"
+    },
+    "prodigy": {
+      "": "神童"
+    },
+    "cleric": {
+      "": "牧师"
+    },
+    "drunkard": {
+      "": "醉汉"
+    },
+    "dweorg": {
+      "": "矮人"
+    },
+    "siren": {
+      "": "海妖"
+    },
+    "shieldmaiden": {
+      "": "盾女"
+    }
+  }
+}

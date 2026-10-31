@@ -1,0 +1,589 @@
+/* The mektxt.com website, over the game. Colours and sizes are Figma's (file "mektxt.com",
+   page "web"); the colour names are its variables'. */
+
+@font-face { font-family: "MEKZANTINE Mono"; src: url("../assets/fonts/MEKZANTINE-Mono.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "MEKZANTINE"; src: url("../assets/fonts/MEKZANTINE-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "MEK Sans"; src: url("../assets/fonts/MEKSans-Regular.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --dark1: #071324;      /* the background */
+  --blue2: #3f3f74;      /* the header over the game */
+  --c400: #363331;       /* lines */
+  --c700: #736860;
+  --c800: #9a8c81;
+  --c1000: #c7bbb2;      /* text */
+  --gold1: #8a6f30;
+  --gold2: #d9a066;
+  --mono: "MEKZANTINE Mono", monospace;
+  --serif: "MEKZANTINE", serif;
+  --sans: "MEK Sans", monospace;
+  /* type: MEKZANTINE (Mono and Regular) big, MEK Sans body and small; a size up on Figma's */
+  --big: 24px;
+  --body: 16px;
+  --small: 14px;
+  --header-h: 56px;
+  --quick-h: 33px;       /* the quick links under every page: one row (two on a tablet, none on a phone) */
+}
+
+html, body { margin: 0; height: 100%; background: var(--dark1); overflow: hidden; }
+/* type drawn as Figma draws it: macOS browsers otherwise thicken it (subpixel-style smoothing) */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* The game's box: the whole of what's visible (dvh), not what's behind a phone's or tablet's
+   browser bars (vh). Behind the website it fades (in steps, main.js) and takes no input. */
+#game { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100dvh; }
+canvas { display: block; width: 100%; height: 100%; touch-action: none; image-rendering: pixelated; }
+/* (a finger held on the game never selects anything or brings up a callout: see game.js) */
+body[data-mode="game"] { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+body[data-mode="web"] #game { pointer-events: none; }
+/* Loading (index.html): the trees' wave in the middle on dark1, 4 screen px a pixel, fading in only
+   after 0.3s so a quick load never flashes it */
+#loading { position: absolute; inset: 0; display: grid; place-items: center; background: var(--dark1); pointer-events: none; }
+#loading canvas { width: 200px; height: 48px; image-rendering: pixelated; opacity: 0; animation: loading-in 0.2s 0.3s forwards; }
+@keyframes loading-in { to { opacity: 1; } }
+/* The game's pictures wouldn't load (Figma "error" 631:80641, game.js): on dark1, centred (32px
+   lower padding), the DOS-AGE logo (DOS, the cross of four stat icons, AGE: 39.084px MEKZANTINE
+   Mono, its cross 64.37px and AGE 94.68px in) over the message in gold1, CLICK HERE in gold2 */
+#load-error { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 56px; padding: 0 16px 32px; background: var(--dark1); color: var(--gold1); font-family: var(--mono); }
+#load-error[hidden] { display: none; }
+#load-error .logo { display: flex; align-items: flex-start; height: 41.383px; font-size: 39.084px; letter-spacing: 1.5634px; }
+#load-error .logo span { margin-top: 1.65px; line-height: 34.9px; text-box: trim-both cap alphabetic; }
+#load-error .logo span:first-child { width: 64.37px; }
+#load-error .cross { display: grid; grid-template: repeat(3, 13.794px) / repeat(3, 9.196px); margin-right: 2.72px; }
+#load-error .cross img { display: block; width: 9.196px; height: 13.794px; }
+#load-error .cross img:nth-child(1) { grid-area: 1 / 2; }
+#load-error .cross img:nth-child(2) { grid-area: 2 / 1; }
+#load-error .cross img:nth-child(3) { grid-area: 2 / 3; }
+#load-error .cross img:nth-child(4) { grid-area: 3 / 2; }
+#load-error p { width: 284px; max-width: 100%; margin: 0; font-size: 28px; line-height: 39.95px; letter-spacing: 1.12px; text-align: center; text-transform: uppercase; }
+#load-error button { padding: 0; border: 0; background: none; color: var(--gold2); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+/* Ko-fi's Support me on the game's title (kofi.js, "landing" 607:297824): its widget's button (in
+   its own frame, the pill at the frame's bottom left) moved to the bottom right, 40px in from the
+   corner on a computer, 24px on a phone (each frame as wide as its pill, kofi.js), and as big as the
+   mock's less 8% (the user's, 2026-10-14: Ko-fi's 178px at 0.745, 133px);
+   its donation panel opening just over it */
+#kofi { --kofi-in: 40px; }
+#kofi[data-phone="true"] { --kofi-in: 24px; }
+#kofi[hidden] { display: none; }
+#kofi .floatingchat-container-wrap, #kofi .floatingchat-container-wrap-mobi {
+  left: auto !important; right: var(--kofi-in) !important; bottom: var(--kofi-in) !important;
+  transform: scale(0.745); transform-origin: right bottom; }
+#kofi .floating-chat-kofi-popup-iframe, #kofi .floating-chat-kofi-popup-iframe-mobi {
+  left: auto !important; right: var(--kofi-in) !important; bottom: calc(var(--kofi-in) + 42px) !important; }
+
+/* The website: shown through a dither while it comes and goes (main.js) */
+#web { position: fixed; inset: 0; padding-top: var(--header-h); box-sizing: border-box; overflow: auto; scrollbar-width: none; color: var(--c1000); font: var(--body)/1.16 var(--sans); }
+/* it scrolls (narrow windows, two pages under each other in the dither) without a bar, so its width never jumps */
+#web::-webkit-scrollbar { display: none; }
+body[data-mode="game"] #web { visibility: hidden; }
+/* staging is the game alone (index.html): no website, and no header links or ESC switch to it */
+body[data-game-only] #web, body[data-game-only] .header .left, body[data-game-only] .header .esc { display: none; }
+#web > section { display: none; min-height: calc(100% - var(--quick-h)); position: relative; z-index: 1; }
+/* the page being left, kept under the one dithered in over it (main.js) */
+#web > section.leaving { display: block; position: absolute; inset: var(--header-h) 0 0; z-index: 0; overflow: hidden; }
+body[data-page="home"] #web > [data-page="home"],
+body[data-page="works"] #web > [data-page="works"],
+body[data-page="about"] #web > [data-page="about"],
+body[data-page="art-market"] #web > [data-page="art-market"],
+body[data-page="devlog"] #web > [data-page="devlog"],
+body[data-page="wiki"] #web > [data-page="wiki"] { display: block; }
+/* a page that couldn't be built */
+.soon { margin: 0; padding: 30vh 16px 0; text-align: center; font: var(--big)/1 var(--mono); color: var(--c800); }
+
+/* Header: big from 600px across (like the game's own switch to its phone layout), small under.
+   There are two, one over the other: the game variant (#header, which takes the clicks) and,
+   laid over it, the web variant (a copy, site.js), shown through the same dither as the
+   website, so every pixel is one variant's colour or the other's, never a blend. */
+.header {
+  position: fixed; left: 0; top: 0; right: 0; z-index: 3; height: var(--header-h); box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 16px;
+  border-bottom: 1px solid transparent; color: var(--blue2); user-select: none;
+}
+.header .left, .header .right { display: flex; align-items: center; }
+.header .left { gap: 12px; }
+.header .right { gap: 8px; }
+.header a { display: flex; align-items: center; gap: 4px; color: inherit; text-decoration: none; font: var(--big)/1 var(--mono); text-box: trim-both cap alphabetic; }
+.header .logo { gap: 12px; }
+.header kbd, .header .wide { display: none; }
+.header .wide { align-items: center; gap: 4px; }
+.header kbd {
+  box-sizing: border-box; width: 16px; height: 16px; align-items: center; justify-content: center;
+  border: 1px solid currentColor; border-radius: 2px; font: var(--small)/1.16 var(--sans);
+}
+.header button { display: flex; align-items: center; gap: 6px; padding: 0; border: 0; background: none; color: inherit; cursor: pointer; font: var(--body)/1.16 var(--sans); }
+.icon { display: block; width: 16px; height: 16px; background: currentColor; -webkit-mask: var(--mask) center / contain no-repeat; mask: var(--mask) center / contain no-repeat; }
+.icon.mek { --mask: url("../assets/web/mek-logo.svg"); }
+.header .logo .icon.mek { width: 22px; height: 22px; }   /* about as tall as MEK.TXT beside it */
+.icon.speaker { --mask: url("../assets/web/speaker-high.svg"); }
+body.muted .icon.speaker { --mask: url("../assets/web/speaker-x.svg"); }
+/* on the game's own page the speaker's a gear, beige like the keys ([L]) since 2026-10-27 (it was wood brown, before that blue), for the game's settings */
+body[data-game-only] .icon.speaker, body[data-game-only].muted .icon.speaker { --mask: url("../assets/web/gear.svg"); }
+/* ...pinned 16px in from the top left, whatever the header's height (the user's, 2026-10-18) */
+body[data-game-only] .header .mute { color: var(--gold2); position: fixed; left: 16px; top: 16px; }
+/* ...and the rest of the header lets presses through to the game under it (the title's language pill, 2026-10-26) */
+body[data-game-only] .header { pointer-events: none; }
+body[data-game-only] .header .mute { pointer-events: auto; }
+/* on mektxt.com the speaker stays, and the game's settings have a gear of their own, the same
+   beige, 16px in under the header, only while in the game (the user's, 2026-10-19) */
+.gear { position: fixed; left: 16px; top: calc(var(--header-h) + 16px); z-index: 3; padding: 0; border: 0; background: none; color: var(--gold2); cursor: pointer; }
+.gear .icon { --mask: url("../assets/web/gear.svg"); }
+body[data-game-only] .gear, body[data-switch="web"] .gear { display: none; }
+/* The ESC switch is a slider: its knob rests at the game's end (left) or the website's, and
+   slides between (slideKnob() in site.js), in both variants together */
+.slider { position: relative; display: block; width: 30px; height: 17.5px; background: url("../assets/web/slider-track-game.svg") center / contain no-repeat; }
+.knob { position: absolute; inset: 0; background: url("../assets/web/slider-knob-game.svg") center / contain no-repeat; }
+body[data-switch="web"] .knob { transform: translateX(12.5px); }
+.header a { white-space: nowrap; }
+@media (max-width: 599px) { .header .left { gap: 8px; } }
+@media (max-width: 374px) { .header a { font-size: 20px; } .header .logo .icon.mek { width: 18px; height: 18px; } }   /* narrower than an iPhone: or it won't fit */
+@media (min-width: 600px) {
+  .header .left, .header .right { gap: 16px; }
+  .header kbd, .header .wide { display: flex; }
+}
+
+/* ...and its web variant, with a line under it: the page you're on lit, the others dim */
+.header.web { z-index: 4; pointer-events: none; color: var(--c1000); border-bottom-color: var(--c400); background: var(--dark1); }
+body[data-mode="game"] .header.web { visibility: hidden; }
+.header.web kbd { border-color: var(--c400); color: var(--c700); }
+.header.web button { color: var(--c800); }
+.header.web .slider { background-image: url("../assets/web/slider-track-web.svg"); }
+.header.web .knob { background-image: url("../assets/web/slider-knob-web.svg"); }
+.header.web a[data-to] { position: relative; color: var(--c700); }
+.header.web .lit { position: absolute; inset: 0; display: flex; align-items: center; gap: inherit; color: var(--c1000); visibility: hidden; }
+body[data-page="home"] .header.web a[data-to="home"],
+body[data-page="works"] .header.web a[data-to="works"],
+body[data-page="about"] .header.web a[data-to="about"],
+body[data-page="art-market"] .header.web a[data-to="art-market"] { color: var(--c1000); }
+
+/* ---- Pages ---- */
+
+.corner { position: absolute; left: -1px; top: -1px; width: 7px; height: 7px; background: url("../assets/web/corner.svg") no-repeat; pointer-events: none; }
+.meta { font: var(--small)/1.16 var(--sans); color: var(--c700); text-box: trim-both cap alphabetic; }
+img.pixel { image-rendering: pixelated; }
+/* links take their colour from where they are, unless something says otherwise (the weakest rule there is) */
+:where(#web) a { color: inherit; text-decoration: none; }
+
+/* Home (Figma "home-web", 178:24411): the strip along the top, the featured works under it,
+   filling the rest of the screen; the game's card has no background, the game shows in it */
+.home { display: flex; flex-direction: column; min-height: calc(100vh - var(--header-h) - var(--quick-h)); min-height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+.strip { display: flex; min-height: 89px; flex: none; border-bottom: 1px solid var(--c400); box-sizing: border-box; background: rgb(7 19 36 / 0.8); }
+.strip .intro { width: 290px; flex: none; box-sizing: border-box; margin: 0; padding: 16px; display: flex; align-items: center; border-right: 1px solid var(--c400); color: var(--c800); }
+.recent-head { flex: none; display: flex; flex-direction: column; justify-content: space-between; padding: 16px 12px; border-right: 1px solid var(--c400); color: var(--c700); white-space: nowrap; }
+.recent-head .arrows { display: flex; justify-content: space-between; gap: 8px; }
+.arrow { width: 16px; height: 16px; padding: 0; border: 0; cursor: pointer; background: var(--c800); -webkit-mask: url("../assets/web/arrow-left.svg") center / contain no-repeat; mask: url("../assets/web/arrow-left.svg") center / contain no-repeat; }
+.arrow.right { -webkit-mask-image: url("../assets/web/arrow-right.svg"); mask-image: url("../assets/web/arrow-right.svg"); }
+.arrow:hover { background: var(--c1000); }
+.recent { display: flex; overflow-x: auto; scrollbar-width: none; flex: 1; }
+.recent::-webkit-scrollbar { display: none; }
+.recent-card { position: relative; flex: none; width: 190px; gap: 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; padding: 16px 12px; border-right: 1px solid var(--c400); }
+.recent-card .title { color: var(--c800); }
+.recent-card:hover .title, a.featured-card:hover .title, .featured-card a.caption:hover .title { color: var(--c1000); }
+.featured { flex: 1; display: flex; gap: 16px; padding: 16px; min-height: 0; }
+.featured-card { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--c400); background: rgb(7 19 36 / 0.8); }
+.featured-card.game { order: 2; background: none; }
+/* the game's caption over the game, dark1 behind it so it reads over trees and all, fading out
+   below it (eased, the steps many, so there's no edge or band where it ends) */
+.featured-card.game .caption { position: relative; z-index: 1; }
+.featured-card.game .caption::before {
+  content: ""; position: absolute; inset: 0 0 -64px; z-index: -1; pointer-events: none;
+  background: linear-gradient(rgb(7 19 36 / 0.9) 0%, rgb(7 19 36 / 0.86) 40%, rgb(7 19 36 / 0.74) 54%,
+    rgb(7 19 36 / 0.57) 65%, rgb(7 19 36 / 0.39) 75%, rgb(7 19 36 / 0.23) 84%, rgb(7 19 36 / 0.1) 92%, rgb(7 19 36 / 0) 100%);
+}
+.featured-card.game .corner { z-index: 2; }
+.featured-card:not(.game) ~ .featured-card:not(.game) { order: 3; }
+.featured-card .caption { min-height: 94px; flex: none; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; padding: 12px 12px 16px; }   /* 94px tall (Figma 178:34325), a title of one line or two */
+.featured-card .caption .title { font: var(--big)/1.05 var(--serif); color: var(--c1000); text-box: trim-both cap alphabetic; }
+.featured-card .frame { position: relative; flex: 1; min-height: 0; border-radius: 4px; overflow: hidden; }
+/* its pictures going by, edge to edge (home.js roll): a run of them, then the same again; a hand
+   to grab them with, not a link's pointer */
+.featured-card .ticker { position: absolute; inset: 0; display: flex; will-change: transform; }
+.featured-card .run { flex: none; display: flex; height: 100%; }
+.featured-card .run img, .featured-card .run video { flex: none; display: block; height: 100%; width: auto; }
+.featured-card:not(.game) .frame { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.featured-card .frame.dragging { cursor: grabbing; }
+/* hovered, a featured card brightens a touch (10%), and over its caption, the link to the work
+   (or, the game's card, all of it a link), the date and kind light up too; the title's already
+   at its brightest */
+.featured-card:hover, .featured-card:focus-within { filter: brightness(1.1); }
+a.featured-card:hover .meta, .featured-card a.caption:hover .meta, .featured-card :focus-visible .meta, a.featured-card:focus-visible .meta { color: var(--c800); }
+/* the quick links along the bottom of every page (347:47719, in index.html, under the pages): a caption, then the links sharing what's left,
+   each with its arrow at the right; on a tablet three across in two rows (178:34362), the lines
+   between them the gaps; left off a phone */
+.quick-links { position: relative; z-index: 1; display: flex; height: var(--quick-h); box-sizing: border-box; border-top: 1px solid var(--c400); background: var(--dark1); font-size: var(--small); }
+.quick-head { flex: none; display: flex; align-items: center; padding: 0 16px; border-right: 1px solid var(--c400); color: var(--c700); white-space: nowrap; }
+.quick-link { position: relative; flex: 1 0 0; min-width: max-content; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 16px; border-right: 1px solid var(--c400); color: var(--c800); white-space: nowrap; }
+.quick-link:last-child { border-right: 0; }
+.quick-link .up-right { flex: none; width: 16px; height: 16px; background: currentColor; -webkit-mask: url("../assets/web/arrow-up-right.svg") center / contain no-repeat; mask: url("../assets/web/arrow-up-right.svg") center / contain no-repeat; }
+/* lit on hover through the dither, as the header's links are (site.js hoverDither) */
+.quick-link .lit { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 16px; color: var(--c1000); visibility: hidden; pointer-events: none; }
+.quick-link .corner { top: 0; }
+@media (max-width: 1023px) {
+  :root { --quick-h: 66px; }
+  .quick-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 32px; gap: 1px; background: var(--c400); }
+  .quick-head, .quick-link { border-right: 0; background: var(--dark1); min-width: 0; }
+}
+@media (max-width: 599px) {
+  :root { --quick-h: 0px; }
+  .quick-links { display: none; }
+}
+/* narrower: only the game's card, as Figma has it on a tablet or phone */
+@media (max-width: 1023px) {
+  .featured-card:not(.game) { display: none; }
+}
+@media (max-width: 599px) {
+  .strip .intro { display: none; }
+  .featured { padding: 12px; gap: 12px; }
+}
+
+/* About (Figma "about-web" a and b, 179:39898 and 200:64768): three columns, each scrolling on
+   its own, the middle one empty for the game to show through, or holding the panel */
+.about { display: grid; grid-template-columns: min(33.333%, 450px) minmax(0, 1fr) min(33.333%, 450px); height: calc(100vh - var(--header-h) - var(--quick-h)); height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+.about .col { position: relative; overflow-x: hidden; overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; }
+.about .col::-webkit-scrollbar { display: none; }
+.about .left, .about .right, .about .panel { background: rgb(7 19 36 / 0.8); }
+.about .left { border-right: 1px solid var(--c400); padding-bottom: 16px; }
+.about .right { border-left: 1px solid var(--c400); }
+.about p { margin: 0; max-width: 440px; }
+/* the left column fits the screen without scrolling: the portrait takes what the words leave,
+   up to 400px tall (Figma 744x1133 has it at 141), and goes (no-portrait) rather than be
+   shorter than 85px; past that the intro's type steps down to fit (fitAbout() in about.js) */
+.about .left > :not(.portrait):not(.corner) { flex: none; }
+.about .portrait { display: flex; justify-content: center; padding: 0 16px; flex: 1 1 400px; max-height: 400px; min-height: 0; }
+.about .left.no-portrait .portrait { display: none; }
+.about .crop { position: relative; overflow: hidden; aspect-ratio: 207 / 241; height: 100%; }
+.about .crop img { position: absolute; left: -25.14%; top: -0.9%; width: 149.36%; height: 149.67%; }
+.about .intro { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-bottom: 1px solid var(--c400); font: var(--intro, var(--big))/1.2 var(--serif); }
+.about .text { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.about .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.link, .tab, .arrow, .recent-card .title, .featured-card, .featured-card .title, .featured-card .meta, .panel-bar .hide, .panel-bar .arrow, .entry a {
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, filter 160ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .link, .tab, .arrow, .recent-card .title, .featured-card, .featured-card .title, .featured-card .meta, .panel-bar .hide, .panel-bar .arrow, .entry a { transition: none; }
+}
+.link, .tab { display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 36px; padding: 0 12px; box-sizing: border-box; border: 1px solid var(--c400); border-radius: 4px; color: var(--c800); white-space: nowrap; }
+.link .n, .tab .n { color: var(--c700); }
+a.link:hover, .tab:hover, .link.on { border-color: var(--c800); color: var(--c1000); }
+.link.on .n { color: var(--c800); }
+/* the right column's picture: as wide as the column, at the bottom of what's left of it, its
+   top cut off if there isn't room (Figma "img", items-end) */
+.about .right > :not(.picture):not(.corner) { flex: none; }
+.about .picture { flex: 1; min-height: 0; overflow: hidden; display: flex; align-items: flex-end; }
+.about .picture img { display: block; flex: none; width: 100%; height: auto; }
+.about .panel { display: none; flex: 1; max-width: 450px; box-sizing: border-box; border-right: 1px solid var(--c400); padding-bottom: 32px; }
+.about.panel-open .panel { display: block; }
+.panel-bar { padding: 8px 16px; border-bottom: 1px solid var(--c400); }
+.panel-bar .hide { display: flex; align-items: center; gap: 8px; color: var(--c700); }
+.panel-bar .arrow { display: block; background: var(--c700); }
+.panel-bar .hide:hover { color: var(--c1000); }
+.panel-bar .hide:hover .arrow { background: var(--c1000); }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.tab { flex: 1; }
+.tab.on { border-color: var(--c800); color: var(--c1000); }
+.tab.on .n { color: var(--c800); }
+.entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; padding: 16px 16px 32px; }
+.entry { display: flex; flex-direction: column; gap: 8px; }
+.entry a { text-decoration: underline; text-underline-offset: 2px; }
+.entry a:hover { color: var(--c800); }
+/* a phone: one column, the left's then the right's; the panel over it all */
+@media (max-width: 599px) {
+  .about { display: block; height: auto; }
+  .about .col { overflow: visible; }
+  .about .portrait { flex: none; max-height: none; }
+  .about .crop { height: min(320px, 40vh); }
+  .about .left { border-right: 0; }
+  .about .right { border-left: 0; border-top: 1px solid var(--c400); }
+  .about .mid { display: none; }
+  .about.panel-open .mid { display: block; position: fixed; z-index: 2; left: 0; right: 0; top: var(--header-h); bottom: 0; overflow-y: auto; }
+  .about.panel-open .panel { background: rgb(7 19 36 / 0.95); border-right: 0; min-height: 100%; max-width: none; }
+}
+
+/* The sidebar of works and of the art market (Figma 195:80751, 197:25250), a quarter wider than
+   Figma's 200px. Hidden, it's a strip with its icon: its width eases there while what's in it
+   slides out to the left, like about's panel, at its width all the way so nothing rewraps. */
+:root { --side-w: 250px; --side-strip: 33px; --slide: 240ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+.side { position: relative; flex: none; width: var(--side-w); }
+.sidebar { position: absolute; inset: 0 auto 0 0; width: var(--side-w); overflow: hidden; display: flex; flex-direction: column; border-right: 1px solid var(--c400); background: rgb(7 19 36 / 0.8); box-sizing: border-box; }
+.sidebar .bar, .sidebar-body { width: var(--side-w); box-sizing: border-box; flex: none; }
+.sidebar .bar { position: relative; display: flex; align-items: center; gap: 8px; padding: 8px 16px; border: 0; border-bottom: 1px solid var(--c400); background: none; color: var(--c700); font: var(--body)/1.16 var(--sans); cursor: pointer; text-align: left; white-space: nowrap; }
+.sidebar .bar .icon { flex: none; }
+.sidebar .bar kbd { display: flex; box-sizing: border-box; width: 16px; height: 16px; align-items: center; justify-content: center; border: 1px solid var(--c400); border-radius: 2px; font: var(--small)/1.16 var(--sans); }
+.sidebar .bar:hover { color: var(--c1000); }
+.icon.list { --mask: url("../assets/web/list.svg"); }
+/* the categories stay put and the list under them scrolls (the categories too, if they can't fit) */
+.sidebar-body { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.sidebar .group:first-child { flex: 0 1 auto; min-height: 0; }
+.sidebar .group:last-child { flex: 1 1 0; min-height: 160px; }
+.sidebar nav { min-height: 0; overflow-y: auto; scrollbar-width: none; }
+.sidebar nav::-webkit-scrollbar { display: none; }
+.sidebar .group { position: relative; display: flex; flex-direction: column; gap: 20px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.sidebar .head { margin: 0; color: var(--c700); }
+.sidebar nav { position: relative; display: flex; flex-direction: column; }
+.sidebar nav a { display: flex; align-items: center; padding: 6px 0; color: var(--c800); transition: color 160ms ease; }
+.sidebar .items a { align-items: flex-start; }
+.sidebar nav a.on { color: var(--c1000); }
+/* a row's ">": none idle, dim on hover, and on the picked row; 4px off its words when shown */
+.sidebar .mark { flex: none; overflow: hidden; max-width: 0; opacity: 0; color: var(--c700);
+  transition: max-width 160ms ease, margin 160ms ease, opacity 160ms ease; }
+.sidebar nav a:hover .mark { max-width: 1em; opacity: 1; margin-right: 4px; }
+.sidebar nav a.on .mark { max-width: 1em; opacity: 1; margin-right: 4px; }
+.sidebar .items a.on .mark { color: var(--c1000); }
+/* ...but in the list, whose titles wrap, it's laid over room kept at the row's right, the words
+   sliding over into it (as the art market's menus): they wrap the same, shown or not */
+.sidebar .items { --shift: calc(0.54em + 4px); }
+.sidebar .items a { position: relative; padding-right: var(--shift); }
+.sidebar .items .mark, .sidebar .items a:hover .mark, .sidebar .items a.on .mark { position: absolute; left: 0; max-width: none; margin: 0; }
+.sidebar .items .mark + span { transition: transform 160ms ease; }
+.sidebar .items a:hover .mark + span, .sidebar .items a.on .mark + span { transform: translateX(var(--shift)); }
+.sidebar .rule { flex: 1; height: 1px; margin: 0 6px; background: var(--c400); }
+.sidebar .count { color: var(--c700); }
+.sidebar .categories a.on .count { color: var(--c1000); }
+/* ...hidden */
+.sidebar-hidden .side, .sidebar-hidden .sidebar { width: var(--side-strip); }
+.sidebar-hidden .sidebar-body { transform: translateX(calc(var(--side-strip) - var(--side-w))); visibility: hidden; }
+.sidebar-hidden .sidebar .label, .sidebar-hidden .sidebar kbd { opacity: 0; }
+.sidebar-ready .side, .sidebar-ready .sidebar { transition: width var(--slide); }
+.sidebar-ready .sidebar-body { transition: transform var(--slide), visibility 0s; }
+.sidebar-ready.sidebar-hidden .sidebar-body { transition: transform var(--slide), visibility 0s var(--slide); }
+.sidebar-ready .sidebar .label, .sidebar-ready .sidebar kbd { transition: opacity var(--slide); }
+.sidebar-hidden .sidebar .bar { padding-left: 8px; }
+.sidebar-hidden .sidebar { cursor: pointer; }   /* the whole strip opens it (sidebar.js) */
+.sidebar-ready .sidebar .bar { transition: padding var(--slide), color 160ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-ready .side, .sidebar-ready .sidebar, .sidebar-ready .sidebar-body, .sidebar-ready .sidebar .label,
+  .sidebar-ready .sidebar kbd, .sidebar-ready .sidebar .bar, .sidebar .mark, .sidebar .items .mark + span { transition: none; }
+}
+
+/* Works (Figma "works-web", 184:74635): the sidebar, a work's words, its pictures; each scrolls on its own */
+.works { display: flex; height: calc(100vh - var(--header-h) - var(--quick-h)); height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+.work { flex: 1; min-width: 0; display: flex; }
+.work-text { position: relative; flex: none; width: 300px; display: flex; flex-direction: column; overflow-y: auto; scrollbar-width: none; border-right: 1px solid var(--c400); background: rgb(7 19 36 / 0.8); }
+.work-text::-webkit-scrollbar, .work-images::-webkit-scrollbar { display: none; }
+.title-block { display: flex; flex-direction: column; gap: 56px; padding: 16px; background: #0f1c2f; border-bottom: 1px solid var(--c400); }
+.title-block h1 { margin: 0; font: var(--big)/1.05 var(--serif); color: var(--c1000); font-weight: normal; }
+.title-block .subtitle { margin: 0; color: var(--c800); }
+.work .desc { padding: 16px; border-bottom: 1px solid var(--c400); }
+.work .desc p { margin: 0 0 1.16em; }
+.work .desc p:last-child { margin: 0; }
+.work .desc a, .details a { text-decoration: underline; text-underline-offset: 2px; }
+.details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 8px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.details > div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.details .value { color: var(--c800); overflow-wrap: anywhere; }
+.details a:hover { color: var(--c1000); }
+/* the game's: a word on supporting it, and Ko-fi and the devlog as links over pictures of it */
+.support { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.support .corner { left: 0; }
+.support p { margin: 0; color: var(--c800); font-size: var(--small); line-height: 1.16; }
+.support-link { position: relative; overflow: hidden; height: 80px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: space-between; padding: 12px; border: 1px solid var(--c400); border-radius: 4px; background: var(--c400); color: var(--c1000); font: var(--big)/1.05 var(--serif); }
+.support-link + .support-link { background: var(--dark1); }
+.support-link img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: transform 0.3s ease; }
+a.support-link:hover img, a.support-link:focus-visible img { transform: scale(1.1); }
+.support-link::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent, var(--c400) 83%); }
+.support-link + .support-link::after { background: linear-gradient(transparent, var(--dark1) 83%); }
+.support-link span { position: relative; z-index: 1; text-box: trim-both cap alphabetic; }
+.support-link .go { color: var(--c700); }
+a.support-link:hover .go, a.support-link:focus-visible .go { color: var(--c1000); }
+.tags { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-end; gap: 8px; padding: 16px; }
+.work-images { flex: 1; min-width: 0; overflow-y: auto; scrollbar-width: none; }
+.work-images img, .work-images video { display: block; width: 100%; height: auto; }
+.gallery { columns: 2; column-gap: 0; }
+/* a YouTube video over the cover (works.js video): the player, 16:9, covering the cover's shape
+   and then a fifth bigger again, so YouTube's title along its top and logo in its corner are cut
+   off; nothing of it can be pointed at. The cover over it till it's been playing a moment */
+.cover.yt { position: relative; overflow: hidden; container-type: size; aspect-ratio: 16 / 9; }
+.cover.yt iframe { position: absolute; left: 50%; top: 50%; border: 0; pointer-events: none;
+  width: max(100cqw, 100cqh * 16 / 9); aspect-ratio: 16 / 9; transform: translate(-50%, -50%) scale(1.2); }
+.cover.yt .poster { position: absolute; inset: 0; height: 100%; object-fit: cover; transition: opacity 600ms ease; }
+.cover.yt.playing .poster { opacity: 0; }
+.gallery img, .gallery video { break-inside: avoid; }
+.work-images [data-pic] { cursor: zoom-in; }
+.work-images [data-pic]:focus-visible { outline: 1px solid var(--c800); outline-offset: -1px; }
+/* The lightbox (lightbox.js): a work's pictures one at a time, over everything, the whole
+   window, dark1 behind; shown through the website's dither as it comes and goes. Along the
+   bottom a bar: the work's title, the arrows with where it's at, and close (Esc) */
+.lightbox { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; background: var(--dark1); color: var(--c1000); font: var(--body)/1.16 var(--sans); }
+.lightbox[hidden] { display: none; }
+.lb-pic { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.lb-pic > * { display: block; max-width: none; }
+.lb-bar { position: relative; flex: none; height: 48px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding: 0 16px; border-top: 1px solid var(--c400); }
+.lb-bar .corner { top: -1px; }
+.lb-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--c800); }
+.lb-nav { display: flex; align-items: center; gap: 16px; }
+.lb-count { min-width: 5ch; text-align: center; font-variant-numeric: tabular-nums; }
+.lightbox.single .lb-nav { visibility: hidden; }
+.lb-close { justify-self: end; display: flex; align-items: center; gap: 8px; padding: 0; border: 0; background: none; cursor: pointer; color: var(--c800); font: var(--small)/1.16 var(--sans); }
+.lb-close:hover, .lb-close:focus-visible { color: var(--c1000); outline: none; }
+.lb-close kbd { box-sizing: border-box; height: 16px; display: flex; align-items: center; padding: 0 3px; border: 1px solid currentColor; border-radius: 2px; font: inherit; font-size: 10px; }
+@media (max-width: 599px) { .lb-title { display: none; } .lb-bar { grid-template-columns: auto 1fr; } .lb-nav { order: -1; } .lb-close kbd { display: none; } }
+/* a tablet: the sidebar and one column, the words above the pictures */
+@media (max-width: 1023px) {
+  .work { display: block; overflow-y: auto; }
+  .work-text { width: auto; border-right: 0; overflow: visible; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .title-block { justify-content: space-between; }
+  .work .desc { border-left: 1px solid var(--c400); }
+  .details { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tags { grid-column: 1 / -1; border-bottom: 1px solid var(--c400); }
+  .support { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .support p { grid-column: 1 / -1; }
+  .work-images { overflow: visible; }
+}
+/* a phone: the sidebar hidden to a strip, opening over the work (or the devlog's entry); the words one under another */
+@media (max-width: 599px) {
+  .side, .sidebar-hidden .side { width: var(--side-strip); }
+  .sidebar { z-index: 2; }
+  .works:not(.sidebar-hidden) .sidebar { background: rgb(7 19 36 / 0.96); }
+  .work-text { display: flex; }
+  .work .desc { border-left: 0; }
+  .details { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .support { display: flex; }
+}
+
+/* Devlog (Figma "devlog-web-1200x800-a", 347:47835): its own column (title, Ko-fi, the entries),
+   an entry's words and its pictures (as a work's, .work-images); each scrolls on its own */
+.devlog { --side-w: 300px; display: flex; height: calc(100vh - var(--header-h) - var(--quick-h)); height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+/* the column's the sidebar's body, under its bar (the sidebar's own rows' rules overridden) */
+.log-side { position: relative; overflow-y: auto; scrollbar-width: none; }
+.log-side::-webkit-scrollbar, .entry-text::-webkit-scrollbar { display: none; }
+.log-side > .corner { z-index: 1; }
+.log-title { display: flex; flex-direction: column; gap: 40px; padding: 16px; background: var(--dark1); border-bottom: 1px solid var(--c400); }
+.log-title h1, .entry-head h2 { margin: 0; font: var(--big)/1.05 var(--serif); color: var(--c1000); font-weight: normal; }
+.log-title p { margin: 0; }
+.log-title .log-demo { margin-top: -24px; }
+.log-title .log-demo a { text-decoration: underline; text-underline-offset: 2px; }
+.log-title .log-demo a:hover { color: var(--c1000); }
+.devlog .date { margin: 0; color: var(--c700); font-size: var(--small); line-height: 1.16; }
+.log-list { position: relative; flex: 1 0 auto; border-bottom: 1px solid var(--c400); }
+.log-list .corner { left: 0; }
+.log-list .head { margin: 0; padding: 16px; border-bottom: 1px solid var(--c400); color: var(--c700); }
+.devlog .log-list nav { display: flex; flex-direction: column; overflow: visible; }
+/* a row: its ">" (as the sidebar's) none idle, dim on hover, lit on the entry shown, which is set apart */
+.devlog .log-list a { display: flex; align-items: flex-start; padding: 12px 16px; border-bottom: 1px solid var(--c400); color: var(--c800); transition: color 160ms ease; }
+.devlog .log-list a.on { background: #0f1c2f; color: var(--c1000); }
+.devlog .log-list .mark { flex: none; overflow: hidden; max-width: 0; opacity: 0; color: var(--c700); transition: max-width 160ms ease, margin 160ms ease, opacity 160ms ease; }
+.devlog .log-list a:hover .mark, .devlog .log-list a.on .mark { max-width: 1em; opacity: 1; margin-right: 6px; }
+.devlog .log-list a.on .mark { color: var(--c1000); }
+.log-list .caption { min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.log-entry { flex: 1; min-width: 0; display: flex; }
+.entry-text { position: relative; flex: none; width: 400px; overflow-y: auto; scrollbar-width: none; border-right: 1px solid var(--c400); background: #0f1c2f; }
+.entry-head { display: flex; flex-direction: column; gap: 24px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.log-entry .desc { padding: 16px; border-bottom: 1px solid var(--c400); }
+.log-entry .desc p { margin: 0 0 1.16em; }
+.log-entry .desc p:last-child { margin: 0; }
+.log-entry a { text-decoration: underline; text-underline-offset: 2px; }
+.entry-list { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.entry-list .head { margin: 0; color: var(--c800); font-size: var(--small); line-height: 1.16; text-transform: uppercase; }
+.entry-list ul { display: flex; flex-direction: column; gap: 16px; margin: 0; padding-left: 24px; }
+.entry-list li span { color: var(--c800); }
+/* a tablet: the entry's words above its pictures */
+@media (max-width: 1023px) {
+  .log-entry { display: block; overflow-y: auto; }
+  .entry-text { width: auto; border-right: 0; overflow: visible; }
+}
+/* a phone: the column hidden to a strip, opening over the entry (as works' sidebar) */
+@media (max-width: 599px) {
+  .devlog:not(.sidebar-hidden) .sidebar { background: rgb(7 19 36 / 0.96); }
+}
+
+/* Wiki (web/wiki.js, no Figma yet: the art market's sidebar and cards, Claude's, 2026-10-20): the
+   sidebar of sections and entries, then a section's entries as cards, 3 across, 2 on a tablet, 1
+   on a phone, scrolling; the entry linked to lit. The game's icons drawn up pixelated */
+.wiki { display: flex; height: calc(100vh - var(--header-h) - var(--quick-h)); height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+.wiki, .wiki .sidebar, .wiki-bar { background: var(--dark1); }
+.wiki-main { flex: 1; min-width: 0; overflow-y: auto; scrollbar-width: none; }
+.wiki-main::-webkit-scrollbar { display: none; }
+.wiki-main .soon { padding: 16px; }
+.wiki .dim { margin: 0; color: var(--c700); }
+.wiki-bar { position: sticky; top: 0; z-index: 1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding: 16px; border-bottom: 1px solid var(--c400); }
+.wiki-bar h1 { margin: 0; font: var(--big)/1.05 var(--serif); color: var(--c1000); font-weight: normal; }
+.wiki-bar .dim { font-size: var(--small); }
+.wiki-cards { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); align-items: start; gap: 12px; padding: 12px; }
+@media (min-width: 1600px) { .wiki-cards { --cols: 4; } }
+@media (max-width: 1199px) { .wiki-cards { --cols: 2; } }
+@media (max-width: 767px) { .wiki-cards { --cols: 1; } }
+.wiki-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--c400); background: #0f1c2f; color: var(--c800); scroll-margin-top: 72px; transition: border-color 160ms ease; }
+.wiki-card.on { border-color: var(--c800); }
+.wiki-card > * { padding: 12px; }
+.wiki-card > * + * { border-top: 1px solid var(--c400); }
+.wiki-card > .corner { padding: 0; left: -1px; top: -1px; }
+.wiki-card > .corner + * { border-top: 0; }
+.wiki-card header { display: flex; align-items: center; gap: 12px; background: var(--dark1); }
+.wiki-card h2 { margin: 0 0 4px; font: var(--body)/1.16 var(--sans); color: var(--c1000); }
+.wiki-card p { margin: 0; }
+.wiki-icon { flex: none; width: 32px; height: 48px; image-rendering: pixelated; }
+.wiki-icon.small { width: 16px; height: 24px; }
+.wiki-desc { color: var(--c1000); }
+.wiki-stats { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0; }
+.wiki-stats div { display: flex; flex-direction: column; gap: 2px; }
+.wiki-stats dt { color: var(--c700); font-size: var(--small); }
+.wiki-stats dd { margin: 0; color: var(--c1000); }
+.wiki .notes { margin: 0; padding-left: 18px; }
+.wiki .notes li + li { margin-top: 4px; }
+.wiki-card .head { margin: 0 0 8px; color: var(--c700); font-size: var(--small); }
+.wiki-rows { display: flex; flex-direction: column; gap: 12px; }
+.wiki-row { display: flex; align-items: flex-start; gap: 10px; }
+.wiki-row > div { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.wiki-row .name { color: var(--c1000); }
+.wiki-row .notes { font-size: var(--small); color: var(--c700); }
+/* the game's log lines, as it says them, in its gold (MEK Sans, not the game's MEKZANTINE: too
+   hard to read in this many lines, the user's, 2026-10-20) */
+.wiki-lines { display: flex; flex-direction: column; gap: 6px; color: var(--gold2); }
+
+/* Art market (Figma "artmarket-web", 197:21136): the sidebar, and the pieces as cards (Figma
+   "card-art", 270:59284), 4 across on a big screen, 3, 2 on a tablet, 1 on a phone; they scroll */
+.market { display: flex; height: calc(100vh - var(--header-h) - var(--quick-h)); height: calc(100dvh - var(--header-h) - var(--quick-h)); }
+/* solid: the game's not seen through the art market */
+.market, .market .sidebar, .market .art-bar { background: var(--dark1); }
+.listing { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+/* the bar over the cards (Figma 239:54244): where you are, and the two menus */
+.art-bar { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding: 8px 16px; border-bottom: 1px solid var(--c400); background: rgb(7 19 36 / 0.8); line-height: 1.16; }
+.art-bar .crumb { color: var(--c700); white-space: nowrap; }
+.art-bar .filters { display: flex; gap: 24px; margin-left: auto; }
+.filter { position: relative; }
+.filter .pick { display: flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; color: var(--c800); font: inherit; cursor: pointer; white-space: nowrap; transition: color 160ms ease; }
+.filter .pick:hover, .filter.open .pick { color: var(--c1000); }
+.icon.caret { --mask: url("../assets/web/caret-down.svg"); width: 14px; height: 14px; transition: transform 160ms ease; }
+.filter.open .caret { transform: rotate(180deg); }
+/* a row's ">" (as the sidebar's: dim on hover, lit on the one picked) is laid over the room kept
+   for it at the menu's right, the words sliding over into it: the menu's as wide either way */
+.filter .menu { --shift: calc(0.54em + 4px); display: none; position: absolute; right: 0; top: calc(100% + 9px); flex-direction: column; min-width: 100%; box-sizing: border-box; padding: 6px calc(12px + var(--shift)) 6px 12px; border: 1px solid var(--c400); background: var(--dark1); }
+.filter.open .menu { display: flex; }
+.filter .menu button { position: relative; display: flex; align-items: center; padding: 6px 0; border: 0; background: none; color: var(--c800); font: inherit; text-align: left; white-space: nowrap; cursor: pointer; transition: color 160ms ease; }
+.filter .menu button.on { color: var(--c1000); }
+.filter .menu .mark { position: absolute; left: 0; opacity: 0; color: var(--c700); transition: opacity 160ms ease; }
+.filter .menu .mark + span { transition: transform 160ms ease; }
+.filter .menu button:hover .mark, .filter .menu button.on .mark { opacity: 1; }
+.filter .menu button:hover .mark + span, .filter .menu button.on .mark + span { transform: translateX(var(--shift)); }
+.filter .menu button.on .mark { color: var(--c1000); }
+.art .none { grid-column: 1 / -1; margin: 0; padding: 16px 4px; color: var(--c700); }
+.art { flex: 1; min-width: 0; overflow-y: auto; scrollbar-width: none; display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); align-content: start; gap: 24px 12px; padding: 12px; }
+.art::-webkit-scrollbar { display: none; }
+@media (min-width: 1600px) { .art { --cols: 4; } }
+@media (max-width: 1023px) { .art { --cols: 2; } }
+@media (max-width: 599px) { .art { --cols: 1; } }
+.card-art { display: flex; flex-direction: column; border: 1px solid var(--c400); background: var(--dark1); color: var(--c700);
+  /* a card off screen isn't laid out or drawn (a few hundred of them made coming to this page, and
+     leaving it, slow); it holds the size it last had, and about a square picture's till it's had one */
+  content-visibility: auto; contain-intrinsic-size: auto 420px; }
+.card-art .frame { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 24px; background: #0f1c2f; border-bottom: 1px solid var(--c400); }
+.card-art .frame img { position: relative; display: block; width: 100%; height: auto; }
+/* till its picture's in (or with none), the MEK logo (Figma 197:21279's) in the middle */
+.card-art .frame { position: relative; }
+.card-art .frame::before { content: ""; position: absolute; left: 50%; top: 50%; width: 48px; height: 48px; margin: -24px 0 0 -24px; background: var(--c700);
+  -webkit-mask: url("../assets/web/mek-logo.svg") center / contain no-repeat; mask: url("../assets/web/mek-logo.svg") center / contain no-repeat; }
+.card-art .frame.loaded::before { display: none; }
+.card-art .caption { position: relative; display: flex; flex-direction: column; }
+.card-art .caption > span { padding: 12px; }
+.card-art .caption > span + span { border-top: 1px solid var(--c400); }
+.card-art .corner { left: -1px; top: 0; }
+.card-art .corner.tr { left: auto; right: -1px; transform: rotate(90deg); }
+.card-art .corner.bl { top: auto; bottom: -1px; transform: rotate(-90deg); }
+.card-art .corner.br { top: auto; left: auto; right: -1px; bottom: -1px; transform: rotate(180deg); }
+.card-art .title { font: var(--body)/1.16 var(--sans); color: var(--c1000); }   /* MEK Sans, as Figma has it now */
+/* one line (Figma 270:59284): XTZ 45.44 / USD 14.2, and the editions at the right (under it, at
+   the right, on a card too narrow for both) */
+.card-art .price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 10px; color: var(--c800); white-space: nowrap; }
+.card-art .detail { display: flex; align-items: baseline; gap: 6px; }
+.card-art .slash { color: var(--c400); }
+.card-art .editions { flex: 1; text-align: right; color: var(--c700); }
+.card-art .label { font-size: var(--small); color: var(--c700); }
