@@ -73,7 +73,7 @@ npm run check
 - `tools/check-game-over.mjs`：离线死亡与天数结束流程、结算按钮和键盘导航检查。
 - `tools/check-dynamic.mjs`：执行楼层日志、战斗状态及法术名称的实际翻译路径，检查已有地图切换语言，并核对源码中的直接文本调用；这项检查不代表已穷尽所有运行时拼接文本。
 
-GitHub Actions 在 push / pull request 时执行检查。对翻译源的修改应运行上述生成命令并提交生成结果。`tools/fetch-original.py` 是最初下载资源的辅助脚本，不能当作无条件更新工具；升级原版需要重新匹配资源和语言模板。
+GitHub Actions 在 push / pull request 时执行检查；推送到 `main` 后，检查通过会自动部署到正式网站。对翻译源的修改应运行上述生成命令并提交生成结果。`tools/fetch-original.py` 是最初下载资源的辅助脚本，不能当作无条件更新工具；升级原版需要重新匹配资源和语言模板。
 
 ## Cloudflare Pages 部署
 
@@ -86,7 +86,11 @@ cp .env.example .env
 npm run deploy
 ```
 
-部署工具先运行检查，再使用固定版本的 Wrangler 上传静态资源。`.env` 仅用于本机认证，不会上传至 Pages，也不应提交到仓库。CI 仅做检查，推送代码不会自动部署；发布由 `npm run deploy` 执行。
+日常发布只需将修改推送到 `main`。工作流先验证生成文件是否同步并运行检查，通过后自动安装锁定的依赖、调用 `npm run deploy` 发布到正式网站。PR 和其他分支只做检查，不发布。也可在 GitHub Actions 的 **Check and deploy game → Run workflow** 中选择 `main` 手动重新部署。
+
+部署使用仓库 Actions Secrets 中的 `CLOUDFLARE_ACCOUNT_ID` 与 `CLOUDFLARE_API_TOKEN`。令牌需要目标账户的 Cloudflare Pages 编辑权限。凭据仅注入部署步骤，不写入代码或上传到网站；本地 `.env` 仍只用于手动发布。生产部署串行执行，避免多个上传任务同时覆盖站点。
+
+在 [GitHub Actions](https://github.com/miaoz/dos-age-zh/actions/workflows/check.yml) 查看每次检查和部署结果。检查失败时不会部署，线上继续保留上一次成功发布的版本。此方案沿用 Cloudflare Pages 的 [Direct Upload + CI 工作流](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/)。
 
 - `wrangler.toml`：Pages 项目与静态目录配置。
 - `dist/_worker.js`：对未接入的 `/scores` 和 `/chat` 接口返回 JSON 503。
